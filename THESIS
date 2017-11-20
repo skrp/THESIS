@@ -22,14 +22,16 @@ SICC network file system
 MKRX archive tools
 HIVE work processors
 
-Hardened FreeBSD_10.3 custom unix kernels
-PSK-OPIE privilege escalation & partitions
+KERN hardened FreeBSD_10.3 custom unix kernels
+PSK-OPIE privilege partition & escalation
 
-ZFS raidz setups using SATA, PCI-SATA, USB, SAS
-Massive Tower Schematics & Utilities
+PROTO unix network protocol implementations
+STAT node & network dtrace sensor analysis
 
-Root task manuals of instructions & examples
-logs, mount, hot-swap, zfs, ntfs, boot, perl
+ZFS diagrams SATA, PCI-SATA, USB, SAS
+Schematics & Utilities
+
+MAN manuals of instructions & examples
 
 ####################################################
 # Table of Contents
@@ -102,12 +104,17 @@ PROTO
 # 6 ################################################
 STAT
   List
+  dtrace
+    cpu
+    PID
+    fs
+    net
   Performance
     LOG
     ECHO
   ANAL
-    STATS
-    NETAVG
+    SELF
+    NET
 
 # 7 ################################################
 ZFS & Hardware
@@ -136,11 +143,24 @@ SCHMATIC
   SIMP
   TOWR
   Utilities
+
 # 9 ################################################
 MAN
   unix manuals
+    log
+    mount
+    boot
+    ntfs
   perl manuals
+    log
+    language
+    modules
   zfs manuals
+    log
+    hotswap
+    import
+    set
+
 # END ##############################################
 MANIFESTO
   Appalachian Epic of 3Shot
