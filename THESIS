@@ -307,43 +307,91 @@ Transparent file-system
 ####################################################
 # 1 - MKRX
 ####################################################
+Tools to administer the network file-system
 
-######## MKRX Tools   ##############################
+MKRX Tools:
+  [XS]
+    Extract & Standardize Recursively
+  [SCRUB]
+    Verify sha of the data is true
+  [CHKMETA]
+    Confirm each file has metadata
+  [UNIQ]
+    Output unless (ARG1-files exist in ARG2-files)
+  [XFR]
+    Serve data to local drive
+    Serve data to remote locations
+  [INDEX]
+    Build Metadata hash-dumps
+  [CLI]
+    Load INDEX hash-dumps into memory
+    Terminal Input & Output produce single entry lists
 
-# SCRUB ############################################
-Verify sha of the data is true
-Report untrue data
 
-# CHKMETA ##########################################
-Confirm each file has metadata
-Report rogue data
+# XS ###############################################
+Gateway for files to enter the archive
+High io usage
 
-# UNIQ #############################################
-If ARG1 files exist in ARG2 print
-Check if data is unique to the network
+Features the expert developer kent\n
+This code been worked over hundreds of millions of files
+
+Name & path standardization keep the environment safe
+The path allows for past-association awareness
+Size & encoding keep calculations one-time-only
+
+Automatic gear logic
+Just point & pull trigger
+
+# UNIQ ############################################
+Output if ARG1 does-not-exist in ARG2
+
+Filter data that is unique on the network
 Compare NODE list against NET list
+Backup the network with priority files needing duplication
 
-# XFR ##############################################
-Serve data to local drive
-Serve data to remote locations
+This is a very useful command
+It can handle millions of iterations in both ARGs
 
-# INDEX ############################################
-Build Metadata hash-dumps
+Learn the simple code mechanic & this command will prove a general system tool
+In minutes this processes data that would require many days for grep
 
-# CLI ##############################################
-Load INDEX hash-dumps into memory
-Terminal Input & Output produce single entry lists
+# CLI ############################################
+Interface to network archive requests
+  [1] Build hash-dumps into memory
+    This may take several minutes due to massive-data
+
+  [2] Build array-list
+    Set to network array-list
+    Load a custom array-list from file
+
+  [3] Filter down array list
+    Use perl regular-expressions to parse patterns
+
+  [4] Report on array-list
+    Print a filtered array to file
+    Count the sum of array-list
+    Output array-list sha
+    Output the corresponding array-list value
+      name, path, size, encode
+
+  [5] Create lists of files bound to a byte-parameter
+    The calculation of sums add up when it is to the millions
+    Array-list is sectioned into specific-sized chunks
+
+  [6] XFR the file
+    This process will only require a feed of the output of the array-list
+    Array-list will always only be the sha lists of all filtered file-metadata
 
 Application Program Interface (API):
   {regx}  regx data filters
   {reset} reset array to full network-array
   {load}  load array from custom file
-  {print} output current array
+  {print} output current array to file
   {count} count array
   {value} output values of array 'name, path, size, encoding'
   {pop}   output size-specific lists that sum to a specific-amount of bytes
 
-# 4 EXAMPLES ########################################
+# EXAMPLES #######################################
 
 [1]
 Create GET for backup
