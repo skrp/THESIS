@@ -206,39 +206,85 @@ MAN
 # 0 - SICC
 ####################################################
 
-{#} System In Complete Chaos
-{###} The core of this system is based on the sha-algorithm which produces unique data identifiers
-{###} Each file is named after its mathematically-based unique identifier
-{###} This de-duplicates & assigns data into Chaos order
-{###} Metadata is securely kept seperate from the data
-{###} This isolation allows for open obfuscation of data
-{###} All data files are kept in one location in alphanumeric order of a 64 hexadecimal identifier
-{###} Data is stored in an ultra-transient method for simple network archive management
+######## System In Complete Chaos    ###############
 
-{#} Standard metadata file entries:
-{##} name - MKRX XS standardized name
-{##} path - MKRX XS standardized path of extraction
-{##} size - number of bytes
-{##} encode - type of encoding
+# NAME SYSTEM ######################################
+The core of this system is based on a mathematical sha-algorithm
+The sha-algorithm produces unique data identifiers
+Each file is named after these mathematically-based unique identifiers
 
-{#} KEY is a recipe to rebuild an obfuscated file
-{##} KEY file is named after the original file sha
-{##} Hexidecimal sequental list of sha that produce the file
+This name system has two benefits:
+  {1} de-duplicates data files
+  {2} assigns data into Chaos order
 
-{#} SLICR & BLKR further deepens the obfuscation to unprecedented levels
-{##} SLICR
-{###} Shreds a file into random-sized parts & creates KEY
-{##} BLKR
-{###} Blocks file into standard-size parts that produce associative compression & creates KEY
-{###} Homogeneous data types will have duplicate collisions discovered in the sha which will overwrite the previous file that is an exact copy
-{###} The smaller [per-NODE] block-size the greater power of compression & obfuscation
+Data identifier uniqueness as a name keeps all data simple
+Ultra-transient data package
 
-{#} NOTE
-{##} All file entries are located in the /usr/nfs/pub/ directory
-{##} This will store|share|backup|recieve as a network
-{##} Network level deduplication of data
-{##} Sane & Clean orders of massive data on an archive network
-{##} All data easily accounted for in simple-single-entry lists
+The duplications data are inherently accounted in single-entry lists
+Each data-pool is maximized in its ability to minimize the data-pool's disk-footprint
+This allows for network data backup prioritization
+
+# METADATA #######################################
+Metadata is kept isolated from the data
+The isolation allows for the obfuscation of open data
+
+The data has to be in possession for its contents to be known by someone without the Metadata
+Files can only be accessed by explicit name transfers
+  [+] get $sha
+  [+] send $sha
+
+This file system built for ultra-transient network management
+All data files are located in the directory "/usr/nfs/pub/"
+
+Two factors assist in obfuscation
+  (1) No subdirectories to betray association
+  (2) Alpha-numeric ordering of the hexidecimal names in single-pool grouping prevent list snooping
+
+
+Each file is periodically verified to have a corresponding metadata-file
+Each metadata-file consists of 4 single-line entries:
+  (1) name - XS (MKRX) standardized name
+  (2) path - XS standardized path of extraction
+  (3) size - number of bytes
+  (4) encode - type of encoding
+
+# KEY ##############################################
+A KEY is a recipe to rebuild an obfuscated file
+
+This allows for a powerful layer of unprecedented obfuscation
+What is public gibberish is made private information thru the KEY file
+
+Each KEY file is named after the original file sha
+The KEY file contains a single-line entry sequential list of sha
+
+Obfuscation Methods:
+
+  [X] SLICR (secure against original file known)
+        Shreds a file into random-sized parts & creates KEY
+        Random-size prevents sha rainbow-tables if the attacker has original file
+
+  [X] BLKR (insecure if original file known)
+       Blocks file into standard-size parts & creates KEY
+       Homogeneous data types will have duplicate collisions which nullify the duplicate data
+       Many KEY files can correspond to the same block reducing total data-pool size
+       The smaller block-size the greater power of compression & obfuscation
+       Each node is configured to their own block-size
+
+# END ##############################################
+
+This file-system spread over a network has the following benefits:
+  [o] All data easily accounted for in single-entry lists
+  [o] Sane & Clean orders of massive data on an network
+  [o] Network level explicit control of the duplication of data
+
+On a homogeneous unix kernel network this file-system is transparent
+Only active tunnels will be displayed in the available pool of data
+
+Transparent
+  [l] store data remotely
+  [l] request a remote file
+  [1] backup up the network to drive
+  [1] serve files
 |
 |
 |
@@ -250,84 +296,84 @@ MAN
 # 1 - MKRX
 ####################################################
 
-{#} Tool summary
+Tool summary
 
-{####} SCRUB
-{########} Verify sha of the data is true
-{########} Report untrue data
+SCRUB
+Verify sha of the data is true
+Report untrue data
 
-{####} CHKMETA
-{########} Confirm each file has metadata
-{########} Report rogue data
+CHKMETA
+Confirm each file has metadata
+Report rogue data
 
-{####} UNIQ
-{########} Check if data is unique to the network
-{########} Compare NODE data against NET data
-{########} Create add backup duplicates to network
+UNIQ
+Check if data is unique to the network
+Compare NODE data against NET data
+Create add backup duplicates to network
 
-{####} XFR
-{########} Get data onto local drive
+XFR
+Get data onto local drive
 
-{####} INDEX
-{########} Update metadata database hash dumps
+INDEX
+Update metadata database hash dumps
 
-{####} CLI
-{########} Load INDEX into memory
-{########} Terminal Input & Output to produce single entry lists
+CLI
+Load INDEX into memory
+Terminal Input & Output to produce single entry lists
 
-{####} API
-{########} RESET - reset array to full network-array
-{########} LOAD - load array from custom file
-{########} PRINT - output current array
-{########} COUNT - count array
-{########} VAL - output values of array 'name, path, size, encoding'
-{########} POP - output size specific lists to fill up the specific amount of bytes
+API
+ RESET - reset array to full network-array
+ LOAD - load array from custom file
+ PRINT - output current array
+ COUNT - count array
+ VAL - output values of array 'name, path, size, encoding'
+ POP - output size specific lists to fill up the specific amount of bytes
 
-{####} Use & example
-{########} create GET for backup
-+$usr@host> UNIQ TOTAL_NET TOTAL_LOCAL GET
-+TOTAL_NET - location of network-wide file list
-+TOTAL_LOCAL - location of local file list
-+GET - will now have line-per-entry list of what TOTAL_LOCAL lacks from TOTAL_NET
+  Use & example
+ create GET for backup
+$usr@host> UNIQ TOTAL_NET TOTAL_LOCAL GET
+TOTAL_NET - location of network-wide file list
+TOTAL_LOCAL - location of local file list
+GET - will now have line-per-entry list of what TOTAL_LOCAL lacks from TOTAL_NET
 
-{########} create EXTRACT from UNIQ
-+$usr@host> UNIQ TOTAL_SOURCE TOTAL_NET EXTRACT
-+TOTAL_SOURCE - sha lists of a source
-+TOTAL_NET - network-wide file list
-+EXTRACT - new files to append to network-wide list
+ create EXTRACT from UNIQ
+$usr@host> UNIQ TOTAL_SOURCE TOTAL_NET EXTRACT
+TOTAL_SOURCE - sha lists of a source
+TOTAL_NET - network-wide file list
+EXTRACT - new files to append to network-wide list
 
-{########} populate a new drive
-+$usr@host> CLI ~/INDEX/
-+~/INDEX/ - location of INDEX metadata database hash dumps
-+
-+pop 1000000000
-+exit
-+
-+$usr@host> cd ~/POP/
-+
-+$usr@host> wc -l 1000000000
-+8493719 1000000000
-+
-+$usr@host> wc -l leftover_1000000000
-+39533365846 leftover_1000000000
-+
-+$usr@host> XFR ~/POP/1000000000 /mnt/USB/pool/
-+~/POP/1000000000 - file to transfer
-+/mnt/USB/pool/ - location to dump files
-+
-+$usr@host> CLI ~/INDEX/
-+
-+load leftover_1000000000
-+
-+pop 1000000000
-+exit
-+
-+{########} loop over & over by gigabyte sized fragments
+ populate a new drive
+$usr@host> CLI ~/INDEX/
+~/INDEX/ - location of INDEX metadata database hash dumps
 
-{########} extract a source
-+$usr@host> XS /mnt/bkup10/ ~/
-+/mnt/bkup10/ - location to grab new data
-+~/ - location to dump data into ~/pool/ & ~/g/
+pop 1000000000
+exit
+
+$usr@host> cd ~/POP/
+
+$usr@host> wc -l 1000000000
+8493719 1000000000
+
+$usr@host> wc -l leftover_1000000000
+39533365846 leftover_1000000000
+
+$usr@host> XFR ~/POP/1000000000 /mnt/USB/pool/
+~/POP/1000000000 - file to transfer
+/mnt/USB/pool/ - location to dump files
+
+$usr@host> CLI ~/INDEX/
+
+load leftover_1000000000
+
+pop 1000000000
+exit
+
+ loop over & over by gigabyte sized fragments
+
+ extract a source
+$usr@host> XS /mnt/bkup10/ ~/
+/mnt/bkup10/ - location to grab new data
+~/ - location to dump data into ~/pool/ & ~/g/
 |
 |
 |
@@ -339,46 +385,46 @@ MAN
 # 2 - HIVE
 ####################################################
 
-{####} HIVE
-{########} DEMON - always online unix daemon goons with network API
+  HIVE
+ DEMON - always online unix daemon goons with network API
 
-{####} NODE Structure
-{########} /tmp/$NAME/dump/ - DEMON specific host dump
-{########} /tmp/PING - host DEMON roster
+  NODE Structure
+ /tmp/$NAME/dump/ - DEMON specific host dump
+ /tmp/PING - host DEMON roster
 
-{####} NET Structure
-{########} /HIVE/ - nfs remote mount
-{########} /HIVE/PING - net DEMON roster
-{########} /HIVE/node/$NODE - node specific directory
-{########} /HIVE/node/$NODE/PID - node specific PID rooster
-{########} /HIVE/node/$NODE/QUE/ - host specific API que
-{########} /HIVE/cemetery/ - network wide DEMON graveyard
-{########} /HIVE/cemetery/RAW_$NAME -
-{########} /HIVE/cemetery/DONE_$NAME -
-{########} /HIVE/cemetery/TODO_$NAME -
+  NET Structure
+ /HIVE/ - nfs remote mount
+ /HIVE/PING - net DEMON roster
+ /HIVE/node/$NODE - node specific directory
+ /HIVE/node/$NODE/PID - node specific PID rooster
+ /HIVE/node/$NODE/QUE/ - host specific API que
+ /HIVE/cemetery/ - network wide DEMON graveyard
+ /HIVE/cemetery/RAW_$NAME -
+ /HIVE/cemetery/DONE_$NAME -
+ /HIVE/cemetery/TODO_$NAME -
 
-{####} Dump
-{########} /$nfs_pool/ - remote que file dump
-{########} /$nfs_g/ - remote que meta dump
+  Dump
+ /$nfs_pool/ - remote que file dump
+ /$nfs_g/ - remote que meta dump
 
-{####} Mechanics
-{########} ORDER
-{########} SLEEP
-{########} SUICIDE
-{########} CLEAN
-{########} RESUME
+  Mechanics
+ ORDER
+ SLEEP
+ SUICIDE
+ CLEAN
+ RESUME
 
-{####} API
-{########} SHA - sha a file
-{########} GET - http request URL & XS file into remote dump
-{########} UNTAR - extract file archive type & XS into remote dump
-{########} REGX - test massive-data for patterns
-{########} BLKR - shred files into standard-blocks
-{########} SLICR - shred files into random-blocks
+  API
+ SHA - sha a file
+ GET - http request URL & XS file into remote dump
+ UNTAR - extract file archive type & XS into remote dump
+ REGX - test massive-data for patterns
+ BLKR - shred files into standard-blocks
+ SLICR - shred files into random-blocks
 
-{####} Logs
-{########}
-{########}
+  Logs
+
+
 |
 |
 |
