@@ -222,8 +222,81 @@ MKRX
 
 {#} Tool summary
 
-{#} Use & example
-{##} create GET from BKUP
-{##} create GET from UNIQ
-{##} populate a new drive
-{##} extract a source
+{####} SCRUB
+{########} Verify sha of the data is true
+{########} Report untrue data
+
+{####} CHKMETA
+{########} Confirm each file has metadata
+{########} Report rogue data
+
+{####} UNIQ
+{########} Check if data is unique to the network
+{########} Compare NODE data against NET data
+{########} Create add backup duplicates to network
+
+{####} XFR
+{########} Get data onto local drive
+
+{####} INDEX
+{########} Update metadata database hash dumps
+
+{####} CLI
+{########} Load INDEX into memory
+{########} Terminal Input & Output to produce single entry lists
+
+{####} API
+{########} RESET - reset array to full network-array
+{########} LOAD - load array from custom file
+{########} PRINT - output current array
+{########} COUNT - count array
+{########} VAL - output values of array 'name, path, size, encoding'
+{########} POP - output size specific lists to fill up the specific amount of bytes
+
+{####} Use & example
+{########} create GET for backup
++$usr@host> UNIQ TOTAL_NET TOTAL_LOCAL GET
++TOTAL_NET - location of network-wide file list
++TOTAL_LOCAL - location of local file list
++GET - will now have line-per-entry list of what TOTAL_LOCAL lacks from TOTAL_NET
+
+{########} create EXTRACT from UNIQ
++$usr@host> UNIQ TOTAL_SOURCE TOTAL_NET EXTRACT
++TOTAL_SOURCE - sha lists of a source
++TOTAL_NET - network-wide file list
++EXTRACT - new files to append to network-wide list
+
+{########} populate a new drive
++$usr@host> CLI ~/INDEX/
++~/INDEX/ - location of INDEX metadata database hash dumps
++
++pop 1000000000
++exit
++
++$usr@host> cd ~/POP/
++
++$usr@host> wc -l 1000000000
++8493719 1000000000
++
++$usr@host> wc -l leftover_1000000000
++39533365846 leftover_1000000000
++
++$usr@host> XFR ~/POP/1000000000 /mnt/USB/pool/
++~/POP/1000000000 - file to transfer
++/mnt/USB/pool/ - location to dump files
++
++$usr@host> CLI ~/INDEX/
++
++load leftover_1000000000
++
++pop 1000000000
++exit
++
++{########} loop over & over by gigabyte sized fragements
+
+{########} extract a source
++$usr@host> XS /mnt/bkup10/ ~/
++/mnt/bkup10/ - location to grab new data
++~/ - location to dump data into ~/pool/ & ~/g/
+
+
