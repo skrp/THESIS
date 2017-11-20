@@ -231,15 +231,15 @@ The obvious duplication count allows for network backup prioritization
 
 # METADATA #######################################
 Metadata is kept isolated from the data
-The isolation allows for the obfuscation of open data
+This isolation allows for the obfuscation of open data
 
-The data has to be in possession for its contents to be known by someone without the Metadata
+Data-pool lists are useless without Metadata
 Files can only be accessed by explicit name transfers
   [+] get $sha
   [+] send $sha
 
-This file system built for ultra-transient network management
-All data files are located in the directory "/usr/nfs/pub/"
+This file-system  is built for ultra-transient network management
+All files are located in the directory "/usr/nfs/pub/"
 
 Two factors assist in obfuscation
   (1) No subdirectories to betray association
@@ -257,23 +257,24 @@ Each metadata-file consists of 4 single-line entries:
 A KEY is a recipe to rebuild an obfuscated file
 
 This allows for a powerful layer of unprecedented obfuscation
-What is public gibberish is made private information thru the KEY file
+What is public gibberish is made private information thru access to a KEY file
 
 Each KEY file is named after the original file sha
-The KEY file contains a single-line entry sequential list of sha
+The KEY file contains sequential sha-per-line entries
 
 Obfuscation Methods:
 
-  [X] SLICR (secure against original file known)
+  [X] SLICR (secure against file-known)
         Shreds a file into random-sized parts & creates KEY
-        Random-size prevents sha rainbow-tables if the attacker has original file
+        Random-size prevents sha rainbow-tables if the attacker knows file
 
-  [X] BLKR (insecure if original file known)
-       Blocks file into standard-size parts & creates KEY
-       Homogeneous data types will have duplicate collisions which nullify the duplicate data
-       Many KEY files can correspond to the same block reducing total data-pool size
+  [X] BLKR (insecure if file-known)
+       Shreds file into standard-sized blocks & creates KEY
+       Homogeneous data types will have duplicate-collisions which nullify the duplicate data
+       Only one copy of data can exist in the data-pool
+       Many KEY files can correspond to the same block reducing the data-pool foot-print
        The smaller block-size the greater power of compression & obfuscation
-       Each node is configured to their own block-size
+       Each node configures own block-size
 
 # END ##############################################
 
@@ -285,7 +286,7 @@ This file-system spread over a network has the following benefits:
 On a homogeneous unix kernel the network file-system is transparent
 Only active tunnels will be displayed as available data-pools
 
-Transparent
+Transparent file-system
   [l] store data remotely
   [l] get a remote file
   [l] serve a local file
