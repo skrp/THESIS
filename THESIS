@@ -209,20 +209,25 @@ MAN
 ######## System In Complete Chaos    ###############
 
 # NAME SYSTEM ######################################
-The core of this system is based on a mathematical sha-algorithm
-The sha-algorithm produces unique data identifiers
-Each file is named after these mathematically-based unique identifiers
+The core of this system is based on sha file computation
+
+Sha is a unique file identifier that is the output of a mathematical algorithm
+This mathematical algorithm will produce the same sha for the same file
+
+Each file is named after its sha
 
 This name system has two benefits:
-  {1} de-duplicates data files
+  {1} de-duplicates files
   {2} assigns data into Chaos order
 
-Data identifier uniqueness as a name keeps all data simple
-Ultra-transient data package
+Sha uniqueness keeps all data:
+  [-] simple
+  [-] homogeneous
+  [-] ultra-transient
 
-The duplications data are inherently accounted in single-entry lists
+The duplication of data is inherently accounted in single-entry lists
 Each data-pool is maximized in its ability to minimize the data-pool's disk-footprint
-This allows for network data backup prioritization
+The obvious duplication count allows for network backup prioritization
 
 # METADATA #######################################
 Metadata is kept isolated from the data
