@@ -1,14 +1,13 @@
 ####################################################
 # MKRX UNIX NETWORK
 
-        ~ skrp
-        Kehkay Genkai
-        of the village
-        Hidden in the 1337
-
+                                             ~ skrp
+                                       Kehkay Genkai
+                                      of the village
+                                  Hidden in the 1337
 {{  t_(o0)_j  }}
 \\ Meri Kann //
-_\\cibR punX//_
+_\\cibR punX//______________________________________
 |
 |
 |
@@ -16,17 +15,15 @@ _\\cibR punX//_
 |
 |
 |
-This manuscript details the machine of MKRX UNIX NETWORK
-This system connects many nodes thru encrypted tunnels
+This manuscript details the machine of MKRX UNIX NETWORKS
+This system connects nodes thru encrypted tunnels
 
 Hardened FreeBSD_10.3 custom unix kernels
 PSK-OPIE privilege escalation & partitions
 
-MKRX archive law
+SICC file system
+MKRX archive tools
 HIVE work processors
-
-The CORE of the machine is in unix network protocols
-Archive Tools are forged in perl code
 
 Hardware is detailed, explained & examples given
 ZFS raidz setups using SATA, PCI-SATA, USB, SAS
@@ -39,9 +36,12 @@ logs, mount, hot-swap, zfs, ntfs, boot, perl
 # Table of Contents
 ####################################################
 
+# 0 ################################################
+SICC
+  Standard
+
 # 1 ################################################
 MKRX
-  Standards
   Tools explained
   Tool use & examples
     create GET from BKUP
@@ -78,6 +78,7 @@ KERN
       heir
       seer
       norm
+
 # 4 ################################################
 PSK-OPIE
   Review
@@ -85,7 +86,21 @@ PSK-OPIE
   Mine
     KEY
     RAW
+
 # 5 ################################################
+PROTO
+  Overview
+  SSH
+  SCP
+  FTP
+  PF
+  NFS
+  IRC
+  8080
+  HTTPS
+  MORSE
+
+# 6 ################################################
 STAT
   List
   Performance
@@ -94,7 +109,8 @@ STAT
   ANAL
     STATS
     NETAVG
-# 6 ################################################
+
+# 7 ################################################
 ZFS & Hardware
   ZFS
     0
@@ -116,12 +132,12 @@ ZFS & Hardware
     Notes
       JBOD
 
-# 7 ################################################
+# 8 ################################################
 SCHMATIC
   SIMP
   TOWR
   Utilities
-# 8 ################################################
+# 9 ################################################
 MAN
   unix manuals
   perl manuals
