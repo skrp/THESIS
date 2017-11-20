@@ -318,7 +318,7 @@ MAN
 +pop 1000000000
 +exit
 +
-+{########} loop over & over by gigabyte sized fragements
++{########} loop over & over by gigabyte sized fragments
 
 {########} extract a source
 +$usr@host> XS /mnt/bkup10/ ~/
