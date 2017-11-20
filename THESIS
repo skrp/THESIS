@@ -39,6 +39,28 @@ MAN manuals of instructions & examples
 |
 |
 |
+Let us preserve all insight
+Till the last man walk
+
+That he might not walk
+In the darkness of past
+
+Independent of time
+Independent of wealth
+Independent of government
+
+In the order of Anarchy
+In that way deliver basic rights
+
+Files get lost
+Storage gets easier
+|
+|
+|
+|
+|
+|
+|
 ####################################################
 # Table of Contents
 ####################################################
@@ -183,18 +205,6 @@ MANIFESTO
 ####################################################
 # 0 - SICC
 ####################################################
-{###} let us preserve all insight
-{###} till the last man walk
-{###} that he might not walk
-{###} in the darkness of past
-
-{###} independent of time
-{###} independent of wealth
-{###} independent of government
-
-{###} Files get lost
-{###} Storage gets easier
-
 
 {#} System In Complete Chaos
 {###} The core of this system is based on the sha-algorithm which produces unique data identifiers
@@ -329,6 +339,43 @@ MANIFESTO
 # 2 - HIVE
 ####################################################
 
-{####}
+{####} HIVE
+{########} DEMON - always online unix daemon goons with network API
+
+{####} NODE Structure
+{########} /tmp/$NAME/dump/ - DEMON specific host dump
+{########} /tmp/PING - host DEMON roster
+
+{####} NET Structure
+{########} /HIVE/ - nfs remote mount
+{########} /HIVE/PING - net DEMON roster
+{########} /HIVE/node/$NODE - node specific directory
+{########} /HIVE/node/$NODE/PID - node specific PID rooster
+{########} /HIVE/node/$NODE/QUE/ - host specific API que
+{########} /HIVE/cemetery/ - network wide DEMON graveyard
+{########} /HIVE/cemetery/RAW_$NAME -
+{########} /HIVE/cemetery/DONE_$NAME -
+{########} /HIVE/cemetery/TODO_$NAME -
+
+{####} Dump
+{########} /$nfs_pool/ - remote que file dump
+{########} /$nfs_g/ - remote que meta dump
+
+{####} Mechanics
+{########} ORDER
+{########} SLEEP
+{########} SUICIDE
+{########} CLEAN
+{########} RESUME
+
+{####} API
+{########} SHA - sha a file
+{########} GET - http request URL & XS file into remote dump
+{########} UNTAR - extract file archive type & XS into remote dump
+{########} REGX - test massive-data for patterns
+{########} BLKR - shred files into standard-blocks
+{########} SLICR - shred files into random-blocks
+
+{####} Logs
 {########}
-$usr@host>
+{########}
