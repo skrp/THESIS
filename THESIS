@@ -274,17 +274,17 @@ Obfuscation Methods:
 
 This file-system spread over a network has the following benefits:
   [o] All data easily accounted for in single-entry lists
-  [o] Sane & Clean orders of massive data on an network
+  [o] Sane & Clean orders of massive-data on an network
   [o] Network level explicit control of the duplication of data
 
-On a homogeneous unix kernel network this file-system is transparent
-Only active tunnels will be displayed in the available pool of data
+On a homogeneous unix kernel the network file-system is transparent
+Only active tunnels will be displayed as available data-pools
 
 Transparent
   [l] store data remotely
-  [l] request a remote file
-  [1] backup up the network to drive
-  [1] serve files
+  [l] get a remote file
+  [l] serve a local file
+  [l] backup network to drive
 |
 |
 |
