@@ -319,21 +319,23 @@ Confirm each file has metadata
 Report rogue data
 
 # UNIQ #############################################
+If ARG1 files exist in ARG2 print
 Check if data is unique to the network
-Compare NODE data against NET data
-Create add backup duplicates to network
+Compare NODE list against NET list
 
 # XFR ##############################################
-Get data onto local drive
+Serve data to local drive
+Serve data to remote locations
 
 # INDEX ############################################
-Update metadata database hash dumps
+Build Metadata hash-dumps
 
 # CLI ##############################################
-Load INDEX into memory
-Terminal Input & Output to produce single entry lists
+Load INDEX hash-dumps into memory
+Terminal Input & Output produce single entry lists
 
 Application Program Interface (API):
+  {regx}  regx data filters
   {reset} reset array to full network-array
   {load}  load array from custom file
   {print} output current array
@@ -341,8 +343,9 @@ Application Program Interface (API):
   {value} output values of array 'name, path, size, encoding'
   {pop}   output size-specific lists that sum to a specific-amount of bytes
 
-# EXAMPLES ########################################
+# 4 EXAMPLES ########################################
 
+[1]
 Create GET for backup
   {TOTAL_NET}   location of network-wide file list
   {TOTAL_LOCAL} location of local file list
@@ -351,6 +354,7 @@ Create GET for backup
 $usr@host> UNIQ TOTAL_NET TOTAL_LOCAL GET
 +++++++++++++++++++++++++++++++++++++++++++++++++++
 
+[2]
 Create EXTRACT from UNIQ
   {TOTAL_SOURCE} sha lists of a source
   {TOTAL_NET} network-wide file list
@@ -359,6 +363,7 @@ Create EXTRACT from UNIQ
 $usr@host> UNIQ TOTAL_SOURCE TOTAL_NET EXTRACT
 +++++++++++++++++++++++++++++++++++++++++++++++++++
 
+[3]
 Populate a new drive
   {~/INDEX/}         location of INDEX metadata database hash dumps
   {~/POP/1000000000} file to transfer
@@ -385,6 +390,7 @@ exit
 +++++++++++++++++++++++++++++++++++++++++++++++++++
 Loop over & over by gigabyte-sized fragments
 
+[4]
 Extract a source
   {/mnt/bkup10/} location to grab new data
   {~/} location to dump data into ~/pool/ & ~/g/
