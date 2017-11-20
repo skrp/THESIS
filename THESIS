@@ -329,24 +329,28 @@ MKRX Tools:
 
 
 # XS ###############################################
-Gateway for files to enter the archive
-High io usage
+Extract & Standardize All Files Recursively
+  Send data to pool-dir
+  Build metadata in g-dir
+
+This process is the gateway for files to enter the archive
+High io usage & multiple process utilization
 
 Features the expert developer kent\n
-This code been worked over hundreds of millions of files
+This code been worked over 100s millions of files
 
-Name & path standardization keep the environment safe
+Automatic logic
+Just point & pull trigger
+
+Name & path values are standardized to keep environment safe
 The path allows for past-association awareness
 Size & encoding keep calculations one-time-only
-
-Automatic gear logic
-Just point & pull trigger
 
 # UNIQ ############################################
 Output if ARG1 does-not-exist in ARG2
 
 Filter data that is unique on the network
-Compare NODE list against NET list
+Compare NODE-list against NET-list
 Backup the network with priority files needing duplication
 
 This is a very useful command
@@ -356,8 +360,8 @@ Learn the simple code mechanic & this command will prove a general system tool
 In minutes this processes data that would require many days for grep
 
 # CLI ############################################
-Interface to network archive requests
-  [1] Build hash-dumps into memory
+Interface to network archive requests custom file requests
+  [1] Build INDEX hash-dumps into memory
     This may take several minutes due to massive-data
 
   [2] Build array-list
@@ -369,8 +373,7 @@ Interface to network archive requests
 
   [4] Report on array-list
     Print a filtered array to file
-    Count the sum of array-list
-    Output array-list sha
+    Count the quantity in array-list
     Output the corresponding array-list value
       name, path, size, encode
 
@@ -382,10 +385,10 @@ Interface to network archive requests
     This process will only require a feed of the output of the array-list
     Array-list will always only be the sha lists of all filtered file-metadata
 
-  [7] Use regular-expressions to edit the array-list names into a new-file
+  [7] Use conditional regular-expressions to edit the array-list names into a new-file
     After XFR complete use new-file to rename array-list files
 
-Application Program Interface (API):
+Command Menu:
   {regx}  regx data filters
   {reset} reset array to full network-array
   {load}  load array from custom file
@@ -393,8 +396,8 @@ Application Program Interface (API):
   {count} count array
   {value} output values of array 'name, path, size, encoding'
   {pop}   output size-specific lists that sum to a specific-amount of bytes
-  {name}  edit name using regx into new-file
-  
+  {name}  edit name using conditional regx into new-file
+
 # EXAMPLES #######################################
 
 [1]
