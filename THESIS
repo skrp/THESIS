@@ -279,7 +279,7 @@ Obfuscation Methods:
        The smaller block-size the greater power of compression & obfuscation of data-pool
        Each node configures own block-size
 
-# END ##############################################
+# SUMMARY #########################################
 
 This file-system spread over a network has the following benefits:
   [o] All data easily accounted for in single-entry lists
@@ -313,7 +313,7 @@ MKRX Tools:
   [XS]
     Extract & Standardize Recursively
   [SCRUB]
-    Verify sha of the data is true
+    Verify if sha of file is true
   [CHKMETA]
     Confirm each file has metadata
   [UNIQ]
@@ -325,7 +325,7 @@ MKRX Tools:
     Build Metadata hash-dumps
   [CLI]
     Load INDEX hash-dumps into memory
-    Terminal Input & Output produce single entry lists
+    Terminal Input & Output produce single-entry lists
 
 
 # XS ###############################################
@@ -378,9 +378,12 @@ Interface to network archive requests
     The calculation of sums add up when it is to the millions
     Array-list is sectioned into specific-sized chunks
 
-  [6] XFR the file
+  [6] Use XFR to request the files into home directory
     This process will only require a feed of the output of the array-list
     Array-list will always only be the sha lists of all filtered file-metadata
+
+  [7] Use regular-expressions to edit the array-list names into a new-file
+    After XFR complete use new-file to rename array-list files
 
 Application Program Interface (API):
   {regx}  regx data filters
@@ -390,7 +393,8 @@ Application Program Interface (API):
   {count} count array
   {value} output values of array 'name, path, size, encoding'
   {pop}   output size-specific lists that sum to a specific-amount of bytes
-
+  {name}  edit name using regx into new-file
+  
 # EXAMPLES #######################################
 
 [1]
