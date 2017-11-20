@@ -97,11 +97,17 @@ STAT
 # 6 ################################################
 ZFS & Hardware
   ZFS
+    0
+    Mirror
+    raidz2
+    raidz3
   Hardware
     SATA
     PCI-SATA
     SAS
     USB
+    Notes
+      JBOD
 # 7 ################################################
 SCHMATIC
   SIMP
