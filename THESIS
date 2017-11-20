@@ -170,6 +170,19 @@ MANIFESTO
 
 # 0 ################################################
 SICC
+{###} let us preserve all insight
+{###} till the last man walk
+{###} that he might not walk
+{###} in the darkness of past
+
+{###} independent of time
+{###} independent of wealth
+{###} independent of government
+
+{###} Files get lost
+{###} Storage gets easier
+
+
 {#} System In Complete Chaos
 {###} The core of this system is based on the sha-algorithm which produces unique data identifiers
 {###} Each file is named after its mathematically-based unique identifier
@@ -177,6 +190,7 @@ SICC
 {###} Metadata is securely kept seperate from the data
 {###} This isolation allows for open obfuscation of data
 {###} All data files are kept in one location in alphanumeric order of a 64 hexadecimal identifier
+{###} Data is stored in an ultra-transient method for simple network archive management
 
 {#} Standard metadata file entries:
 {##} name - MKRX XS standardized name
@@ -184,23 +198,23 @@ SICC
 {##} size - number of bytes
 {##} encode - type of encoding
 
+{#} KEY is a recipe to rebuild an obfuscated file
+{##} KEY file is named after the original file sha
+{##} Hexidecimal sequental list of sha that produce the file
+
 {#} SLICR & BLKR further deepens the obfuscation to unprecedented levels
 {##} SLICR
 {###} Shreds a file into random-sized parts & creates KEY
 {##} BLKR
 {###} Blocks file into standard-size parts that produce associative compression & creates KEY
 {###} Homogeneous data types will have duplicate collisions discovered in the sha which will overwrite the previous file that is an exact copy
-{###} The smaller the per-NODE block size the greater the compression & obfuscation
-
-{#} KEY recipe to rebuild file it is named after
-{##} KEY file is named after the original file sha
-{##} Hexidecimal sequental list of sha that produce the file
+{###} The smaller [per-NODE] block-size the greater power of compression & obfuscation
 
 {#} NOTE
 {##} All file entries are located in the /usr/nfs/pub/ directory
-{##} This will store/share/backup/recieve on a network
+{##} This will store|share|backup|recieve as a network
 {##} Network level deduplication of data
-{##} Sane & Clean orders of an archive network
+{##} Sane & Clean orders of massive data on an archive network
 {##} All data easily accounted for in simple-single-entry lists
 
 # 1 ################################################
