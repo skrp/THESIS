@@ -102,12 +102,20 @@ ZFS & Hardware
     raidz2
     raidz3
   Hardware
+    BOX
+      BIOS
+      cpu
+      RAM
+      PCI
+      DEV
+      Supply
     SATA
     PCI-SATA
     SAS
     USB
     Notes
       JBOD
+
 # 7 ################################################
 SCHMATIC
   SIMP
