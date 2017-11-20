@@ -32,7 +32,13 @@ ZFS diagrams PCI, SATA, SAS, USB
 Schematics & Utilities
 
 MAN manuals of instructions & examples
-
+|
+|
+|
+|
+|
+|
+|
 ####################################################
 # Table of Contents
 ####################################################
@@ -167,9 +173,16 @@ MANIFESTO
   Appalachian Epic of 3Shot
   Virtues of Narcissism
   Esoteric Order of Dagon
-
-# 0 ################################################
-SICC
+|
+|
+|
+|
+|
+|
+|
+####################################################
+# 0 - SICC
+####################################################
 {###} let us preserve all insight
 {###} till the last man walk
 {###} that he might not walk
@@ -216,9 +229,16 @@ SICC
 {##} Network level deduplication of data
 {##} Sane & Clean orders of massive data on an archive network
 {##} All data easily accounted for in simple-single-entry lists
-
-# 1 ################################################
-MKRX
+|
+|
+|
+|
+|
+|
+|
+####################################################
+# 1 - MKRX
+####################################################
 
 {#} Tool summary
 
@@ -298,5 +318,17 @@ MKRX
 +$usr@host> XS /mnt/bkup10/ ~/
 +/mnt/bkup10/ - location to grab new data
 +~/ - location to dump data into ~/pool/ & ~/g/
+|
+|
+|
+|
+|
+|
+|
+####################################################
+# 2 - HIVE
+####################################################
 
-
+{####}
+{########}
+$usr@host>
