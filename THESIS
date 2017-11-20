@@ -28,7 +28,7 @@ PSK-OPIE privilege partition & escalation
 PROTO unix network protocol implementations
 STAT node & network dtrace sensor analysis
 
-ZFS diagrams SATA, PCI-SATA, USB, SAS
+ZFS diagrams PCI, SATA, SAS, USB
 Schematics & Utilities
 
 MAN manuals of instructions & examples
@@ -70,15 +70,15 @@ HIVE
 # 3 ################################################
 KERN
   Hardened
-    PSK-OPIE
-    RINGS (rings of power)
-    USR
-      root
-      sroot
-      lord
-      heir
-      seer
-      norm
+  PSK-OPIE
+  RINGS (rings of power)
+  USR
+    root
+    sroot
+    lord
+    heir
+    seer
+    norm
 
 # 4 ################################################
 PSK-OPIE
@@ -125,18 +125,17 @@ ZFS & Hardware
     raidz3
   Hardware
     BOX
-      BIOS
-      cpu
-      RAM
-      PCI
-      DEV
-      Supply
+    BIOS
+    cpu
+    RAM
+    PCI
+    DEV
+    Supply
+    PCI
     SATA
-    PCI-SATA
     SAS
     USB
-    Notes
-      JBOD
+    JBOD
 
 # 8 ################################################
 SCHMATIC
@@ -160,6 +159,8 @@ MAN
     hotswap
     import
     set
+  dtrace manuals
+    language
 
 # END ##############################################
 MANIFESTO
