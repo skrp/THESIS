@@ -170,8 +170,7 @@ MANIFESTO
 
 # 0 ################################################
 SICC
-{#} Standard
-{##} System In Complete Chaos
+{#} System In Complete Chaos
 {###} The core of this system is based on the sha-algorithm which produces unique data identifiers
 {###} Each file is named after its mathematically-based unique identifier
 {###} This de-duplicates & assigns data into Chaos order
@@ -179,7 +178,7 @@ SICC
 {###} This isolation allows for open obfuscation of data
 {###} All data files are kept in one location in alphanumeric order of a 64 hexadecimal identifier
 
-{#} Metadata files include four entries:
+{#} Standard metadata file entries:
 {##} name - MKRX XS standardized name
 {##} path - MKRX XS standardized path of extraction
 {##} size - number of bytes
@@ -195,4 +194,10 @@ SICC
 
 {#} KEY recipe to rebuild file it is named after
 {##} KEY file is named after the original file sha
-{##} Contains a sequential list of sha that produce the file
+{##} Hexidecimal sequental list of sha that produce the file
+
+{#} NOTE
+{##} All file entries are located in the /usr/nfs/pub/ directory
+{##} This will store/share/backup/recieve on a network
+{##} Network level deduplication of data
+{##} Sane & Clean orders of an archive network
