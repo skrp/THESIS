@@ -334,35 +334,35 @@ Load INDEX into memory
 Terminal Input & Output to produce single entry lists
 
 Application Program Interface (API):
- RESET - reset array to full network-array
- LOAD - load array from custom file
- PRINT - output current array
- COUNT - count array
- VAL - output values of array 'name, path, size, encoding'
- POP - output size specific lists to fill up the specific amount of bytes
+  {reset} reset array to full network-array
+  {load}  load array from custom file
+  {print} output current array
+  {count} count array
+  {value} output values of array 'name, path, size, encoding'
+  {pop}   output size-specific lists that sum to a specific-amount of bytes
 
 # EXAMPLES ########################################
 
 Create GET for backup
-TOTAL_NET - location of network-wide file list
-TOTAL_LOCAL - location of local file list
-GET - single-entry line lists of what TOTAL_LOCAL lacks from TOTAL_NET
+  {TOTAL_NET}   location of network-wide file list
+  {TOTAL_LOCAL} location of local file list
+  {GET}         single-entry line lists of what TOTAL_LOCAL lacks from TOTAL_NET
 +++++++++++++++++++++++++++++++++++++++++++++++++++
 $usr@host> UNIQ TOTAL_NET TOTAL_LOCAL GET
 +++++++++++++++++++++++++++++++++++++++++++++++++++
 
 Create EXTRACT from UNIQ
-TOTAL_SOURCE - sha lists of a source
-TOTAL_NET - network-wide file list
-EXTRACT - new unique files to network list
+  {TOTAL_SOURCE} sha lists of a source
+  {TOTAL_NET} network-wide file list
+  {EXTRACT} new unique files to network list
 +++++++++++++++++++++++++++++++++++++++++++++++++++
 $usr@host> UNIQ TOTAL_SOURCE TOTAL_NET EXTRACT
 +++++++++++++++++++++++++++++++++++++++++++++++++++
 
 Populate a new drive
-~/INDEX/ - location of INDEX metadata database hash dumps
-~/POP/1000000000 - file to transfer
-/mnt/USB/pool/ - location to dump files
+  {~/INDEX/}         location of INDEX metadata database hash dumps
+  {~/POP/1000000000} file to transfer
+  {/mnt/USB/pool/}   location to dump files
 +++++++++++++++++++++++++++++++++++++++++++++++++++
 $usr@host> CLI ~/INDEX/
 pop 1000000000
@@ -386,8 +386,8 @@ exit
 Loop over & over by gigabyte-sized fragments
 
 Extract a source
-/mnt/bkup10/ - location to grab new data
-~/ - location to dump data into ~/pool/ & ~/g/
+  {/mnt/bkup10/} location to grab new data
+  {~/} location to dump data into ~/pool/ & ~/g/
 +++++++++++++++++++++++++++++++++++++++++++++++++++
 $usr@host> XS /mnt/bkup10/ ~/
 +++++++++++++++++++++++++++++++++++++++++++++++++++
