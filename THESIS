@@ -31,3 +31,6 @@ Archive Tools are forged in perl code
 Hardware is detailed, explained & examples given
 ZFS raidz setups using SATA, PCI-SATA, USB, SAS
 Massive Tower Schematics & Utilities
+
+Root task manuals
+logs, mount, hot-swap, zfs, ntfs, boot, perl
