@@ -96,7 +96,12 @@ STAT
     NETAVG
 # 6 ################################################
 ZFS & Hardware
-
+  ZFS
+  Hardware
+    SATA
+    PCI-SATA
+    SAS
+    USB
 # 7 ################################################
 SCHMATIC
   SIMP
