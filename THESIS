@@ -18,18 +18,17 @@ _\\cibR punX//______________________________________
 This manuscript details the machine of MKRX UNIX NETWORKS
 This system connects nodes thru encrypted tunnels
 
-Hardened FreeBSD_10.3 custom unix kernels
-PSK-OPIE privilege escalation & partitions
-
-SICC file system
+SICC network file system
 MKRX archive tools
 HIVE work processors
 
-Hardware is detailed, explained & examples given
+Hardened FreeBSD_10.3 custom unix kernels
+PSK-OPIE privilege escalation & partitions
+
 ZFS raidz setups using SATA, PCI-SATA, USB, SAS
 Massive Tower Schematics & Utilities
 
-Root task manuals
+Root task manuals of instructions & examples
 logs, mount, hot-swap, zfs, ntfs, boot, perl
 
 ####################################################
