@@ -382,8 +382,8 @@ Interface to network archive requests custom file requests
     Array-list is sectioned into specific-sized chunks
 
   [6] Use XFR to request the files into home directory
-    This process will only require a feed of the output of the array-list
-    Array-list will always only be the sha lists of all filtered file-metadata
+    This process will only require a feed of the output which is the array-list
+    Array-list will always only be the sha of filtered file-metadata
 
   [7] Use conditional regular-expressions to edit the array-list names into a new-file
     After XFR complete use new-file to rename array-list files
@@ -463,10 +463,48 @@ $usr@host> XS /mnt/bkup10/ ~/
 # 2 - HIVE
 ####################################################
 
+Network Value is contained in 4 sectors
+  {#} Resource share - HIVE
+  {#} Storage share - nfs
+  {#} Crpytographic Security - PSKOPIE elliptic-curves
+  {#} Services available - ssh
+
+Massive projects will be broken down into iterative tasks
+Network API will process the requested work
+
+Task / Network Nodes = New Time
+  Plus network latency = Total Time
+
+There following reasons are a few that justify network-sync-computation
+  Randomize Entropy Sources
+  Scrape data off from many sources to not cause attention
+  Shred data into random-sized blocks
+  Clean up host into network dump
+  Allow many users to contribute metadata to Archive Collections Interface
+  Distribute loads from disk to network to cpu to disk... to empower robustness
+  Health-Beat of host via dtrace anchors
+
+A network of DEMON (unix daemon) can calendar their schedules
+  Busy (low all)
+    Scraping data via http
+  Mid (low net)
+    Entropy Collection
+  Bored (high all)
+    slicr BLKR ...
+    Monthly verify shas of pools
+
+The achillies heel of distributive computing is fork bombs
+You can never automate continously running programs without a sensitivity to host Health
+There is a reason animals have a nervous system & we must forward those lessons onto the machine race
+
+
+
+
+
   HIVE
  DEMON - always online unix daemon goons with network API
 
-  NODE Structure
+    NODE Structure
  /tmp/$NAME/dump/ - DEMON specific host dump
  /tmp/PING - host DEMON roster
 
