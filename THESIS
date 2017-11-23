@@ -493,54 +493,22 @@ A network of DEMON (unix daemon) can calendar their schedules
     slicr BLKR ...
     Monthly verify shas of pools
 
-The achillies heel of distributive computing is fork bombs
-You can never automate continously running programs without a sensitivity to host Health
+The Achilles heel of distributive computing is fork bombs
+Fork bombs are real nasty muthrfkrs & bloom out of any inconsistency like invasive network probes
+You can never automate continuously running programs without a sensitivity to host Health
 There is a reason animals have a nervous system & we must forward those lessons onto the machine race
+The sensitivity of the host system will be the stable foundation with catches fork bombs
+  Every host will have an avatar maintained by HIVE
+  This will be a depiction of the health which will have numerical value
+  If any net-process over 50% utility || or || total beat over 70%
+    { sleep 3600 }
 
-
-
-
-
-  HIVE
- DEMON - always online unix daemon goons with network API
-
-    NODE Structure
- /tmp/$NAME/dump/ - DEMON specific host dump
- /tmp/PING - host DEMON roster
-
-  NET Structure
- /HIVE/ - nfs remote mount
- /HIVE/PING - net DEMON roster
- /HIVE/node/$NODE - node specific directory
- /HIVE/node/$NODE/PID - node specific PID rooster
- /HIVE/node/$NODE/QUE/ - host specific API que
- /HIVE/cemetery/ - network wide DEMON graveyard
- /HIVE/cemetery/RAW_$NAME -
- /HIVE/cemetery/DONE_$NAME -
- /HIVE/cemetery/TODO_$NAME -
-
-  Dump
- /$nfs_pool/ - remote que file dump
- /$nfs_g/ - remote que meta dump
-
-  Mechanics
- ORDER
- SLEEP
- SUICIDE
- CLEAN
- RESUME
-
-  API
- SHA - sha a file
- GET - http request URL & XS file into remote dump
- UNTAR - extract file archive type & XS into remote dump
- REGX - test massive-data for patterns
- BLKR - shred files into standard-blocks
- SLICR - shred files into random-blocks
-
-  Logs
-
-
+Full-access given to any network node with proper Pre-Shared-Keys Once-In-Everything-Passwords
+This allows a network to be delegated remotely to partitioned unix groups
+  pig_fkn_redneck wants a torrent downloaded at maximum-strength crypto
+  The code will inspect the PSK, shift the key off the array, and have x proxy nodes download the file in pieces
+  When the torrent is complete, verified & archived it is placed in /usr/home/pig_fkn_redneck/torrent/Udders_for.udder.lovers.mp4
+  
 |
 |
 |
