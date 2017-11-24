@@ -685,11 +685,14 @@ sshd_config
 other { ttys, jail.conf, login.conf, ntpd.conf, start_if.}
 
 # TREE #############################################
+/usr/home/
+/usr/nfs/pub/
+/usr/bin/
+/usr/sbin/
 
-# ###################################
+# BIN ##############################################
 
-
-
+System-executables
 |
 |
 |
@@ -723,6 +726,11 @@ Seer & norm users have no power to 'su'
 NODE-tree are exact net-clones
 norm1@44m (->) norm1@w2w
 norm1@44m (X) norm2@w2w   (FAIL never had norm2-PSK)
+
+# KEY-UPDATE ######################################
+
+/usr/home/usr/.ssh/id_rsa
+
 
 |
 |
