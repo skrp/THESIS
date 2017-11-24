@@ -464,10 +464,10 @@ $usr@host> XS /mnt/bkup10/ ~/
 ####################################################
 
 Network Value is contained in 4 sectors
-  {#} Resource share - HIVE
-  {#} Storage share - nfs
+  {#} Process clones - HIVE
+  {#} Storage shares - nfs
   {#} Cryptographic Security - PSKOPIE elliptic-curves
-  {#} Services available - ssh
+  {#} Services - ssh
 
 Massive projects will be broken down into iterative tasks
 Network API will process the requested work
@@ -572,12 +572,8 @@ que_r() reads the directory, skips . & .. then returns the next value as the que
 que_up() reads the que-file into an array then deletes it
 Life must have a stable state due to its unpredictable nature
 que_flush() is the mechanism to ensure that a state is kept by TODO que-file that cycles
-api_verify() assures checks the que-file is digestible for the HIVE environment
-
-zombie
-PING
-log
-
+api_verify() checks the que-file is digestible for the HIVE environment
+All que-file that fail the check will become zombies and must be beheaded (head -n 1) & replanted
 |
 |
 |
