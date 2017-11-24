@@ -77,7 +77,7 @@ SICC
   Standard
   Metadata
   Key
-  SLICR
+  shaper
   BLKR
 
 # 1 ################################################
@@ -232,6 +232,11 @@ Data is kept as a sea such that the listing freeze a system
 Obfuscation by explicit filename requests
 Random-parts of random-files in hexadecimal order with no association
 
+To piece together the file 
+  [:D] - Metadata file
+  [:D] - KEY file 
+  [:D] - shape pool
+
 # NAME SYSTEM ######################################
 The core of this system is based on sha file computation
 
@@ -291,7 +296,7 @@ The KEY file contains sequential sha-per-line lists
 
 Obfuscation Methods:
 
-  [X] SLICR (secure against file-known)
+  [X] shaper (secure against file-known)
         Shreds a file into random-sized parts & creates KEY
         Random-size prevents sha rainbow-tables of attacker with file-known
 
@@ -512,7 +517,7 @@ A network of DEMON (unix daemon) work on a schedule
   Mid (low net)
     Entropy collection
   Bored (high all)
-    slicr
+    shaper
     SHA
 
 # NET ##############################################
@@ -532,7 +537,7 @@ HIVE
     ||
    {T}       sleep 3600                                {T}      sleep 3600
  {     }     get www.nasa.com/sun/index.html         {     }    kripkey
-{ FACE  } ========================================{ FACE     }  slicr $i
+{ FACE  } ========================================{ FACE     }  shaper $i
 
 FACE
 This is an ASCII graphical representation of the NODE
