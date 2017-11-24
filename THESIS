@@ -232,11 +232,12 @@ Data is kept as a sea such that the listing freeze a system
 Obfuscation by explicit filename requests
 Random-parts of random-files in hexadecimal order with no association
 
-To piece together the file 
+To piece together the file
   [:D] - Metadata file
-  [:D] - KEY file 
+  [:D] - KEY file
   [:D] - shape pool
-
+  [:D] - KEY$ payment
+  
 # NAME SYSTEM ######################################
 The core of this system is based on sha file computation
 
