@@ -32,6 +32,13 @@ ZFS diagrams PCI, SATA, SAS, USB
 Schematics & Utilities
 
 MAN manuals of instructions & examples
+
+Network Value is contained in 4 sectors
+  {#} Storage shares - nfs
+  {#} Process clones - HIVE
+  {#} Cryptographic Security - PSKOPIE elliptic-curves
+  {#} Services - ssh
+
 |
 |
 |
@@ -207,6 +214,23 @@ MAN
 ####################################################
 
 ######## System In Complete Chaos    ###############
+Storage is the most important factor that this system contributes the network
+Archive-oriented structures are implemented as network-wide file donations
+
+/usr/dump/ 330 write-only dump-dir which will be scraped into the SICC-system
+SICC will process all files into a sane manner built to handle massive numbers
+
+Storage has a next important factor is entropy strength
+Entropy is stored to be traded with other hosts
+
+Entropy over-time multiple-source random-selection
+Each Private-Key stored as its sha
+
+To sum up
+Data is kept as a sea such that the listing freeze a system
+
+Obfuscation by explicit filename requests
+Random-parts of random-files in hexadecimal order with no association
 
 # NAME SYSTEM ######################################
 The core of this system is based on sha file computation
@@ -218,21 +242,21 @@ Each file is named after its sha
 
 This name system has two benefits:
   {1} de-duplicates files
-  {2} assigns data into Chaos order
+  {2} assigns data into chaotic order
 
 Sha uniqueness keeps all data:
   [-] simple
   [-] homogeneous
   [-] ultra-transient
 
-The duplication of data is accounted in single-entry lists
+The duplication of data is accounted in lists
 Each data-pool is maximized in its ability to minimize the data-pool's disk-footprint
 
 The duplication count allows for network backup prioritization to remote devices
-This foundation is stable for automated backup management of massive-data networks
+This foundation is stable for automated backup management of massive-distributed-data
 
 # METADATA #######################################
-Metadata is kept isolated from the data
+Metadata is kept isolated from data
 This isolation allows for the obfuscation of open data
 
 Data-pool lists have lessened-value without Metadata
@@ -247,10 +271,10 @@ Two factors assist in obfuscation
   (1) No subdirectories to betray association
   (2) Alpha-numeric ordering of the hexadecimal names
 
-
+The path allows for past-association to be deduced for group-reconstruction
 Each file is periodically verified to have a corresponding metadata-file
 
-Each metadata-file consists of 4 single-line entries:
+Each metadata-file consists of 4 lines:
   (1) name - XS (MKRX) standardized name
   (2) path - XS standardized path of extraction
   (3) size - number of bytes
@@ -263,7 +287,7 @@ This allows for a powerful layer of unprecedented obfuscation
 What is public gibberish is made private information thru access to a KEY file
 
 Each KEY file is named after the original file sha
-The KEY file contains sequential sha-per-line entries
+The KEY file contains sequential sha-per-line lists
 
 Obfuscation Methods:
 
@@ -282,12 +306,13 @@ Obfuscation Methods:
 # SUMMARY #########################################
 
 This file-system spread over a network has the following benefits:
-  [o] All data easily accounted for in single-entry lists
-  [o] Sane & Clean orders of massive-data on an network
+  [o] All data easily accounted for in simple lists
+  [o] Sane & clean orders of massive-data on an network
   [o] Network level explicit control of the duplication of data
   [o] Each node serves what is possible
   [o] Each node has access to total data
   [o] Each node can assist in external backups
+  [o] Total network-pool footprint is minimized
 
 On a homogeneous unix kernel the network file-system is transparent
 Only active tunnels will be displayed as available data-pools
@@ -361,6 +386,9 @@ In minutes this processes data that would require many days for grep
 
 # CLI ############################################
 Interface to network archive requests custom file requests
+This is a daemon server that keeps METAMASTER in memory
+Transactions are hexadecimal arrays
+
   [1] Build INDEX hash-dumps into memory
     This may take several minutes due to massive-data
 
@@ -462,12 +490,6 @@ $usr@host> XS /mnt/bkup10/ ~/
 ####################################################
 # 2 - HIVE
 ####################################################
-
-Network Value is contained in 4 sectors
-  {#} Process clones - HIVE
-  {#} Storage shares - nfs
-  {#} Cryptographic Security - PSKOPIE elliptic-curves
-  {#} Services - ssh
 
 Massive projects will be broken down into iterative tasks
 Network API will process the requested work
