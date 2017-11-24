@@ -466,7 +466,7 @@ $usr@host> XS /mnt/bkup10/ ~/
 Network Value is contained in 4 sectors
   {#} Resource share - HIVE
   {#} Storage share - nfs
-  {#} Crpytographic Security - PSKOPIE elliptic-curves
+  {#} Cryptographic Security - PSKOPIE elliptic-curves
   {#} Services available - ssh
 
 Massive projects will be broken down into iterative tasks
@@ -492,6 +492,24 @@ A network of DEMON (unix daemon) can calendar their schedules
   Bored (high all)
     slicr BLKR ...
     Monthly verify shas of pools
+####################################################
+# NET ##############################################
+Spells that are cast to administer all DEMON
+Restricted back-door logic to dictate the program flow
+  PING - alive last 15-min
+  SLEEP - pause all (may take forever to infinity)
+  RAW - all output log
+  HICC - fail / error
+  BURP - cat log of successful iterations
+  FACE - echo DEMON portrait
+  REIN - iograph of net & individual data
+  BARK - { [PING * ALLOWANCE] < 10%_expected }
+  SUICIDE - clean-up then kill-itself
+
+
+
+
+# NODE #############################################
 
 The Achilles heel of distributive computing are fork-bombs & defunct-muthrfkrs
 Fork bombs are nasty & bloom out of any inconsistency [like invasive network probes]
