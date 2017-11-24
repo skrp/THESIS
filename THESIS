@@ -484,31 +484,16 @@ There following reasons are a few that justify network-sync-computation
   Distribute loads from disk to network to cpu to disk... to empower robustness
   Health-Beat of host via dtrace anchors
 
-A network of DEMON (unix daemon) can calendar their schedules
+A network of DEMON (unix daemon) work on a schedule
   Busy (low all)
-    Scraping data via http
+    Scrape http data
   Mid (low net)
-    Entropy Collection
+    Entropy collection
   Bored (high all)
-    slicr BLKR ...
-    Monthly verify shas of pools
-####################################################
+    slicr
+    SHA
+
 # NET ##############################################
-Spells that are cast to administer all DEMON
-Restricted back-door logic to dictate the program flow
-  PING - alive last 15-min
-  SLEEP - pause all (may take forever to infinity)
-  RAW - all output log
-  HICC - fail / error
-  BURP - cat log of successful iterations
-  FACE - echo DEMON portrait
-  REIN - iograph of net & individual data
-  BARK - { [PING * ALLOWANCE] < 10%_expected }
-  SUICIDE - clean-up then kill-itself
-
-A HIVE cumulative workload should never breach 20% of maximum
-The goal behind this work is to allow sanity thru dissociative-scheduled-massive-computation of a network of these HIVE
-
 
 HIVE
     {T}    get www.pedrk.com/tome.txt
@@ -536,7 +521,27 @@ STATE represents the HOST each report independent to other DEMON
   [y] SUCCESSFUL_ITERATIONS (YAY, 5-line-success-buffer)
 
 
+Commands (all or node)
+  PING - alive last 15-min
+  SLEEP - pause all (may take forever to infinity)
+  RAW - all output log
+  HICC - fail / error
+  BURP - cat log of successful iterations
+  FACE - echo DEMON portrait
+  REIN - iograph of net & individual data
+  BARK - { [PING * ALLOWANCE] < 10%_expected }
+  SUICIDE - clean-up then kill-itself
+
+A HIVE cumulative workload should never breach 20% of maximum
+The goal behind this work is to allow sanity thru dissociative-scheduled-massive-computation of a network of these HIVE
+
 # NODE #############################################
+
+A unix daemon is an process that severs all-but-explicit interface file descriptors
+This provides an independence which stabilizes the foundation of the code
+This code is a summon-scroll crafted to deal with specific actions
+  The process can be suspended-shutdown-update_que by an admin able to write in a locked-down dir
+  The DEMON-INTERFACE will all specific tasks in an explicit command execution
 
 The Achilles heel of distributive computing are fork-bombs & defunct-muthrfkrs
 Fork bombs are nasty & bloom out of any inconsistency [like invasive network probes]
@@ -554,15 +559,25 @@ This allows a network to be delegated remotely to partitioned unix groups
   The code will inspect the PSK, shift the key off the array, and have x proxy nodes download the file in pieces
   When the torrent is complete, verified & archived it is placed in /usr/home/pig_fkn_redneck/torrent/Udders_for.udder.lovers.mp4
 
-A unix daemon is an process that severes all-but-explicit interface file descriptors
-This provides an independence which stabilizes the foundation of the code
-This code is a summon-scroll crafted to deal with specific actions
-  The process can be suspended-shutdown-update_que by an admin able to write in a locked-down dir
-  The DEMON-INTERFACE will all specific tasks in an explicit command execution
+# FUNCTIONS #########################################
 
+tombstone() name() time()
+Each DEMON has a unique name that will be memorialized with its lifeswork
+For a member to enrich the whole, first the society must cherish the member
+The tombstone is a snapshot of the last DEMON portrait FACE
 
+que_r() que_up() que_flush() api_verify()
+QUE for work is placed via nfs into the node specific folder /HIVE/node/$host/que/que-file
+que_r() reads the directory, skips . & .. then returns the next value as the que-file
+que_up() reads the que-file into an array then deletes it
+Life must have a stable state due to its unpredictable nature
+que_flush() is the mechanism to ensure that a state is kept by TODO que-file that cycles
+api_verify() assures checks the que-file is digestible for the HIVE environment
 
-|
+zombie
+PING
+log
+
 |
 |
 |
@@ -590,7 +605,7 @@ This code is a summon-scroll crafted to deal with specific actions
 |
 |
 ####################################################
-# 5 - PROTO
+# 5 - PF
 ####################################################
 |
 |
@@ -600,7 +615,7 @@ This code is a summon-scroll crafted to deal with specific actions
 |
 |
 ####################################################
-# 6 - STAT
+# 6 - SERVICE
 ####################################################
 |
 |
@@ -630,7 +645,7 @@ This code is a summon-scroll crafted to deal with specific actions
 |
 |
 ####################################################
-# 9 - MAN
+# 9 - STAT
 ####################################################
 |
 |
