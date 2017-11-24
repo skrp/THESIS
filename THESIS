@@ -493,15 +493,15 @@ A network of DEMON (unix daemon) can calendar their schedules
     slicr BLKR ...
     Monthly verify shas of pools
 
-The Achilles heel of distributive computing is fork bombs
-Fork bombs are real nasty muthrfkrs & bloom out of any inconsistency like invasive network probes
-You can never automate continuously running programs without a sensitivity to host Health
+The Achilles heel of distributive computing are fork-bombs & defunct-muthrfkrs
+Fork bombs are nasty & bloom out of any inconsistency [like invasive network probes]
+Defunct processors are unkillable in certain situations
+You can never automate continuously running programs without a sensitivity to host health
 There is a reason animals have a nervous system & we must forward those lessons onto the machine race
 The sensitivity of the host system will be the stable foundation with catches fork bombs
   Every host will have an avatar maintained by HIVE
   This will be a depiction of the health which will have numerical value
-  If any net-process over 50% utility || or || total beat over 70%
-    { sleep 3600 }
+  If any net-process over 50% utilized-cpu then cleanup & exit or sleep
 
 Full-access given to any network node with proper Pre-Shared-Keys Once-In-Everything-Passwords
 This allows a network to be delegated remotely to partitioned unix groups
@@ -510,12 +510,13 @@ This allows a network to be delegated remotely to partitioned unix groups
   When the torrent is complete, verified & archived it is placed in /usr/home/pig_fkn_redneck/torrent/Udders_for.udder.lovers.mp4
 
 A unix daemon is an process that severes all-but-explicit interface file descriptors
-This provides an independence which stabilizes the foundation of the code 
-This code is a summon-scroll crafted to deal with specific actions 
-  The process can be suspended-shutdown-update_que by an admin able to write in a locked-down dir 
-   
+This provides an independence which stabilizes the foundation of the code
+This code is a summon-scroll crafted to deal with specific actions
+  The process can be suspended-shutdown-update_que by an admin able to write in a locked-down dir
+  The DEMON-INTERFACE will all specific tasks in an explicit command execution
 
-  
+
+
 |
 |
 |
