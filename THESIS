@@ -237,7 +237,7 @@ To piece together the file
   [:D] - KEY file
   [:D] - shape pool
   [:D] - KEY$ payment
-  
+
 # NAME SYSTEM ######################################
 The core of this system is based on sha file computation
 
@@ -497,13 +497,37 @@ $usr@host> XS /mnt/bkup10/ ~/
 # 2 - HIVE
 ####################################################
 
-Massive projects will be broken down into iterative tasks
-Network API will process the requested work
+Network TXN (transactions) are based on KEY$ currency
+Creating & trading private-keys as a means for network access
 
-Task / Network Nodes = New Time
-  Plus network latency = Total Time
+Usr sends unstable-input to HIVE
+A DEMON stablizes-input & computes
+HIVE deposits payment into usr bank
+Usr buys host-keys & trades them for specified-host-keys
 
-There following reasons are a few that justify network-sync-computation
+Each heart of each node singular in the aim of Archive
+Data stored for the future & it will offer refuge to any helpful
+
+Encode bounty * group-multiplier = payment
+Payment is exchanged for group-limited private-keys
+
+Private-key will be used to open a tunnel
+Pre-Shared-Key One-Time-In-Everything
+_
+
+Massive projects will be broken down into iterative-tasks
+Usr will work DEMON upon sections of those iterative-tasks
+
+Two quest areas
+  ["] - harvest of novel workloads lists
+  ["] - compute lists
+
+Each project will be distributed to array-computation
+
+project / network-nodes = time
+  time + network latency = total-time
+
+Benefits of network-sync-computation
   Randomize Entropy Sources
   Scrape data off from many sources to not cause attention
   Shred data into random-sized blocks
