@@ -506,7 +506,34 @@ Restricted back-door logic to dictate the program flow
   BARK - { [PING * ALLOWANCE] < 10%_expected }
   SUICIDE - clean-up then kill-itself
 
+A HIVE cumulative workload should never breach 20% of maximum
+The goal behind this work is to allow sanity thru dissociative-scheduled-massive-computation of a network of these HIVE
 
+
+HIVE
+    {T}    get www.pedrk.com/tome.txt
+  {     }  blkr $i
+{ FACE    }
+    ||
+    ||
+    ||
+    ||
+    ||                    key_4ff38 < [usr]
+    ||                    key_ff9aae   v   > key_d3413
+    ||
+    ||
+    ||
+   {T}       sleep 3600                                {T}      sleep 3600
+ {     }     get www.nasa.com/sun/index.html         {     }    kripkey
+{ FACE  } ========================================{ FACE     }  slicr $i
+
+FACE
+This is an ASCII graphical representation of the NODE
+STATE represents the HOST each report independent to other DEMON
+  [y] NAME
+  [Y] STATE
+  [y] AGE_IN_HOURS
+  [y] SUCCESSFUL_ITERATIONS (YAY, 5-line-success-buffer)
 
 
 # NODE #############################################
