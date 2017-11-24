@@ -214,8 +214,9 @@ MAN
 ####################################################
 
 ######## System In Complete Chaos    ###############
-Storage is the most important factor that this system contributes the network
-Archive-oriented structures are implemented as network-wide file donations
+
+Storage shares are the most important factor in this network
+Archive-oriented structures are implemented as network-wide pursuit of unique files
 
 /usr/dump/ 330 write-only dump-dir which will be scraped into the SICC-system
 SICC will process all files into a sane manner built to handle massive numbers
@@ -239,6 +240,7 @@ To piece together the file
   [:D] - KEY$ payment
 
 # NAME SYSTEM ######################################
+
 The core of this system is based on sha file computation
 
 Sha is a unique file identifier that is the output of a mathematical algorithm
@@ -262,6 +264,7 @@ The duplication count allows for network backup prioritization to remote devices
 This foundation is stable for automated backup management of massive-distributed-data
 
 # METADATA #######################################
+
 Metadata is kept isolated from data
 This isolation allows for the obfuscation of open data
 
@@ -287,6 +290,7 @@ Each metadata-file consists of 4 lines:
   (4) encode - type of encoding
 
 # KEY ##############################################
+
 A KEY is a recipe to rebuild an obfuscated file
 
 This allows for a powerful layer of unprecedented obfuscation
@@ -360,6 +364,7 @@ MKRX Tools:
 
 
 # XS ###############################################
+
 Extract & Standardize All Files Recursively
   Send data to pool-dir
   Build metadata in g-dir
@@ -378,6 +383,7 @@ The path allows for past-association awareness
 Size & encoding keep calculations one-time-only
 
 # UNIQ ############################################
+
 Output if ARG1 does-not-exist in ARG2
 
 Filter data that is unique on the network
@@ -391,6 +397,7 @@ Learn the simple code mechanic & this command will prove a general system tool
 In minutes this processes data that would require many days for grep
 
 # CLI ############################################
+
 Interface to network archive requests custom file requests
 This is a daemon server that keeps METAMASTER in memory
 Transactions are hexadecimal arrays
@@ -635,6 +642,54 @@ All que-file that fail the check will become zombies and must be beheaded (head 
 ####################################################
 # 3 - KERN
 ####################################################
+FreeBSD 10.3 kernel is hardened & customized to provide a homogeneous network-environment
+
+  [z] - program install
+  [z] - configuration
+  [z] - users & groups (section 4)
+
+The system is off-line installation till PSKOPIE
+USB is loaded with pre-worked tarballs of sourcecode
+
+Configuration purify the integrity of the unix-hull
+Users & groups form the columns that keep structure
+
+# PROGRAMS #########################################
+
+To load the USB with programs to be made available by default
+  (1) go to the /usr/ports/ program directory
+  (2) make fetch
+  (3) sanitize configure file
+  (4) if test then tar to USB
+  (5) insert program into USB install code
+
+# CONFIGURATION ####################################
+
+sysctl.conf
+
+rc.conf
+
+pf.conf
+  All network pipes are structured thru this configuration
+  Tables allow for each node to be synced to the other with approved lists
+  All tcp communications are hardened with reassemble scrubs
+  Traffic is blocked-silent unless there is explicit approval
+  Proxy tunnels are established thru net-lists
+    [q] source_interface
+    [q] destination_addr
+    [q] port
+    [q] usr
+
+
+sshd_config
+other { ttys, jail.conf, login.conf, ntpd.conf, start_if.}
+
+# TREE #############################################
+
+# ###################################
+
+
+
 |
 |
 |
@@ -645,6 +700,30 @@ All que-file that fail the check will become zombies and must be beheaded (head 
 ####################################################
 # 4 - PSKOPIE
 ####################################################
+Pre-Shared-Key Once-Password-In-Everything
+Group RING key types
+
+Each login will require a reduction of the usr usb-bank
+
+# Escalation ######################################
+GROUPS
+  lord:wheel - su-root
+    mreki:lord - su-lord
+    betty:lord - su-lord
+  heir-lord - su-lord
+    hermi:betty - su-betty
+    genri:merki - su-mreki
+
+  seer-seer - null
+  norm-norm - null
+
+'su' can only be used for ascension
+Seer & norm users have no power to 'su'
+
+NODE-tree are exact net-clones
+norm1@44m (->) norm1@w2w
+norm1@44m (X) norm2@w2w   (FAIL never had norm2-PSK)
+
 |
 |
 |
