@@ -672,6 +672,7 @@ sysctl.conf
   [p] - Tighten
 
 rc.conf
+  [p] - host
 
 pf.conf
   All network pipes are structured thru this configuration
@@ -739,14 +740,17 @@ NODE-tree are exact net-clones
 norm1@44m (->) norm1@w2w
 norm1@44m (X) norm2@w2w   (FAIL never had norm2-PSK)
 
+ALICE ASCENSION
+ [[3]]
+(alice)#
     lord:wheel
-------------------
-||               ||      {{  sir:lord  }}
-||               ||                           [heir:sir] [heir:sir]
-||               ||                           [heir:sir] [heir:sir]
+------------------                         [[2]]
+||               ||      {{  sir:lord  }} (alice)            [[1]]
+||               ||                           [y_heir:sir]  (alice)[x_heir:sir]
+||               ||                           [y_heir:sir]         [x_heir:sir]
 ||               ||      {{ mam:lord   }}
-||               ||                           [heir:mam] [heir:mam]
-||               ||                           [heir:mam] [heir:mam]
+||               ||                           [f_heir:mam] [b_heir:mam]
+||               ||                           [b_heir:mam] [b_heir:mam]
 ------------------
 
 # KEY-UPDATE ######################################
@@ -811,6 +815,12 @@ SSL sockets confirm the identity of the host
 Privileged nologin accounts sha-confirm then load the addresses
 Approved-list -> sha256 -> post to network -> network confirm -> load list
 If the sha does not match the network the table is not loaded
+
+# USR ##############################################
+pf allows for a network to pipe data by usr accounts
+All accounts are preset & preshared to keep the network clean, simple & stable
+
+USR & GRP are mirrored over hosts
 |
 |
 |
@@ -821,6 +831,10 @@ If the sha does not match the network the table is not loaded
 ####################################################
 # 6 - SERVICE
 ####################################################
+
+Every day a node is awarded a token that can be exchanged with a host for KEY$
+This incentive will increase a network wide service branch
+
 DNS
 NTP
 SSH
