@@ -739,6 +739,16 @@ NODE-tree are exact net-clones
 norm1@44m (->) norm1@w2w
 norm1@44m (X) norm2@w2w   (FAIL never had norm2-PSK)
 
+    lord:wheel
+------------------
+||               ||      {{  sir:lord  }}
+||               ||                           [heir:sir] [heir:sir]
+||               ||                           [heir:sir] [heir:sir]
+||               ||      {{ mam:lord   }}
+||               ||                           [heir:mam] [heir:mam]
+||               ||                           [heir:mam] [heir:mam]
+------------------
+
 # KEY-UPDATE ######################################
 
 /usr/home/usr/.ssh/id_rsa
@@ -755,6 +765,14 @@ Registers account each transaction of a node,  a unique file can only be on one 
   (1) REGSTR( past + add -  ded )
   (2) {jan-mar} = $sha
   (3) "ALARM" unless (cat REGSTR | grep [jan|feb|mar] | SHA == '$sha')
+
+A usr puts in a QUE-bid for a DEMON which relies on host-load to process
+If the output is acceptable output the usr is rewarded with credits it buys connections with
+
+Available kernel KEY$ on a host
+{ host } { host } { host }
+| KEY$ | | KEY$ | |      |
+|_...__| |_...__| |______| . . .
 
 |
 |
