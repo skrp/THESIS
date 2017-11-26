@@ -643,6 +643,7 @@ All que-file that fail the check will become zombies and must be beheaded (head 
 # 3 - KERN
 ####################################################
 FreeBSD 10.3 kernel is hardened & customized to provide a homogeneous network-environment
+The power of unix is its ability to clone increases the network cohesiveness with the intricateness of the clone
 
   [z] - program install
   [z] - configuration
@@ -740,6 +741,12 @@ NODE-tree are exact net-clones
 norm1@44m (->) norm1@w2w
 norm1@44m (X) norm2@w2w   (FAIL never had norm2-PSK)
 
+USR & GRP are mirrored over hosts
+This allows for the seasoned usr to ascend deeper with ease on any host
+
+Remote root is allowed but thru obfuscated-means & alarms
+The common-action is to use a hidden & extremely limited accounts
+
 ALICE ASCENSION
  [[3]]
 (alice)#
@@ -820,7 +827,6 @@ If the sha does not match the network the table is not loaded
 pf allows for a network to pipe data by usr accounts
 All accounts are preset & preshared to keep the network clean, simple & stable
 
-USR & GRP are mirrored over hosts
 |
 |
 |
@@ -883,3 +889,5 @@ MORSE
 |
 |
 |
+
++
