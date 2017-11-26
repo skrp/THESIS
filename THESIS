@@ -785,6 +785,21 @@ Available kernel KEY$ on a host
 | KEY$ | | KEY$ | |      |
 |_...__| |_...__| |______| . . .
 
+# MARKET ##########################################
+
+KEY$ are exchanged p2p
+  [B] SELL - sell uniq data to kern in exchange for token
+  [B] XFR - transfer KEY$ for KEY$
+
+
+KEY$ are managed like stock
+The more valuable the host access the more valuable the KEY$
+
+(1)
+//zr9\\ ---- $sha_of_unique + zr9_KEY$ ----> //8n8\\
+(2)
+//8n8\\ ---- $sha_of_unique + zr9_KEY$ ----> //55q\\
+
 |
 |
 |
@@ -889,5 +904,3 @@ MORSE
 |
 |
 |
-
-+
