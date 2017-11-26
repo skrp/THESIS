@@ -1,4 +1,4 @@
-####################################################
+4####################################################
 # MKRX UNIX NETWORK
 
                                              ~ skrp
@@ -18,11 +18,11 @@ _\\cibR punX//______________________________________
 This manuscript details the machine of MKRX UNIX NETWORKS
 This system connects nodes thru encrypted tunnels
 
-SICC network file system https://github.com/skrp/SICC
-MKRX archive tools https://github.com/skrp/MKRX
-HIVE work processors https://github.com/skrp/HIVE
+SICC network file system
+MKRX archive tools
+HIVE work processors
 
-KERN hardened FreeBSD_10.3 custom unix kernels https://github.com/skrp/ECHO
+KERN hardened FreeBSD_10.3 custom unix kernels
 PSK-OPIE privilege partition & escalation
 
 PROTO unix network protocol implementations
@@ -666,6 +666,10 @@ To load the USB with programs to be made available by default
 # CONFIGURATION ####################################
 
 sysctl.conf
+  [p] - Restrict owner-only process view
+  [p] - Restrict member-only group view
+
+  [p] - Tighten
 
 rc.conf
 
@@ -684,15 +688,23 @@ pf.conf
 sshd_config
 other { ttys, jail.conf, login.conf, ntpd.conf, start_if.}
 
-# TREE #############################################
+# ZFS-HEIRARCHY #############################################
 /usr/home/
 /usr/nfs/pub/
-/usr/bin/
-/usr/sbin/
+/usr/bin/ - norm bin
+/bin - lord bin
+
+
 
 # BIN ##############################################
 
 System-executables
+
+The only user that can read a user home directory is root or su-capable user
+Privacy of user files is a founding principal of this network
+  [#] home
+  [#] mail
+  [#]
 |
 |
 |
@@ -742,6 +754,30 @@ norm1@44m (X) norm2@w2w   (FAIL never had norm2-PSK)
 ####################################################
 # 5 - PF
 ####################################################
+
+# RAW ##############################################
+Packet Filter is a raw-packet piping
+Raw-packet pipe systems allows for the simplest form of action
+
+tcpdump network analysis
+pflog is read via tcpdump
+
+# XCOM #############################################
+eXplicit COMmunications kept the hull of the network tight
+A solid object is formed as expertise grows
+
+No packet is passed unless it is explicitly-allowed to an explicit-host that is SSL verified
+All TCP transactions are scrubbed & reassembled
+
+Anti-Middleman techniques used at the network & kernel level
+
+####################################################
+Tables are files the system uses to lookup hosts to pass
+SSL sockets confirm the identity of the host
+
+Privledged nologin accounts sha-confirm then load the addresses
+Approved-list -> sha256 -> post to network -> network confirm -> load list
+
 |
 |
 |
