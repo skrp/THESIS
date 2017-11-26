@@ -18,11 +18,11 @@ _\\cibR punX//______________________________________
 This manuscript details the machine of MKRX UNIX NETWORKS
 This system connects nodes thru encrypted tunnels
 
-SICC network file system
-MKRX archive tools
-HIVE work processors
+SICC network file system https://github.com/skrp/SICC
+MKRX archive tools https://github.com/skrp/MKRX
+HIVE work processors https://github.com/skrp/HIVE
 
-KERN hardened FreeBSD_10.3 custom unix kernels
+KERN hardened FreeBSD_10.3 custom unix kernels https://github.com/skrp/ECHO
 PSK-OPIE privilege partition & escalation
 
 PROTO unix network protocol implementations
