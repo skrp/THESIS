@@ -743,6 +743,18 @@ norm1@44m (X) norm2@w2w   (FAIL never had norm2-PSK)
 
 /usr/home/usr/.ssh/id_rsa
 
+# KEY$ ############################################
+
+First, to communicate with the network the PSKOPIE KEY$ must be obtained
+Kernels exchange files & services for KEY$ that are a fluid source with a finite-lifespan
+
+Elliptic-curves are used in a random array which each kernel mines periodically
+KEY$ are then exchanged for increased file-sha on their list
+
+Registers account each transaction of a node,  a unique file can only be on one register, each section of the file a sha-confirmed states
+  (1) REGSTR( past + add -  ded )
+  (2) {jan-mar} = $sha
+  (3) "ALARM" unless (cat REGSTR | grep [jan|feb|mar] | SHA == '$sha')
 
 |
 |
@@ -759,25 +771,28 @@ norm1@44m (X) norm2@w2w   (FAIL never had norm2-PSK)
 Packet Filter is a raw-packet piping
 Raw-packet pipe systems allows for the simplest form of action
 
-tcpdump network analysis
-pflog is read via tcpdump
+tcpdump analysis & parsed-output is PSKOPIE posted over the network
+[ pflog is read via tcpdump ]
 
 # XCOM #############################################
 eXplicit COMmunications kept the hull of the network tight
 A solid object is formed as expertise grows
 
 No packet is passed unless it is explicitly-allowed to an explicit-host that is SSL verified
-All TCP transactions are scrubbed & reassembled
-
 Anti-Middleman techniques used at the network & kernel level
 
-####################################################
+All TCP transactions are scrubbed & reassembled
+The subnet behind the NODE is disguised as the node
+MAC-addresses are all masked on the network
+
+# TABLES ############################################
 Tables are files the system uses to lookup hosts to pass
 SSL sockets confirm the identity of the host
 
-Privledged nologin accounts sha-confirm then load the addresses
+(CAPTN_CONFIG discussed later)
+Privileged nologin accounts sha-confirm then load the addresses
 Approved-list -> sha256 -> post to network -> network confirm -> load list
-
+If the sha does not match the network the table is not loaded
 |
 |
 |
@@ -788,6 +803,15 @@ Approved-list -> sha256 -> post to network -> network confirm -> load list
 ####################################################
 # 6 - SERVICE
 ####################################################
+DNS
+NTP
+SSH
+MAIL
+FTP
+NFS
+HTTP
+SCP-WALKITALKI
+MORSE
 |
 |
 |
@@ -798,6 +822,8 @@ Approved-list -> sha256 -> post to network -> network confirm -> load list
 ####################################################
 # 7 - ZFS & Hardware
 ####################################################
+
+
 |
 |
 |
