@@ -792,6 +792,10 @@ ALICE ASCENSION
 # KEY-UPDATE ######################################
 
 /usr/home/usr/.ssh/id_rsa
+/usr/home/usr/.ssh/id_rsa.pub
+
+Usr accounts have a finite lifespan
+Time added at cost that is reduced upon time-in-relation of the host-system
 
 # KEY$ ############################################
 
@@ -952,6 +956,10 @@ MORSE
 # 7 - ZFS & Hardware
 ####################################################
 
+# QUOTA ############################################
+
+This allows for secure partition of files to order
+Stability is ensured by zfs file-system caps of data
 
 |
 |
