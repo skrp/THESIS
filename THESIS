@@ -973,6 +973,7 @@ Nodes offer transient storage for the BLK_CLD of files
 ####################################################
 
 # RAW ##############################################
+
 Packet Filter is a raw-packet piping
 Raw-packet pipe systems allows for the simplest form of action
 
@@ -980,6 +981,7 @@ tcpdump analysis & parsed-output is PSKOPIE posted over the network
 [ pflog is read via tcpdump ]
 
 # XCOM #############################################
+
 eXplicit COMmunications kept the hull of the network tight
 A solid object is formed as expertise grows
 
@@ -991,6 +993,7 @@ The subnet behind the NODE is disguised as the node
 MAC-addresses are all masked on the network
 
 # TABLES ############################################
+
 Tables are files the system uses to lookup hosts to pass
 SSL sockets confirm the identity of the host
 
@@ -1000,6 +1003,7 @@ Approved-list -> sha256 -> post to network -> network confirm -> load list
 If the sha does not match the network the table is not loaded
 
 # USR ##############################################
+
 pf allows for a network to pipe data by usr accounts
 All accounts are preset & preshared to keep the network clean, simple & stable
 
@@ -1076,6 +1080,7 @@ zfs create -o mountpoint='' $pool
 zfs set -o sharenfs=on $pool
 
 # SECURITY #########################################
+
 read-only
 nfs-share
 nfs-MAC
@@ -1086,6 +1091,7 @@ This allows for secure partition of files to order
 Stability is ensured by zfs file-system caps of data
 
 # zdb ##############################################
+
  [-] v ...
    mo verbosity da mo bettah
 
@@ -1117,6 +1123,7 @@ Stability is ensured by zfs file-system caps of data
    recover tool
 
 # log ##############################################
+
 zfs list
 zpool list
 zpool status -x
@@ -1209,6 +1216,7 @@ USB-SATA
   Power-strip + USB ports + shelf
 
 # TOWR ###############################################
+
   42u Towers are stable ways to hold a command center together
 
    [[98888888888888888888]]
@@ -1231,6 +1239,7 @@ USB-SATA
    [[88888888888888888888]]
 
 # Utilities ##########################################
+
   HDD External Case
     house HDD apartments 1
   UPS
