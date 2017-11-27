@@ -46,6 +46,8 @@ Schematics & Utilities
 
 
 Packet Filter (pf) raw packet piping
+
+https://github.com/skrp/DTRACE
 STAT node & network dtrace sensor analysis
 
 MAN manuals of instructions & examples
@@ -1291,6 +1293,31 @@ NFS serving 75%+ data pool
 ####################################################
 # 9 - STAT
 ####################################################
+
+# UNIX-LOG #########################################
+
+   [M] - NET
+   [M] - DISK
+   [M] - CPU
+
+# ZFS-REPORTS ##########################################
+
+  [M] - NET
+  [M] - DISK
+  [M] - CPU
+
+# DTRACE-REPORTS ###########################################
+
+  [M] - NET
+  [M] - DISK
+  [M] - CPU
+
+DTrace is a powerful bond between the kernel & hacker
+Nobullshit-raw-data-sensor-anchors
+
+Track the host by raw syscalls
+Parse the anchor output into intelligent reports
+
 |
 |
 |
