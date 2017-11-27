@@ -1029,8 +1029,13 @@ Stability is ensured by zfs file-system caps of data
 
 # DISK CONNECTION  #################################
 
+Kernel requirements to use the hard-disk-drives (HDD)
+  [a] Power pin secure to the HDD
+  [a] SATA cable secure attached to HDD
+  [a] Recognizable File System || overwrite
+
 POWER
-  All harddrives are powered by a pin that can be daisy chained as a power source
+  HDD are powered by a pin that can be daisy chained as a power source
   HDD do not require much power and this can allow a node to increase in size
 
 SATA-HDD
@@ -1049,18 +1054,18 @@ JBOD
   Each raid-card has their own BIOS to search for the JBOD option
   Be sure because if you are wrong you are fkd
 
-TOWR
+# TOWR ###############################################
   42u Towers are stable ways to hold a command center together
 
    [[98888888888888888888]]
    [[ ===== firewall ====]]
-   [[ ===================]]
-   [[ ===== x3e 7c7 =====]]
-   [[ ___________________]]
-   [[ ========= UPS =====]]
-   [[ ======= switch ====]]
-   [[ == powerstrip =====]]
-   [[ ====== CHEST ======]]
+   [[ ===================]]oooooo
+   [[ ===== x3e 7c7 =====]]      0
+   [[ ___________________]]       0
+   [[ ========= UPS =====]]        0
+   [[ ======= switch ====]]          0000000000000
+   [[ == powerstrip =====]]         /_____________\
+   [[ ====== CHEST ======]]         ' ' ' ' ' ' ' '
    [[ ===================]]
    [[ ====== raid1 ======]]
    [[ ===================]]
