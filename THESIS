@@ -1011,11 +1011,86 @@ MORSE
 # 7 - ZFS & Hardware
 ####################################################
 
+# FUNCTIONS ########################################
+
+zpool create $dev addr
+++++++++++++++++++++++++++++++++++++++++++++++++++++
++ zpool create usb /dev/da1
++ cd /usb/
+++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+zpool import -f
+++++++++++++++++++++++++++++++++++++++++++++++++++++
++ zpool inport -f usb
++ cd /usb/
+++++++++++++++++++++++++++++++++++++++++++++++++++++
+  [m] DANGER may create unkillable zombie
+  [m] usb or sata attached device
+
+zpool export
+  [m] DANGER may create unkillable zombie
+++++++++++++++++++++++++++++++++++++++++++++++++++++
++ cd ~/
++ zpool export -f usb
+++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+zfs snapshot pool@date
+++++++++++++++++++++++++++++++++++++++++++++++++++++
++ zfs snapshot usb@10mar17
+++++++++++++++++++++++++++++++++++++++++++++++++++++
+2
+zfs set
+zfs get
+zfs create -o compression=on $pool
+zfs create -o mountpoint='' $pool
+zfs set -o sharenfs=on $pool
+
+# SECURITY #########################################
+read-only
+nfs-share
+nfs-MAC
+
 # QUOTA ############################################
 
 This allows for secure partition of files to order
 Stability is ensured by zfs file-system caps of data
 
+# zdb ##############################################
+ [-] v ...
+   mo verbosity da mo bettah
+
+ [-] b
+   Block details
+ [-] d ...
+   Dataset details
+   mo d da mo bettah
+ [-] m .. mmm
+   Metaslab details
+   mmm is every spacemap record
+
+ [-] s
+   I/O statistics
+ [-] h
+   History of the pool
+
+ [-] -R $pool vdev:offset:size[:flags]
+   manual file read
+
+ [-] u
+   get uberblock
+ [-] l
+   get vdev labels
+
+ [-] A .. AAA
+   recover tool
+ [-] F
+   recover tool
+
+# log ##############################################
+zfs list
+zpool list
+zpool status -x
+zfs snapshot pool@date
 |
 |
 |
@@ -1082,6 +1157,29 @@ Utilities
   CHEST - lock your private possessions
   switch - unmanaged pass thru 24 ports
   scraper - dual-processor scrapers
+
+# RAID ###############################################
+
+Raid can be a beautiful thing
+They are always true muthrfkrs
+
+Hot-swap is the act of precariously recalculating pool-parity onto a new drive when an old drive has failed
+First the physical-location must be known a trial of hardship for white-box-hackers
+
+I have created maps
+But despite all efforts the drive-failure + physical-location a complete nightmare
+
+If another drive fails the pool is toast
+This a cliff I have myself stared down at
+
+The beauty of simplicity should always be carried out before a raid-array attempted
+Very easy to setup but when SHTF they are the worst to deal with
+
+raidz3 at 15 drives wide nears the efficiency of a raidz2
+I have run one 3 years without a need for hot-swap or error
+NFS serving 75%+ data pool
+
+
 |
 |
 |
