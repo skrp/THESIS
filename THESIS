@@ -512,6 +512,11 @@ Two types of storage
 External-drives are necessary for clean access to a file-system
 A foreign system can port-itself to mount the simple zfs file-system
 
+The root storage is only slightly more complex
+A trade to only then need a amd64 machine architecture to start up
+
+The decision is about 50/50
+
 |
 |
 |
