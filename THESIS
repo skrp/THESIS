@@ -928,6 +928,12 @@ To own that prime & hold it or sell it hot
 
 Local storage or net-trade
 bob_3y89d rents space for prime file storage
+  + net salary
+  + usr rent income
+
+Use of remote nodes is useful & encouraged
+Nodes offer transient storage for the BLK_CLD of files
+
 
 |
 |
@@ -1020,6 +1026,57 @@ Stability is ensured by zfs file-system caps of data
 ####################################################
 # 8 - Schematics
 ####################################################
+
+# DISK CONNECTION  #################################
+
+POWER
+  All harddrives are powered by a pin that can be daisy chained as a power source
+  HDD do not require much power and this can allow a node to increase in size
+
+SATA-HDD
+  All amd64 motherboards contain an L-shaped port
+  A male/female cable will connect the drive to the motherboard
+
+PCI-SATA-HDD
+  PCI cards can come from 1-4 SATA ports which add onto drives connectable to the motherboard
+  PCI-SAS + PCI-SATA + mobo = many ports
+
+PCI-SAS-HDD
+  These use break-out cables that split one into four creating 8 SAS connections (SATA)
+
+JBOD
+  ZFS needs the drive to be passed raw free from hardware-raid interventions
+  Each raid-card has their own BIOS to search for the JBOD option
+  Be sure because if you are wrong you are fkd
+
+TOWR
+  42u Towers are stable ways to hold a command center together
+
+   [[98888888888888888888]]
+   [[ ===== firewall ====]]
+   [[ ===================]]
+   [[ ===== x3e 7c7 =====]]
+   [[ ___________________]]
+   [[ ========= UPS =====]]
+   [[ ======= switch ====]]
+   [[ == powerstrip =====]]
+   [[ ====== CHEST ======]]
+   [[ ===================]]
+   [[ ====== raid1 ======]]
+   [[ ===================]]
+   [[ ===== raid2s ======]]
+   [[ ===================]]
+   [[ ==== raid3 ========]]
+   [[ ===================]]
+   [[ ===== scraper =====]]
+   [[88888888888888888888]]
+
+Utilities
+  HDD External Case - house HDD apartments 1
+  UPS - give the router immunity to death for x-min
+  CHEST - lock your private possessions
+  switch - unmanaged pass thru 24 ports
+  scraper - dual-processor scrapers
 |
 |
 |
