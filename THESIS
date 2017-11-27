@@ -18,27 +18,37 @@ _\\cibR punX//______________________________________
 This manuscript details the machine of MKRX UNIX NETWORKS
 This system connects nodes thru encrypted tunnels
 
-SICC network file system
-MKRX archive tools
-HIVE work processors
-
-KERN hardened FreeBSD_10.3 custom unix kernels
-PSK-OPIE privilege partition & escalation
-
-PROTO unix network protocol implementations
-STAT node & network dtrace sensor analysis
-
-ZFS diagrams PCI, SATA, SAS, USB
-Schematics & Utilities
-
-MAN manuals of instructions & examples
-
 Network Value is contained in 4 sectors
   {#} Storage shares - nfs
   {#} Process clones - HIVE
   {#} Cryptographic Security - PSKOPIE elliptic-curves
   {#} Services - ssh
 
+The following code is the logical infrastructure of the network :
+
+https://github.com/skrp/SICC
+SICC network file system
+
+https://github.com/skrp/MKRX
+MKRX archive tools
+
+https://github.com/skrp/HIVE
+https://github.com/skrp/MINT
+HIVE work processors & interface
+
+https://github.com/skrp/ECHO
+KERN hardened FreeBSD_10.3 custom unix kernels
+PSK-OPIE privilege partition & escalation
+PROTO unix network protocol implementations
+
+ZFS diagrams PCI, SATA, SAS, USB
+Schematics & Utilities
+
+
+Packet Filter (pf) raw packet piping
+STAT node & network dtrace sensor analysis
+
+MAN manuals of instructions & examples
 |
 |
 |
