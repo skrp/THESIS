@@ -1099,6 +1099,50 @@ zfs snapshot pool@date
 ####################################################
 # 8 - Schematics
 ####################################################
+# BIOS #############################################
+
+BIOS is like loving a women
+You have to go thru the labor of investigation
+
+  [i] BIOS button [f2] || [f12] || ...
+    This button will drop the system into BIOS as a hotkey
+  [i] Boot
+    Find the drives
+    Select the boot drive
+    Activation of SATA ports is required on some BIOS
+    To learn your machine you must roam the BIOS
+  [i] SATA
+    The motherboard sata-port position may affect the boot of certain motherboards, try all motherboard slots if troubleshooting
+
+# CPU ##############################################
+
+High-power-cores for beefy processing
+Multi-quick-cores for mass of calculations
+
+Unix & MKRX keep the system simple
+Low-power massive-pool are favored over next-lvl-computation
+
+# RAM ##############################################
+
+ECC ram is the best ram because why not
+ZFS does not require this ram but it adds a layer of verification
+
+RAM is the perfect mate for ZFS
+The better the admin the more need for RAM
+
+SPEED HIERARCHY
+cpu-cache -> ram -> pci-ssd -> sata-ssd -> sata-hdd -> usb -> net
+
+# BOX ##############################################
+
+Hold 1 / 2 drives
+1 SSD
+  Quick root filesystem & network access
+1 HDD
+  Slow but beefy storage
+
+There are several forms of DISK CONNECTION
+Use these options to maximize a NODE build
 
 # DISK CONNECTION  #################################
 
@@ -1126,6 +1170,11 @@ JBOD
   ZFS needs the drive to be passed raw free from hardware-raid interventions
   Each raid-card has their own BIOS to search for the JBOD option
   Be sure because if you are wrong you are fkd
+
+USB-SATA
+  External-drives in an array with external-power-source
+  Modularization & beef up  on a low transaction host
+  Power-strip + USB ports + shelf
 
 # TOWR ###############################################
   42u Towers are stable ways to hold a command center together
