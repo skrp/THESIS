@@ -698,11 +698,15 @@ To load the USB with programs to be made available by default
 sysctl.conf
   [p] - Restrict owner-only process view
   [p] - Restrict member-only group view
-
-  [p] - Tighten
+  [p] - Tighten network settings
 
 rc.conf
-  [p] - host
+  [p] - Dynamic Host Control Protocol (DHCP)
+  [p] - Gateway will determine address & uses that as subnet external-interface
+  [p] - Hostname is a uniq 3 character identifier
+  [p] - Kernel modules loaded
+  [p] - Services are started
+  [p] - System options set
 
 pf.conf
   All network pipes are structured thru this configuration
@@ -715,9 +719,33 @@ pf.conf
     [q] port
     [q] usr
 
+start_if.
+  This will mask the MAC for network communications
+  This mask is imperative to network security
+
+ttys && login.conf
+  Remove direct root access
+  Require root-password to single-user-mode
+
+ntpd.conf
+  OpendBSD built ntp server to sync all nodes
+  There is no external-ntp-server
+  All NODE sync to the other
 
 sshd_config
-other { ttys, jail.conf, login.conf, ntpd.conf, start_if.}
+  PermitRootLogin no
+  PasswordAuthentication no
+  UsePAM no
+
+  AllowGroups ssh
+
+  Protocol 2
+  MaxAuthTries 4
+
+  RSAAuthentication yes
+  PubkeyAuthetication yes
+  AuthorizedKeysFile .ssh/authorized_keys
+  ChallengeResponseAuthentication yes
 
 # ZFS-HEIRARCHY #############################################
 /usr/home/
@@ -1017,6 +1045,12 @@ zpool create $dev addr
 + cd /usb/
 ++++++++++++++++++++++++++++++++++++++++++++++++++++
 
+zpool create mirror
+  [m] mirrors doubles the speed of a filesystem
+++++++++++++++++++++++++++++++++++++++++++++++++++++
++ zpool create mirror zroot /dev/da0 /dev/da2
+++++++++++++++++++++++++++++++++++++++++++++++++++++
+
 zpool import -f
 ++++++++++++++++++++++++++++++++++++++++++++++++++++
 + zpool inport -f usb
@@ -1036,9 +1070,7 @@ zfs snapshot pool@date
 ++++++++++++++++++++++++++++++++++++++++++++++++++++
 + zfs snapshot usb@10mar17
 ++++++++++++++++++++++++++++++++++++++++++++++++++++
-2
-zfs set
-zfs get
+
 zfs create -o compression=on $pool
 zfs create -o mountpoint='' $pool
 zfs set -o sharenfs=on $pool
