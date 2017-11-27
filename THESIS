@@ -493,6 +493,25 @@ Extract a source
 +++++++++++++++++++++++++++++++++++++++++++++++++++
 $usr@host> XS /mnt/bkup10/ ~/
 +++++++++++++++++++++++++++++++++++++++++++++++++++
+
+
+# DISK #############################################
+
+Two types of storage
+  [r] - root storage
+    This is a location that resides upon a root-file-system of a kernel
+      /usr/nfs/pub/
+  [r] - flat storage
+    An external disk that contains only an imported pool of files
+      /37w/pool/ or /usr/nfs/37w/pool/
+
+/usr/nfs/pub/  - zfs mount
+/usr/nfs/373/  - nfs mount
+/usr/nfs/y7u/  - nfs mount
+
+External-drives are necessary for clean access to a file-system
+A foreign system can port-itself to mount the simple zfs file-system
+
 |
 |
 |
