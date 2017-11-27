@@ -216,9 +216,10 @@ MAN
 ######## System In Complete Chaos    ###############
 
 Storage shares are the most important factor in this network
-Archive-oriented structures are implemented as network-wide pursuit of unique files
+Archive-oriented structures are implemented as a network-wide pursuit of unique files
 
-/usr/dump/ 330 write-only dump-dir which will be scraped into the SICC-system
+/usr/nfs/dump/ 330 write-only dump-dir which will be scraped into the SICC-system at /usr/nfs/pub/
+(this exposes the pub to the network for file exchange)
 SICC will process all files into a sane manner built to handle massive numbers
 
 Storage has a next important factor is entropy strength
@@ -515,8 +516,12 @@ A foreign system can port-itself to mount the simple zfs file-system
 The root storage is only slightly more complex
 A trade to only then need a amd64 machine architecture to start up
 
-The decision is about 50/50
 
+/zroot/boot/ - lord only privilege
+---------------------------- DESCRETE LINE
+/usr/nfs/pub/ - zfs quota protection
+/usr/nfs/el1/ - nfs mount
+/usr/nfs/z87/ - nfs mount
 |
 |
 |
@@ -735,7 +740,7 @@ Privacy of user files is a founding principal of this network
 |
 |
 |
-|
+|2
 |
 |
 ####################################################
@@ -840,6 +845,36 @@ http
 log
 
 Access to a host if dervived from the network can only happen from lengthy & positive actions
+
+KEY$ are updated on witness of three others
+Five sha are confirmed the same & published in a broadcast update
+
+All nodes write broadcast to log
+Conflicts will be dealt with noticeably
+
+KEY$ that are inconsistent lock that equal amount in auto-buy
+This allows for the system to be adaptable to mistakes in code
+
+This is a system of key wealthy nodes
+To prosper all one has to do is improve services
+
+NODE make massive-key trades after a value of NODE
+The least inconsistent-locks the more value the KEY$
+
+Incentive to pay for trustworthy-nodes to increase value of TXN
+
+tip witness KEY$
+
+6u8 => 1T KEY$ => 7tw
+  Witnesses
+    mk1 88r q8l
+  XFR worth triples to 3T
+
+This helps centralize efficency the system
+But does not detir decentralized transactions
+
+The host modifier is variant in grade of positive bonus onto the TXN
+The acient houses empower themselves with longstanding service
 
 |
 |
