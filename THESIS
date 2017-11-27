@@ -933,8 +933,6 @@ bob_3y89d rents space for prime file storage
 
 Use of remote nodes is useful & encouraged
 Nodes offer transient storage for the BLK_CLD of files
-
-
 |
 |
 |
@@ -1151,12 +1149,17 @@ JBOD
    [[ ===== scraper =====]]
    [[88888888888888888888]]
 
-Utilities
-  HDD External Case - house HDD apartments 1
-  UPS - give the router immunity to death for x-min
-  CHEST - lock your private possessions
-  switch - unmanaged pass thru 24 ports
-  scraper - dual-processor scrapers
+# Utilities ##########################################
+  HDD External Case
+    house HDD apartments 1
+  UPS
+    give the router immunity to death for x-min
+  CHEST
+    lock your private possessions
+  switch
+    unmanaged pass thru 24 ports
+  scraper
+    dual-processor scrape-only machine
 
 # RAID ###############################################
 
@@ -1178,8 +1181,6 @@ Very easy to setup but when SHTF they are the worst to deal with
 raidz3 at 15 drives wide nears the efficiency of a raidz2
 I have run one 3 years without a need for hot-swap or error
 NFS serving 75%+ data pool
-
-
 |
 |
 |
