@@ -1039,6 +1039,16 @@ SSH
 MAIL
 FTP
 NFS
+  zfs create usr/nfs
+  zfs create usr/nfs/pub
+  zfs set sharenfs=on /usr/nfs/pub
+
+  /etc/exports
+
+  rpcinfo
+  tcpdump
+
+
 HTTP
 SCP-WALKITALKI
 MORSE
@@ -1173,6 +1183,10 @@ Multi-quick-cores for mass of calculations
 Unix & MKRX keep the system simple
 Low-power massive-pool are favored over next-lvl-computation
 
+Bottom-line is if you know why you like your CPU
+That is all the only standard which you need
+To have that boost-output respective to system-specs
+
 # RAM ##############################################
 
 ECC ram is the best ram because why not
@@ -1180,6 +1194,9 @@ ZFS does not require this ram but it adds a layer of verification
 
 RAM is the perfect mate for ZFS
 The better the admin the more need for RAM
+
+MKRX systems is very RAM heavy
+Plus cpu time in most of its computation
 
 SPEED HIERARCHY
 cpu-cache -> ram -> pci-ssd -> sata-ssd -> sata-hdd -> usb -> net
@@ -1194,6 +1211,14 @@ Hold 1 / 2 drives
 
 There are several forms of DISK CONNECTION
 Use these options to maximize a NODE build
+
+Each motherboard has its ways
+To the hacker it may give you headaches
+To the scrub it will make you give-up
+
+BIOS specific experience best learned-once
+Lessen the diversity of motherboards in a same-admin-network
+
 
 # DISK CONNECTION  #################################
 
@@ -1227,14 +1252,47 @@ USB-SATA
   Modularization & beef up  on a low transaction host
   Power-strip + USB ports + shelf
 
-# TOWR ###############################################
+# TOWER ###############################################
 
   42u Towers are stable ways to hold a command center together
+
+`Dark Tower Steel-Maiden`
+42u Steel which bends
+To the heft of the drives
+
+The vessel which brought
+skrp forever to be recalled
+In the tomes of 1337-past-lifetimes
+
+Keekay Gennkai
+of the villiage
+Hidden In the 1337
+
+To him you are the hull
+Its weathers as sea
+
+Can turn my bright-day
+Into melancholy failure
+Aun to the face of death
+In but a sharp-quick-turn
+
+I pleaded for companion
+Universe sent me you
+Magical past contemplation
+
+Till your limits I breach
+Only at the surface-level
+
+Depths of which dark valleys
+That can leave one lost
+
+Till weeks aun months later
+The execution come clean-off
 
    [[98888888888888888888]]
    [[ ===== firewall ====]]
    [[ ===================]]oooooo
-   [[ ===== x3e 7c7 =====]]      0
+   [[ == x3e == 7c7 =====]]      0
    [[ ___________________]]       0
    [[ ========= UPS =====]]        0
    [[ ======= switch ====]]          0000000000000
@@ -1310,7 +1368,12 @@ NFS serving 75%+ data pool
 
   [M] - NET
   [M] - DISK
+      [m] write-latency
+      [m] read-latency
+      [m] create-latency
   [M] - CPU
+    [m] count all syscalls by PID
+    [m]
 
 DTrace is a powerful bond between the kernel & hacker
 Nobullshit-raw-data-sensor-anchors
