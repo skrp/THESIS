@@ -698,12 +698,19 @@ Users & groups form the columns that keep structure
 
 # PROGRAMS #########################################
 
-To load the USB with programs to be made available by default
+Pre-load the USB with programs to be made available by default
   (1) go to the /usr/ports/ program directory
   (2) make fetch
   (3) sanitize configure file
-  (4) if test then tar to USB
   (5) insert program into USB install code
+  (4) if test then tar to USB
+
+perl-modules
+  LWP::Protocol::https
+
+unix-packages
+  perl5
+  bash
 
 # CONFIGURATION ####################################
 
@@ -748,12 +755,9 @@ sshd_config
   PermitRootLogin no
   PasswordAuthentication no
   UsePAM no
-
   AllowGroups ssh
-
   Protocol 2
   MaxAuthTries 4
-
   RSAAuthentication yes
   PubkeyAuthetication yes
   AuthorizedKeysFile .ssh/authorized_keys
@@ -776,6 +780,7 @@ Privacy of user files is a founding principal of this network
   [#] home
   [#] mail
   [#]
+
 |
 |
 |
@@ -822,11 +827,11 @@ ALICE ASCENSION
     lord:wheel
 ------------------                         [[2]]
 ||               ||      {{  sir:lord  }} (alice)            [[1]]
-||               ||                           [y_heir:sir]  (alice)[x_heir:sir]
-||               ||                           [y_heir:sir]         [x_heir:sir]
+||               ||                           [b_heir:sir]  (alice)[x_heir:sir]
+||               ||                           [w_heir:sir]         [n_heir:sir]
 ||               ||      {{ mam:lord   }}
-||               ||                           [f_heir:mam] [b_heir:mam]
-||               ||                           [b_heir:mam] [b_heir:mam]
+||               ||                           [f_heir:mam] [n_heir:mam]
+||               ||                           [a_heir:mam] [z_heir:mam]
 ------------------
 
 # KEY-UPDATE ######################################
@@ -1014,10 +1019,16 @@ Privileged nologin accounts sha-confirm then load the addresses
 Approved-list -> sha256 -> post to network -> network confirm -> load list
 If the sha does not match the network the table is not loaded
 
+All usrs approved on the network share the same tables
+Every usr knows the identity of all other users securely
+
+The configuration memory is sha-verified to confirm identity
+Each new connection must have a pre-shared-table & PSKOPIE
+
 # USR ##############################################
 
 pf allows for a network to pipe data by usr accounts
-All accounts are preset & preshared to keep the network clean, simple & stable
+All accounts are preset & pre-shared to keep the network clean, simple & stable
 
 |
 |
@@ -1173,7 +1184,7 @@ You have to go thru the labor of investigation
     Activation of SATA ports is required on some BIOS
     To learn your machine you must roam the BIOS
   [i] SATA
-    The motherboard sata-port position may affect the boot of certain motherboards, try all motherboard slots if troubleshooting
+    The motherboard sata-port position may affect the boot of certain motherboards, try each motherboard SATA port if troubleshooting
 
 # CPU ##############################################
 
@@ -1254,8 +1265,6 @@ USB-SATA
 
 # TOWER ###############################################
 
-  42u Towers are stable ways to hold a command center together
-
 `Dark Tower Steel-Maiden`
 42u Steel which bends
 To the heft of the drives
@@ -1268,10 +1277,12 @@ Keekay Gennkai
 of the villiage
 Hidden In the 1337
 
-To him you are the hull
-Its weathers as sea
+To him you are hull
+To weather the sea
 
-Can turn my bright-day
+Constant companion
+As planet earth has moods
+
 Into melancholy failure
 Aun to the face of death
 In but a sharp-quick-turn
@@ -1281,13 +1292,11 @@ Universe sent me you
 Magical past contemplation
 
 Till your limits I breach
-Only at the surface-level
+Only at surface-level
 
 Depths of which dark valleys
-That can leave one lost
+Can leave one lost for weeks
 
-Till weeks aun months later
-The execution come clean-off
 
    [[98888888888888888888]]
    [[ ===== firewall ====]]
@@ -1299,7 +1308,7 @@ The execution come clean-off
    [[ == powerstrip =====]]         /_____________\
    [[ ====== CHEST ======]]         ' ' ' ' ' ' ' '
    [[ ===================]]
-   [[ ====== raid1 ======]]
+   [[ ====== raid1 ======]]  ______=======,=======_________
    [[ ===================]]
    [[ ===== raid2s ======]]
    [[ ===================]]
