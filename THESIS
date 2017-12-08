@@ -41,11 +41,9 @@ KERN hardened FreeBSD_10.3 custom unix kernels
 PSK-OPIE privilege partition & escalation
 PROTO unix network protocol implementations
 
-ZFS diagrams PCI, SATA, SAS, USB
-Schematics & Utilities
-
-
 Packet Filter (pf) raw packet piping
+ZFS schematics PCI, SATA, SAS, USB
+Utilities
 
 https://github.com/skrp/DTRACE
 STAT node & network dtrace sensor analysis
@@ -71,8 +69,8 @@ Independent of government
 In the order of Anarchy
 In that way deliver basic rights
 
-Files get lost and storage gets easier
-Hook up a muthrfkr with drives
+Files get lost
+Storage gets easier
 |
 |
 |
@@ -374,7 +372,6 @@ MKRX Tools:
   [CLI]
     Load INDEX hash-dumps into memory
     Terminal Input & Output produce single-entry lists
-
 
 # XS ###############################################
 
@@ -991,8 +988,11 @@ Nodes offer transient storage for the BLK_CLD of files
 
 # RAW ##############################################
 
-Packet Filter is a raw-packet piping
+Packet Filter is a raw-packet pipe system
+Ports & Source-Address pairs are there connected
+
 Raw-packet pipe systems allows for the simplest form of action
+Data that transacts there is read & manipulated pure from 3rd-party-code(government-device-malware)
 
 tcpdump analysis & parsed-output is PSKOPIE posted over the network
 [ pflog is read via tcpdump ]
@@ -1155,6 +1155,8 @@ Stability is ensured by zfs file-system caps of data
 
 # zdb ##############################################
 
+zdb raw drive verification
+
  [-] v ...
    mo verbosity da mo bettah
 
@@ -1204,8 +1206,6 @@ The zombie lasts until death of the kernel
 
 unix is built to run forever
 Respect the ecosystem & it will reward you
-
-
 |
 |
 |
@@ -1245,14 +1245,15 @@ To have that boost-output respective to system-specs
 
 # RAM ##############################################
 
-ECC ram is the best ram because why not
-ZFS does not require this ram but it adds a layer of verification
+ECC ram is the best ram because why not have hardware-verification
+RAM is the perfect mate for ZFS even if it is desktop ram
 
-RAM is the perfect mate for ZFS
 The better the admin the more need for RAM
+It needs to be that long if you want pig-pie
+~ redneck testimony
 
 MKRX systems is very RAM heavy
-Plus cpu time in most of its computation
+Plus cpu time is heavy loads if left unchecked
 
 SPEED HIERARCHY
 cpu-cache -> ram -> pci-ssd -> sata-ssd -> sata-hdd -> usb -> net
@@ -1371,7 +1372,7 @@ Can leave one lost for weeks
    [[ == powerstrip =====]]           /_____________\ d1---,)Xxx'
    [[ ====== CHEST ======]]           ' ' ' ' ' ' ' '  :  ."
    [[ ===================]]                          orrJrr'rr
-   [[ ====== raid1 ======]]  ________=======,=====QQQ         DD
+   [[ ====== raid1 ======]]  ________=======,=====QQQJ        PDD
    [[ ===================]]                          \\     //
    [[ ===== raid2s ======]]                          GG     GG
    [[ ===================]]                    ,,---/  x  x   --}
@@ -1417,13 +1418,11 @@ They are always true muthrfkrs
 Hot-swap is the act of precariously recalculating pool-parity onto a new drive when an old drive has failed
 First the physical-location must be known a trial of hardship for white-box-hackers
 
-I have created maps
-But despite all efforts the drive-failure + physical-location a complete nightmare
+Despite finished efforts of mapping still: drive-failure + physical-location = complete nightmare
 
-But I will spend 10
-
-If another drive fails the pool is toast
-This a cliff I have myself stared down at
+If one drive fails the recalculation of parity will overwork the pool
+If another drive fails the pool is mostly toast
+This a cliff I have myself stared down
 
 The beauty of simplicity should always be carried out before a raid-array attempted
 Very easy to setup but when SHTF they are the worst to deal with
@@ -1449,6 +1448,12 @@ To update backup timely
 Decentralization
 Is the lesson of the seed
 
+SEED
+  unix KERN bootable ZFS MKRX archive
+  One SEED can load the other after boot
+
+  /usr/nfs/$nfs_pool  - variable  /usr/nfs/7t7/pub/ - remote data
+  /usr/nfs/pub/ - host data      /usr/nfs/pub_LIST - low-io directory
 |
 |
 |
