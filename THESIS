@@ -1284,6 +1284,9 @@ LSI-SAS-9211-8i
   Never daisy-chain SATA-data cables
   16 is the expected maximum from the 9211
   This leaves mobo & pci-e sata ports available
+  If more than one ZFS pool exists on a mobo - mix disk sources
+  8-wide-raidz2 => 4 on hba1 4 on hba2
+  7-wide-raidz2 => 4 on hba1 4 on hba2
 
 Hardware-raid-card
   Most raid cards have an option JBOD (just-a-bunch-of-disks)
@@ -1360,10 +1363,13 @@ Can leave one lost for weeks
     dual-processor scrape-only machine
 
   cords
-    Do not daisychain SATA-data cables
-    (.) SATA-power daisy chains
+    (.) SATA-power daisy-chains
     (.) SAS breakout cables
-    (.) Powered
+    (.) Multi-size SATA cables
+    (.) Ethernet cable (multi-size / flat / outdoor)
+    (.) USB=>SATA-data USB=>SATA-power
+    (.) HDMI is the best cable for video
+    Do not daisy-chain SATA-data cables
 
 
 # RAID ###############################################
