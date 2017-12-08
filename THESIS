@@ -1351,15 +1351,15 @@ We weather together
 Melancholy failure
 Or quick-turn success
 
-I pleaded for companion
 Universe sent me you
 Magical past contemplation
 
-Till your limits I breach
+Limitless depths
 Only at surface-level
 
 Depths of which dark valleys
 Can leave one lost for weeks
+
 `
    [[98888888888888888888]]         `The Dark Tower of MKRX`
    [[ ===== firewall ====]]
@@ -1379,7 +1379,7 @@ Can leave one lost for weeks
    [[ ===================]]                     h h     kk     l l
    [[ ===== scraper =====]]                      ===    kk   S S
    [[88888888888888888888]]                        //   ,.   3B8
-   @ @                  @ @                      B83    \/
+   @ @                  @ @                      B83    v
 
 # Utilities ##########################################
 
@@ -1389,11 +1389,17 @@ Can leave one lost for weeks
     give the router immunity to death for x-min
   CHEST
     lock your private possessions
+    Know that rig may explode or melt
+    Due to PS & UPS damage
   switch
     unmanaged pass thru 24 ports
   scraper
     dual-processor scrape-only machine
-
+  keyboard
+    Keyboards are nice with no mice <38:~~
+  USB ports
+    USB-extenders for the lower bandwith-requirements
+    A source for external-drive aggregation
   cords
     (.) SATA-power daisy-chains
     (.) SAS breakout cables
@@ -1425,6 +1431,24 @@ Very easy to setup but when SHTF they are the worst to deal with
 raidz3 at 15 drives wide nears the efficiency of a raidz2
 I have run one 3 years without a need for hot-swap or error
 NFS serving 75%+ data pool
+
+# Aggregations #######################################
+PCI
+  8 ports
+PCI-E
+  4 ports
+MOBO
+  6 ports
+USB
+  extedable
+  Sys-usb-sync-one-only-ever
+
+Aggregations are nice
+To update backup timely
+
+Decentralization
+Is the lesson of the seed
+
 |
 |
 |
