@@ -1328,26 +1328,28 @@ Hardware-raid-card
 # TOWER ###############################################
 
 `Dark Tower Steel-Maiden`
-42u Steel which bends
+42u Steel hull which bends
 To the heft of the drives
 
 The vessel which brought
 skrp forever to be recalled
-In the tomes of 1337-past-lifetimes
+In the tomes of 1337
 
 Keekay Gennkai
 of the villiage
 Hidden In the 1337
 
-To him you are hull
+To him you are ship
 To weather the sea
+Coastside ocean net currents
 
 Constant companion
-As planet earth has moods
+As ecosystem has moods
 
-Into melancholy failure
-Aun to the face of death
-In but a sharp-quick-turn
+We weather together
+
+Melancholy failure
+Or quick-turn success
 
 I pleaded for companion
 Universe sent me you
@@ -1358,27 +1360,26 @@ Only at surface-level
 
 Depths of which dark valleys
 Can leave one lost for weeks
-
-
-   [[98888888888888888888]]
+`
+   [[98888888888888888888]]         `The Dark Tower of MKRX`
    [[ ===== firewall ====]]
    [[ ===================]]oooooo
    [[ == x3e == 7c7 =====]]     \\
    [[ ___________________]]      ===
    [[ ========= UPS =====]]         \\
-   [[ ======= switch ====]]          \\0000000000000
-   [[ == powerstrip =====]]           /_____________\
-   [[ ====== CHEST ======]]           ' ' ' ' ' ' ' '
-   [[ ===================]]
-   [[ ====== raid1 ======]]  ________=======,=======_________
-   [[ ===================]]
-   [[ ===== raid2s ======]]
-   [[ ===================]]
-   [[ ==== raid3 ========]]
-   [[ ===================]]
-   [[ ===== scraper =====]]
-   [[88888888888888888888]]
-   @ @                  @ @
+   [[ ======= switch ====]]          \\0000000000000   i
+   [[ == powerstrip =====]]           /_____________\ d1---,)Xxx'
+   [[ ====== CHEST ======]]           ' ' ' ' ' ' ' '  :  ."
+   [[ ===================]]                          orrJrr'rr
+   [[ ====== raid1 ======]]  ________=======,=====QQQ         DD
+   [[ ===================]]                          \\     //
+   [[ ===== raid2s ======]]                          GG     GG
+   [[ ===================]]                    ,,---/  x  x   --}
+   [[ ==== raid3 ========]]                   {   _____ kk ___  }}
+   [[ ===================]]                     h h     kk     l l
+   [[ ===== scraper =====]]                      ===    kk   S S
+   [[88888888888888888888]]                        //   ,.   3B8
+   @ @                  @ @                      B83    \/
 
 # Utilities ##########################################
 
@@ -1402,7 +1403,6 @@ Can leave one lost for weeks
     (.) HDMI is the best cable for video
     Do not daisy-chain SATA-data cables
 
-
 # RAID ###############################################
 
 Raid can be a beautiful thing
@@ -1413,6 +1413,8 @@ First the physical-location must be known a trial of hardship for white-box-hack
 
 I have created maps
 But despite all efforts the drive-failure + physical-location a complete nightmare
+
+But I will spend 10
 
 If another drive fails the pool is toast
 This a cliff I have myself stared down at
@@ -1454,8 +1456,8 @@ NFS serving 75%+ data pool
       [m] read-latency
       [m] create-latency
   [M] - CPU
-    [m] count all syscalls by PID
-    [m]
+      [m] count all syscalls by PID
+      [m]
 
 DTrace is a powerful bond between the kernel & hacker
 Nobullshit-raw-data-sensor-anchors
