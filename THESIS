@@ -1044,11 +1044,41 @@ All accounts are preset & pre-shared to keep the network clean, simple & stable
 Every day a node is awarded a token that can be exchanged with a host for KEY$
 This incentive will increase a network wide service branch
 
-DNS
-NTP
 SSH
+  Keep It Simple & Stoopid
+  One tunnel in everything
+    [h] Shell
+    [h] Copy
+    [h] Log
+
+    [h] Sockets
+        Every connection made thru PSKOPIE
+
+PROXY
+  [0]  1337 link
+  [1]  one-time-only
+  [10] 1337 link
+  [1G] prime-time
+  [1B] basic-cable
+
+DNS
+  Network is predefined only
+  Outer-network is define-able
+
 MAIL
+  Outer-network proxy sockets
+  (SCP) Local only scp message
+
+HTTP
+  Proxy on port 8080
+  Sockets is a market, the more valuable socket => the more valuable node
+
+NTP
+  Sync time is necessary for a network to have cohesion
+  OpenNTP is necessary for stability in its security
+
 FTP
+
 NFS
   zfs create usr/nfs
   zfs create usr/nfs/pub
@@ -1333,14 +1363,14 @@ Can leave one lost for weeks
    [[98888888888888888888]]
    [[ ===== firewall ====]]
    [[ ===================]]oooooo
-   [[ == x3e == 7c7 =====]]      0
-   [[ ___________________]]       0
-   [[ ========= UPS =====]]        0
-   [[ ======= switch ====]]          0000000000000
-   [[ == powerstrip =====]]         /_____________\
-   [[ ====== CHEST ======]]         ' ' ' ' ' ' ' '
+   [[ == x3e == 7c7 =====]]     \\
+   [[ ___________________]]      ===
+   [[ ========= UPS =====]]         \\
+   [[ ======= switch ====]]          \\0000000000000
+   [[ == powerstrip =====]]           /_____________\
+   [[ ====== CHEST ======]]           ' ' ' ' ' ' ' '
    [[ ===================]]
-   [[ ====== raid1 ======]]  ______=======,=======_________
+   [[ ====== raid1 ======]]  ________=======,=======_________
    [[ ===================]]
    [[ ===== raid2s ======]]
    [[ ===================]]
@@ -1349,6 +1379,7 @@ Can leave one lost for weeks
    [[ ===== scraper =====]]
    [[88888888888888888888]]
    @ @                  @ @
+
 # Utilities ##########################################
 
   HDD External Case
