@@ -84,6 +84,7 @@ Storage gets easier
 
 # 0 ################################################
 SICC
+  Overview
   Standard
   Metadata
   Key
@@ -92,8 +93,10 @@ SICC
 
 # 1 ################################################
 MKRX
+  Overview
   Tools explained
-  Tool use & examples
+  Tool examples
+  CLI examples
     create GET from BKUP
     create GET from UNIQ
     populate a new drive
@@ -101,6 +104,7 @@ MKRX
 
 # 2 ################################################
 HIVE
+  Overview
   Structure
   Mechanics
     ORDER
@@ -114,14 +118,14 @@ HIVE
     UNTAR
     REGX
     BLKR
+    SLCR
   Logs
 
 # 3 ################################################
 KERN
-  Hardened
-  PSK-OPIE
+  Overview
+  Hardened CONF
   RINGS (rings of power)
-  USR
     root
     sroot
     lord
@@ -131,13 +135,19 @@ KERN
 
 # 4 ################################################
 PSK-OPIE
-  Review
+  Overview
   ASIGN
-  Mine
-    KEY
-    RAW
+  KEY Market
+  RAW Market
 
 # 5 ################################################
+PF
+  Overview
+  Tables
+  XFR
+  pflog
+
+# 6 ################################################
 PROTO
   Overview
   SSH
@@ -150,28 +160,21 @@ PROTO
   HTTPS
   MORSE
 
-# 6 ################################################
-STAT
-  List
-  dtrace
-    cpu
-    PID
-    fs
-    net
-  Performance
-    LOG
-    ECHO
-  ANAL
-    SELF
-    NET
+
 
 # 7 ################################################
 ZFS & Hardware
   ZFS
-    0
-    Mirror
-    raidz2
-    raidz3
+  0
+  Mirror
+  raidz2
+  raidz3
+
+# 8 ################################################
+HARDWARE SCHMATICS
+  SIMP
+  TOWR
+  Utilities
   Hardware
     BOX
     BIOS
@@ -185,15 +188,21 @@ ZFS & Hardware
     SAS
     USB
     JBOD
-
-# 8 ################################################
-SCHMATIC
-  SIMP
-  TOWR
-  Utilities
+  RAID
+  Aggregations
 
 # 9 ################################################
-MAN
+DTRACE
+  Overview
+  DISK
+  CPU
+  RAM
+  NET
+  cmpZFS
+  cmpUNIX
+
+# 10 ###############################################
+APPENDIX
   unix manuals
     log
     mount
@@ -1147,6 +1156,9 @@ zfs set -o sharenfs=on $pool
 read-only
 nfs-share
 nfs-MAC
+  No node knows the other's MAC addr
+  This is shuffled in a predetermined way
+    PSKOPIE pool + Algorithm = valid MAC
 
 # QUOTA ############################################
 
@@ -1156,6 +1168,7 @@ Stability is ensured by zfs file-system caps of data
 # zdb ##############################################
 
 zdb raw drive verification
+zfs-point-of-view io-reports
 
  [-] v ...
    mo verbosity da mo bettah
