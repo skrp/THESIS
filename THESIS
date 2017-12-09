@@ -1275,9 +1275,6 @@ ECC ram is the best ram because why not have hardware-verification
 RAM is the perfect mate for ZFS even if it is desktop ram
 
 The better the admin the more need for RAM
-It needs to be that long if you want pig-pie
-~ redneck testimony
-
 MKRX systems is very RAM heavy
 Plus cpu time is heavy loads if left unchecked
 
@@ -1313,6 +1310,7 @@ Kernel requirements to use the hard-disk-drives (HDD)
 POWER
   HDD are powered by a pin that can be daisy chained as a power source
   HDD do not require much power and this can allow a node to increase in size
+  Drives are not power-hungry but a 1000W Power Supply Unit keeps a box robust
 
 SATA-HDD
   All amd64 motherboards contain an L-shaped port
@@ -1355,37 +1353,22 @@ Hardware-raid-card
 # TOWER ###############################################
 
 `Dark Tower Steel-Maiden`
-42u Steel hull which bends
-To the heft of the drives
+42u Steel hull which bends to the heft of massive drive arrays
 
-The vessel which brought
-skrp forever to be recalled
-In the tomes of 1337
+The vessel which brought skrp forever to be recalled in the tomes of 1337
 
 Keekay Gennkai
 of the villiage
 Hidden In the 1337
 
-To him you are ship
-To weather the sea
-Coastside ocean net currents
+To him as ship thru celestial seas of infinity
+Coastside or on net currents
 
-Constant companion
-As ecosystem has moods
+An ecosystem with moods we weather together
+Melancholy failure or quick-turn success
 
-We weather together
-
-Melancholy failure
-Or quick-turn success
-
-Universe sent me you
-Magical past contemplation
-
-Limitless depths
-Only at surface-level
-
-Depths of which dark valleys
-Can leave one lost for weeks
+Magical past contemplation in limitless depths
+Depths of which dark valleys can leave one lost for weeks
 
 `
    [[98888888888888888888]]         `The Dark Tower of MKRX`
@@ -1398,10 +1381,10 @@ Can leave one lost for weeks
    [[ == powerstrip =====]]           /_____________\ d1---,)Xxx'
    [[ ====== CHEST ======]]           ' ' ' ' ' ' ' '  :  ."
    [[ ===================]]                          orrJrr'rr
-   [[ ====== raid1 ======]]  ________=======,=====QQQJ        PDD
+   [[ ====== mirror =====]]  ________=======,=====QQQJ        PDD
    [[ ===================]]                          \\     //
-   [[ ===== raid2s ======]]                          GG     GG
-   [[ ===================]]                    ,,---/  x  x   --}
+   [[ ===== raidz2 ======]]                          GG     GG
+   [[ ===== raidz2 ======]]                    ,,---/  x  x   --}
    [[ ==== raid3 ========]]                   {   _____ kk ___  }}
    [[ ===================]]                     h h     kk     l l
    [[ ===== scraper =====]]                      ===    kk    SS
@@ -1458,15 +1441,26 @@ I have run one 3 years without a need for hot-swap or error
 NFS serving 75%+ data pool
 
 # Aggregations #######################################
+
 PCI
   8 ports
+  raidz3
+  raidz2
+
 PCI-E
   4 ports
+  raidz1
+  mirror
+
 MOBO
   6 ports
+  mirror
+  raidz1
+
 USB
-  extedable
+  extendable
   Sys-usb-sync-one-only-ever
+
 
 Aggregations are nice
 To update backup timely
