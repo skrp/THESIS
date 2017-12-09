@@ -128,6 +128,7 @@ KERN
     heir
     seer
     norm
+  JAIL
 
 # 4 ################################################
 PSK-OPIE
@@ -706,6 +707,11 @@ USB is loaded with pre-worked tarballs of sourcecode
 Configuration purify the integrity of the unix-hull
 Users & groups form the columns that keep structure
 
+Triple-Layer-Security
+Password keys must be Pre Shared Keys Onetime Password In Everything
+Each account is associated with a jail account access that is periodic
+The unix kernel is sterilized & monitored over the network
+
 # PROGRAMS #########################################
 
 Pre-load the USB with programs to be made available by default
@@ -773,13 +779,21 @@ sshd_config
   AuthorizedKeysFile .ssh/authorized_keys
   ChallengeResponseAuthentication yes
 
-# ZFS-HEIRARCHY #############################################
+# ZFS-HEIRARCHY ####################################
 /usr/home/
 /usr/nfs/pub/
 /usr/bin/ - norm bin
 /bin - lord bin
 
+# JAIL #############################################
+FreeBSD jails are the disposable grounds of the system
+User accounts are tied to a jail that has access to an NFS mount
 
+Jails are periodically turned this requires
+  [d] PSKOPIE associated only with certain dates implementing a 3rd security layer
+  [d] The jail is then destroyed & created again with a sha verified image
+
+This implements a Memory-Disk-like environment changed to persist on reboot
 
 # BIN ##############################################
 
