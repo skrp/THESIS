@@ -1,7 +1,7 @@
-4####################################################
-# MKRX UNIX NETWORK
+#####################################################
+# MKRX UNIX ARCHIVE NETWORK
                                            skrp
-{{  t_(o0)_j  }}                      Kehkay Genkai
+{{  t.(o0)_j  }}                      Kehkay Genkai
 \\ Meri Kann //                       of the village
 _\\cibR punX//____________________Hidden in the 1337
 |
@@ -110,7 +110,7 @@ HIVE
     RESUME
   API
     SHA
-    GET
+    GET1
     UNTAR
     REGX
     BLKR
@@ -223,10 +223,10 @@ APPENDIX
 |
 |
 ####################################################
-# 0 - SICC
+# 0 - SICC System In Complete Chaos
 ####################################################
 
-######## System In Complete Chaos    ###############
+# Overview #########################################
 
 Storage shares are the most important factor in this network
 Archive-oriented structures are implemented as a network-wide pursuit of unique files
@@ -356,6 +356,11 @@ Transparent file-system
 ####################################################
 # 1 - MKRX
 ####################################################
+
+# Overview #########################################
+
+
+
 Tools to administer the network file-system
 
 MKRX Tools:
@@ -545,6 +550,8 @@ A trade to only then need a amd64 machine architecture to start up
 # 2 - HIVE
 ####################################################
 
+# Overview #########################################
+
 Network TXN (transactions) are based on KEY$ currency
 Creating & trading private-keys as a means for network access
 
@@ -683,6 +690,9 @@ All que-file that fail the check will become zombies and must be beheaded (head 
 ####################################################
 # 3 - KERN
 ####################################################
+
+# Overview #########################################
+
 FreeBSD 10.3 kernel is hardened & customized to provide a homogeneous network-environment
 The power of unix is its ability to clone increases the network cohesiveness with the intricateness of the clone
 
@@ -789,9 +799,11 @@ Privacy of user files is a founding principal of this network
 |
 |
 ####################################################
-# 4 - PSKOPIE
+# 4 - PSKOPIE Pre-Shared-Key Once-Password-In-Everything
 ####################################################
-Pre-Shared-Key Once-Password-In-Everything
+
+# Overview #########################################
+
 Group RING key types
 
 Each login will require a reduction of the usr usb-bank
@@ -989,7 +1001,7 @@ Nodes offer transient storage for the BLK_CLD of files
 # 5 - PF
 ####################################################
 
-# RAW ##############################################
+# Overview #########################################
 
 Packet Filter is a raw-packet pipe system
 Ports & Source-Address pairs are there connected
@@ -1043,6 +1055,8 @@ All accounts are preset & pre-shared to keep the network clean, simple & stable
 ####################################################
 # 6 - SERVICE
 ####################################################
+
+# Overview #########################################
 
 Every day a node is awarded a token that can be exchanged with a host for KEY$
 This incentive will increase a network wide service branch
@@ -1104,8 +1118,10 @@ MORSE
 |
 |
 ####################################################
-# 7 - ZFS & Hardware
+# 7 - ZFS
 ####################################################
+
+# Overview #########################################
 
 # FUNCTIONS ########################################
 
@@ -1221,8 +1237,11 @@ Respect the ecosystem & it will reward you
 |
 |
 ####################################################
-# 8 - Schematics
+# 8 - Hardware Schematics
 ####################################################
+
+# Overview #########################################
+
 # BIOS #############################################
 
 BIOS is like loving a women
@@ -1385,7 +1404,7 @@ Can leave one lost for weeks
    [[ ===================]]                    ,,---/  x  x   --}
    [[ ==== raid3 ========]]                   {   _____ kk ___  }}
    [[ ===================]]                     h h     kk     l l
-   [[ ===== scraper =====]]                      ===    kk   S S
+   [[ ===== scraper =====]]                      ===    kk    SS
    [[88888888888888888888]]                        //   ,.   3B8
    @ @                  @ @                      B83    v
 
@@ -1471,6 +1490,8 @@ SEED
 ####################################################
 # 9 - STAT
 ####################################################
+
+# Overview #########################################
 
 # UNIX-LOG #########################################
 
