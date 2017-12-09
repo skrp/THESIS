@@ -360,19 +360,34 @@ Transparent file-system
 
 # Overview #########################################
 
+MKRX is built as node-host-clone to archive massive amounts of data
+Nodes enhance the network & recieve amazing benefits
+Node service & contributions are repaid with the contributions of the whole
 
-
-Tools to administer the network file-system
+MKRX Tools allow the clean & stable foundations for this ecosystem
+The user interface is thru the command-line over a network
 
 MKRX Tools:
   [XS]
-    Extract & Standardize Recursively
+    Extract & Standardize
+    Recursive file copy processed by metadata extraction & isolation into ordered ZFS pools
+    This duplicated a pool to pass only unique file data in a minumum-sized disk footprint
+
   [SCRUB]
-    Verify if sha of file is true
+    Verify if sha of file matches the filename
+    This alerts the system to any inconsistencies
+    Alerts help keep the temple pure
+
   [CHKMETA]
     Confirm each file has metadata
+    This keeps a tightly-clean organization
+
   [UNIQ]
     Output unless (ARG1-files exist in ARG2-files)
+    This is a nifty program which is used in all facets of administration
+    It compares a linked-list of data to the other and outputs all inconsistency
+    perl hashes transform this project mathematically to reduce a weeks-long process into minutes
+    
   [XFR]
     Serve data to local drive
     Serve data to remote locations
