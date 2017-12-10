@@ -1,6 +1,6 @@
 #####################################################
 # MKRX UNIX ARCHIVE NETWORK
-                        ~ skrp ~
+                                           skrp
 {{  t.(o0)_j  }}                      Kehkay Genkai
 \\ Meri Kann //                       of the village
 _\\cibR punX//____________________Hidden in the 1337
@@ -367,6 +367,8 @@ Node service & contributions are repaid with the contributions of the whole
 MKRX Tools allow the clean & stable foundations for this ecosystem
 The user interface is thru the command-line over a network
 
+# MKRX Tools #######################################
+
 MKRX Tools:
   [XS]
     Extract & Standardize
@@ -383,16 +385,19 @@ MKRX Tools:
     This keeps a tightly-clean organization
 
   [UNIQ]
-    Output unless (ARG1-files exist in ARG2-files)
+    Output unless (ARG1-files exist in ARG2-files)/
     This is a nifty program which is used in all facets of administration
     It compares a linked-list of data to the other and outputs all inconsistency
     perl hashes transform this project mathematically to reduce a weeks-long process into minutes
-    
+
   [XFR]
     Serve data to local drive
     Serve data to remote locations
+
   [INDEX]
-    Build Metadata hash-dumps
+    Build Metadata hash-dumps that are clean data structures for user interface
+    This greatly minimized CLI initialization
+
   [CLI]
     Load INDEX hash-dumps into memory
     Terminal Input & Output produce single-entry lists
@@ -400,8 +405,8 @@ MKRX Tools:
 # XS ###############################################
 
 Extract & Standardize All Files Recursively
-  Send data to pool-dir
-  Build metadata in g-dir
+  Send a foreign data tree to pool-dir grabbing all files
+  Build metadata in an isolated place from the data
 
 This process is the gateway for files to enter the archive
 High io usage & multiple process utilization
@@ -795,12 +800,14 @@ sshd_config
   ChallengeResponseAuthentication yes
 
 # ZFS-HEIRARCHY ####################################
+
 /usr/home/
 /usr/nfs/pub/
 /usr/bin/ - norm bin
 /bin - lord bin
 
 # JAIL #############################################
+
 FreeBSD jails are the disposable grounds of the system
 User accounts are tied to a jail that has access to an NFS mount
 
@@ -834,10 +841,10 @@ Privacy of user files is a founding principal of this network
 # Overview #########################################
 
 Group RING key types
-
 Each login will require a reduction of the usr usb-bank
 
 # Escalation ######################################
+
 GROUPS
   lord:wheel - su-root
     mreki:lord - su-lord
@@ -1151,6 +1158,16 @@ MORSE
 ####################################################
 
 # Overview #########################################
+
+ark -> 1T -> slicr_server
+slicr_server -> proxy_img -> zfs send proxy/proxy_img -> new_node
+
+new_node -> proxy_dump -> ark
+
+I/O is mostly done on server computers
+Each zfs pool is created from a maximum source pool of the mothership-ark
+
+A proxy shreds the files on its mirror-2T SSD to create the proxy_img
 
 # FUNCTIONS ########################################
 
