@@ -196,8 +196,14 @@ DTRACE
   NET
   cmpZFS
   cmpUNIX
-
 # 10 ###############################################
+SCRAPE
+  Overview
+  Address-of-data
+  Filter html
+  Get data
+
+# 11 ###############################################
 APPENDIX
   unix manuals
     log
@@ -1625,6 +1631,7 @@ Code tips
 1) fix syntax
 2) review structure for mem-leaks
 3) step-into-uncomment-code to correct by block of code
+
 ####################################################
 # 10 - SCRAPE
 ####################################################
@@ -1683,3 +1690,10 @@ Perl http-get-request
   $ua->get($address, ':content_file'=>$file);
 
 
+|
+|
+|
+|
+|
+|
+|
