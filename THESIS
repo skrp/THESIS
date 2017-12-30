@@ -156,6 +156,7 @@ PROTO
   8080
   HTTPS
   MORSE
+  SNIFF
 
 # 7 ################################################
 ZFS & Hardware
@@ -232,8 +233,10 @@ APPENDIX
 Storage shares are the most important factor in this network
 Archive-oriented structures are implemented as a network-wide pursuit of unique files
 
-/usr/nfs/dump/ 330 write-only dump-dir which will be scraped into the SICC-system at /usr/nfs/pub/
-(this exposes the pub to the network for file exchange)
+Write-only dump-dir 0300 /usr/nfs/dump/
+This directory will be scraped by the SICC-system periodically into /usr/nfs/pub/
+
+(this exposes files to an nfs-share mountpoint to the network for file exchange)
 SICC will process all files into a sane manner built to handle massive numbers
 
 Storage has a next important factor is entropy strength
@@ -827,6 +830,17 @@ Privacy of user files is a founding principal of this network
   [#] mail
   [#]
 
+# MULTI-File-System ################################
+zfs
+ufs1
+ufs2
+fat
+msdosfs
+ext2
+ext3
+ntfs (ro)
+fuse-ext4
+fuse-ntfs (rw)
 |
 |
 |
@@ -1423,12 +1437,12 @@ Depths of which dark valleys can leave one lost for weeks
    [[ == x3e == 7c7 =====]]     \\
    [[ ___________________]]      ===
    [[ ========= UPS =====]]    -----\\-----   --------------
-   [[ ======= switch ====]]   |      \\0000000000000   i
-   [[ == powerstrip =====]]   |       /_____________\ d1---,)Xxx'
+   [[ ======= switch ====]]   |      \\0000000000000
+   [[ == powerstrip =====]]   |       /_____________\  A---,)Xxx'
    [[ ====== CHEST ======]]   | unix  ' ' '|' ' ' ' '  :  ."
    [[ ===================]]   |____________|  |_____ orrJrr'rr
-   [[ ====== mirror =====]]  ________=======,=====QQQJ        PDD
-   [[ ===================]]                          \\     //
+   [[ ====== mirror =====]]  ________=======,====8QQQJ        PDD8
+   [[ ===================]]                       '^^\\     //^^'
    [[ ===== raidz2 ======]]                          GG     GG
    [[ ===== raidz2 ======]]                    ,,---/  x  x   --}
    [[ ==== raid3 ========]]                   {   _____ kk ___  }}
@@ -1561,6 +1575,43 @@ Nobullshit-raw-data-sensor-anchors
 
 Track the host by raw syscalls
 Parse the anchor output into intelligent reports
+
+Dtrace reports of HIVE health
+Syscall timing aggregations
+Compare results to normal-health
+
+The result of aggregations will favor or disfavor
+'aggregations allow for a scalable way'
+'prefer to use aggregations...when possible'
+
+Work in the HIVE is standard
+blkr, get, copy, send
+
+The system calls that involve these API
+Are all known & notified if err
+
+
+count
+syscall::write:entry
+{
+  self->writecalls = count() ;
+}
+
+thruput_ttl
+avg
+max
+
+Cacheable predicates for low cost
+
+syscall::write:entry
+{
+  self->rate = avg();
+}
+(unix health audit to determine host health)
+
+Boot tracing via directives in /boot/dtrace.dof
+`dtrace -A`
+`reboot`
 |
 |
 |
