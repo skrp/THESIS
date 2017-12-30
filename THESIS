@@ -832,10 +832,12 @@ Privacy of user files is a founding principal of this network
 
 # MULTI-File-System ################################
 zfs
+  zpool import -f poolname
 ufs1
 ufs2
 fat
 msdosfs
+  mount -t msdosfs /dev/da3s1 /mnt/usb2
 ext2
 ext3
 ntfs (ro)
@@ -1623,3 +1625,44 @@ Code tips
 1) fix syntax
 2) review structure for mem-leaks
 3) step-into-uncomment-code to correct by block of code
+####################################################
+# 10 - SCRAPE
+####################################################
+
+Internet hosts fields of information as free forages
+The extraction of data is unique to individual fields
+
+Massive-Iterations worked-over-time
+Various host sources is ideal
+
+Steps
+  [1] - grab html pages that holds addresses of data
+  [2] - filter only the addresses that are useful into a queue file
+  [3] - work over the queues in a light-weight-sleepy-http_get request
+
+[1]
+Find the lists of data-items
+This takes several probes of investigation
+
+The ideal location is an incremental-address
+  https://artgallery.yale.edu/nodes/0
+  https://artgallery.yale.edu/nodes/1
+  https://artgallery.yale.edu/nodes/2
+
+Deposit these html-files in a designated directory
+
+[2]
+This is normally where the locals get clever to hide the data
+Only by tracing normal-access, can the scraper figure-out the formula for filters
+
+FORMULA
+  [f] - load a html-file in memory to filter
+  [f] - unique-regx-pattern as the start of the address-of-data
+  [f] - unique-regx-pattern as the end of the address-of-data
+  [f] - unique-regx-pattern as the front cut-off-trim to the address-of-data
+  [f] - unique-regx-pattern as the end cut-off-trim to the address-of-data
+  [f] - concatenate the addresses-of-data to a queue file as a full-address-of-data
+  [f] - move html-file to a processed-only-directory only-if there was an extraction of a address-of-data
+
+Formulas in this order will allow you to review why no address-of-data was extracted from a file
+This formula only has to be found once per project but it needs to be created for individual-projects
