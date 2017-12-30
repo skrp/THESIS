@@ -1656,13 +1656,30 @@ This is normally where the locals get clever to hide the data
 Only by tracing normal-access, can the scraper figure-out the formula for filters
 
 FORMULA
-  [f] - load a html-file in memory to filter
   [f] - unique-regx-pattern as the start of the address-of-data
   [f] - unique-regx-pattern as the end of the address-of-data
   [f] - unique-regx-pattern as the front cut-off-trim to the address-of-data
   [f] - unique-regx-pattern as the end cut-off-trim to the address-of-data
   [f] - concatenate the addresses-of-data to a queue file as a full-address-of-data
-  [f] - move html-file to a processed-only-directory only-if there was an extraction of a address-of-data
 
-Formulas in this order will allow you to review why no address-of-data was extracted from a file
-This formula only has to be found once per project but it needs to be created for individual-projects
+Move html-file to a processed-only-directory only-if there was an extraction of a address-of-data
+A review of the formula & the failed-extraction-html-file will improve the formula
+
+A formula must be created for each project
+A formula has to be found once per project
+
+[3]
+Split the queue of the workload into appropriate-segments
+Read each segment then remove it from that directory
+
+Work over each segments only after sleeping the process for a short time
+Sleep is necessary for client-machines, server-machines, & all-in-between
+
+Perl http-get-request
+  LWP::Protocol::https
+  LWP::UserAgent
+
+  my $ua = LWP::UserAgent->new(agent, "donkeytrain/54.0.1", from, "punxnotdead", timeout, 45);
+  $ua->get($address, ':content_file'=>$file);
+
+
