@@ -202,8 +202,13 @@ SCRAPE
   Address-of-data
   Filter html
   Get data
-
 # 11 ###############################################
+SCAN
+  tcpdump
+  nmap
+
+
+# 12 ###############################################
 APPENDIX
   unix manuals
     log
@@ -1688,12 +1693,23 @@ Perl http-get-request
 
   my $ua = LWP::UserAgent->new(agent, "donkeytrain/54.0.1", from, "punxnotdead", timeout, 45);
   $ua->get($address, ':content_file'=>$file);
+|
+|
+|
+|
+|
+|
+|
+####################################################
+# 11 - SCAN
+####################################################
 
+Handmade code aides in obscurity
+Admins can familiarize popular code
+Reverse engineer it to find firewall rules to break a scrape
 
-|
-|
-|
-|
-|
-|
-|
+nmap the greatest hacker tool invented
+Refined by the world's tech power Google
+
+Run handmade code
+Change IP & run nmap
