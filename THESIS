@@ -129,22 +129,17 @@ KERN
     seer
     norm
   JAIL
+  BRICK
+  DNS
 
 # 4 ################################################
-PSK-OPIE
+OTO-PSK-OPIE
   Overview
   ASIGN
   KEY Market
   RAW Market
 
 # 5 ################################################
-PF
-  Overview
-  Tables
-  XFR
-  pflog
-
-# 6 ################################################
 PROTO
   Overview
   SSH
@@ -157,6 +152,13 @@ PROTO
   HTTPS
   MORSE
   SNIFF
+PF
+  Overview
+  Tables
+  XFR
+  pflog
+
+# 6 ################################################
 
 # 7 ################################################
 ZFS & Hardware
@@ -210,6 +212,7 @@ SCAN
 
 # 12 ###############################################
 APPENDIX
+  backup techniques
   unix manuals
     log
     mount
@@ -746,6 +749,13 @@ Password keys must be Pre Shared Keys Onetime Password In Everything
 Each account is associated with a jail account access that is periodic
 The unix kernel is sterilized & monitored over the network
 
+Configurations are default to brick
+BRICK will load decrypted-configuration into dtrace-sensored-memory
+
+Authenticated & anonymous log view
+OTO-PSK key-based log access to node
+(top iostat zfs ps tcpdump)
+
 # PROGRAMS #########################################
 
 Pre-load the USB with programs to be made available by default
@@ -854,6 +864,41 @@ ext3
 ntfs (ro)
 fuse-ext4
 fuse-ntfs (rw)
+# INSTALL ##########################################
+The following will be the steps necessary to install a MKRX node to a network
+# CLEANSE ##########################################
+chmod the fk outta everything
+Always start with a useable base, act then test
+# STRIP ############################################
+Thin down the base
+
+# DNS ##############################################
+Nodes connected thru the cloud
+Directory of ip4-addr:port
+
+Node gets rep by its offers
+
+Servers are planets
+Clients are citizens
+
+Planets serve:
+  nfsv4 file-cities
+  ftp dumps
+  http propaganda
+  irc rooms
+  proxie
+
+Clients can serve:
+  dormant-http-relays
+  scanners
+  scrapers
+  breach-relay
+
+The register on these
+On a P2P basis
+
+Usr gives access to N members
+Members get access to dns
 |
 |
 |
@@ -1210,6 +1255,9 @@ zpool create mirror
 + zpool create mirror zroot /dev/da0 /dev/da2
 ++++++++++++++++++++++++++++++++++++++++++++++++++++
 
+zpool import
+  [m] list available pools
+
 zpool import -f
 ++++++++++++++++++++++++++++++++++++++++++++++++++++
 + zpool inport -f usb
@@ -1454,7 +1502,8 @@ Depths of which dark valleys can leave one lost for weeks
    [[ == powerstrip =====]]   |       /_____________\  A---,)Xxx'
    [[ ====== CHEST ======]]   | unix  ' ' '|' ' ' ' '  :  ."
    [[ ===================]]   |____________|  |_____ orrJrr'rr
-   [[ ====== mirror =====]]  ________=======,====8QQQJ        PDD8
+   [[ ====== hdd cage ===]]        [  ]          [ QQQ      PDD
+   [[ ====== mirror =====]]  ________=======,====QQQQJ        PDD8
    [[ ===================]]                       '^^\\     //^^'
    [[ ===== raidz2 ======]]                          GG     GG
    [[ ===== raidz2 ======]]                    ,,---/  x  x   --}
@@ -1476,6 +1525,9 @@ Depths of which dark valleys can leave one lost for weeks
     Due to PS & UPS damage
   switch
     unmanaged pass thru 24 ports
+  hdd cage
+    hotswap 4-wide holder
+    powered by extended-molex-cables
   scraper
     dual-processor scrape-only machine
   keyboard
@@ -1497,7 +1549,7 @@ Depths of which dark valleys can leave one lost for weeks
 Raid can be a beautiful thing
 They are always true muthrfkrs
 
-Hot-swap is the act of precariously recalculating pool-parity onto a new drive when an old drive has failed
+Hot-swap is the act of precariously recalculating pool-parity after drive-failure
 First the physical-location must be known a trial of hardship for white-box-hackers
 
 Despite finished efforts of mapping still: drive-failure + physical-location = complete nightmare
@@ -1706,10 +1758,11 @@ Perl http-get-request
 
 Handmade code aides in obscurity
 Admins can familiarize popular code
+
 Reverse engineer it to find firewall rules to break a scrape
 
 nmap the greatest hacker tool invented
 Refined by the world's tech power Google
 
 Run handmade code
-Change IP & run nmap
+On-fail run nmap
