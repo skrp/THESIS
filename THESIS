@@ -422,10 +422,7 @@ MKRX Tools:
   [CENSUS]
     Combine all host_LIST into a community-census
     OUTPUT:>sha host1 host2 host3 ... hostN
-            sha host45
-            .
-            .
-            .
+
   [LONE]
     Clone a undupe file from CENSUS
     INPUT:>sha host4
@@ -739,6 +736,11 @@ All que-file that fail the check will become zombies and must be beheaded (head 
 ####################################################
 # 3 - NET
 ####################################################
+
+# OVERVIEW #########################################
+
+# P2p^n ############################################
+
 Network of P2p^n nodes
   host  : uniq identifier
   LIST  : sha list
@@ -761,6 +763,8 @@ Then the user can:
   http proxy
   irc proxy
 
+# REP ##############################################
+
 All entities in NET have a REP
 Transfers of REP is in a community-wide register
 
@@ -782,11 +786,67 @@ Data value of the file appraised by community
 This is exchanged into value
 The value will change but this is discussed later
 
+# GUILD ############################################
+
 GUILD are groups in the network
     vatos_hostalice              vatos_hostbob
            vato_bill >                 vato_proxy: quota bank key
            vato_ben  >
            vato_paul >
+
+BANK GUILD host_representative meet to exchange data
+  BANK increases value
+  Exchanges keys value to host_rep
+  host_rep passes that on to usr
+  usr can TXN the value at AH
+
+Each file is on the master_file
+sha usr cur_usr
+dental.pdf ry4l titty
+
+Value of the sha approved for community value
+Originator gets 70% increase Current-Owner gets 30%
+
+# IRC ##############################################
+
+OTO-PSK access to channels
+Channels are secured rooms of communication
+
+# EXAMPLE 1
+
+#BANK "bots only"
+bots wait for all members to join
+Secondary mechanisms of authentication passed
+
+They meet to exchange msg all log
+They agree on the sha of the log
+Then adjourn the meeting
+
+MEMBERS:
+  node_rep    - relations with other nodes
+  ah_bot  - transactions
+  guild   - power
+  archive - value sha
+
+# EXAMPLE 2
+
+#AH "auction house"
+usr /msg menu_bot "list"
+menu_bot: $id $amt ...
+
+usr /msg menu_bot "buy $amt"
+>>ah_bot: key
+
+>>usr sends key to banker
+>>banker sends confirmation
+
+>>usr /msg ah_bot "$key $confirm"
+
+usr /say "$id"
+ah_bot /say "$TXN $buyer $seller $amt $id"
+
+usr /msg ah_bot "refund"
+ah_bot: refunded $amt
 |
 |
 |
@@ -979,7 +1039,6 @@ bob(alice(hen), gwen())
 
 The network interaction
 host OTO-PSK host
-
 |
 |
 |
