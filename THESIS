@@ -419,6 +419,18 @@ MKRX Tools:
     Load INDEX hash-dumps into memory
     Terminal Input & Output produce single-entry lists
 
+  [CENSUS]
+    Combine all host_LIST into a community-census
+    OUTPUT:>sha host1 host2 host3 ... hostN
+            sha host45
+            .
+            .
+            .
+  [LONE]
+    Clone a undupe file from CENSUS
+    INPUT:>sha host4
+    OUTPUT:>sha host4 host11
+
 # XS ###############################################
 
 Extract & Standardize All Files Recursively
@@ -549,7 +561,6 @@ Extract a source
 +++++++++++++++++++++++++++++++++++++++++++++++++++
 $usr@host> XS /mnt/bkup10/ ~/
 +++++++++++++++++++++++++++++++++++++++++++++++++++
-
 
 # DISK #############################################
 
@@ -726,7 +737,64 @@ All que-file that fail the check will become zombies and must be beheaded (head 
 |
 |
 ####################################################
-# 3 - KERN
+# 3 - NET
+####################################################
+Network of P2p^n nodes
+  host  : uniq identifier
+  LIST  : sha list
+  REG   : TXN register
+  DNS   : tunnel routes
+
+# DNS
+$host $ip4:$port
+
+Example:   4uu 23.123.231.30 22 ssh
+           y43 37.12.33.42 6660 irc
+           ii3 37.12.33.42 6661 rsh
+
+A user connects to a host via OTO-PSK to an anonymous user of that tier
+Then the user can:
+  OPIE into another user
+  purchase zfs quota
+  nfs tokens
+  ftp
+  http proxy
+  irc proxy
+
+All entities in NET have a REP
+Transfers of REP is in a community-wide register
+
+host_alice : host_bob host_ben host_bill
+[ a register all subscribe to by P2p^n communities ]
+
+TXN registers each transaction
+$date $host_witness $from $to $amount
+
+This creates a simple end-of-day-balance
+$usr $balance
+
+All data are sent to REG
+This will sha log
+
+The currency of the network are file sha
+Data value of the file appraised by community
+
+This is exchanged into value
+The value will change but this is discussed later
+
+GUILD are groups in the network
+    vatos_hostalice              vatos_hostbob
+           vato_bill >                 vato_proxy: quota bank key
+           vato_ben  >
+           vato_paul >
+|
+|
+|
+|
+|
+|
+####################################################
+# 4 - KERN
 ####################################################
 
 # Overview #########################################
@@ -899,6 +967,19 @@ On a P2P basis
 
 Usr gives access to N members
 Members get access to dns
+
+P2p^n
+Peer To peer-branch-n
+
+bob -> alice(1) -> gwen(2) -> hen(3)
+bob -> alice(1) gwen(1) -> hen (2)
+
+bob(alice(gwen(hen)))
+bob(alice(hen), gwen())
+
+The network interaction
+host OTO-PSK host
+
 |
 |
 |
