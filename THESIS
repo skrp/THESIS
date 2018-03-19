@@ -1238,6 +1238,13 @@ bob_3y89d rents space for prime file storage
 
 Use of remote nodes is useful & encouraged
 Nodes offer transient storage for the BLK_CLD of files
+# CATPURE ##########################################
+If a root opie is lost & physical access to dev
+  [1] boot live-usb
+  [2] mount -u /
+  [3] zpool import -f -o altroot=/ zroot
+
+ << now you are in>>
 |
 |
 |
