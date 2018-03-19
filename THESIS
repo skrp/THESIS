@@ -1051,9 +1051,26 @@ host OTO-PSK host
 ####################################################
 
 # Overview #########################################
+PAM Group RINGS
+  [#] Socket Credentials
+OSOPSKOPIE
+  [#] One Session Only Pre Shared Key One Password In Everything
 
-Group RING key types
-Each login will require a reduction of the usr usb-bank
+ANONi
+  [#] Rotated JAIL (wiped worlds)
+  [#] All session connected to host here
+  [#] One session is lost the user is deleted & wiped
+
+root-usr_jail-anoni_jail-ip4-anoni_jail-usr_jail-root
+
+ANONi interface alone external to a network
+Monitored by every user
+
+Open source & Open log
+System files chron-verified
+
+If there is a breach or inscrutibility
+All connected to the host should know
 
 # Escalation ######################################
 
