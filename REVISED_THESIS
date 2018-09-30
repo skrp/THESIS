@@ -1,0 +1,1958 @@
+#####################################################
+# MKRX UNIX ARCHIVE NETWORK
+#                                             skrp
+# {{  t.(o0)_j  }}                       Kehkay Genkai
+#  \\ Meri Kann //                      of the village
+#  _\\cibR punX//____________________Hidden in the 1337
+|
+|
+|
+|
+|
+|
+|
+This manuscript details the machine of MKRX unix networks
+A network of connected nodes thru tunnels shrowded by pre-shared-key encryption
+Each node is a clone with minimal customizations
+#####################################################
+Mission: Accumulate, rate, & disperse files in secret
+
+Users acquire keys via interaction with HIVE daemons that live on the HOST system
+Users initate a job, the daemon works the que, the user gets a key
+Keys can be rated over time to be deposited into the user bank in the WORLD
+
+Job example:
+  1) chicksnuff has daemon scrape usb
+  2) daemon tags each file entry with chicksnuff
+  3) HOST verifies each file for uniqueness
+  4) HOST is notified per-file by network on REP (dl_cnt, stars, value)
+  5) HOST pays out keys as dividends to user
+
+Unique file is introduced by a user on a HOST
+HOST introduces the file to the network
+Network rates the file which benefits the HOST even if file has moved to another
+HOST in turn benefits the user
+User is anonymous to the network
+User can then MARKET HOST keys for another HOST
+#####################################################
+Network Value is contained in 4 sectors
+  {#} Storage shares         - node file count & quality 
+  {#} Process clones         - HIVE independent & dependable
+  {#} Cryptographic Security - OTOPSKOPIE authentication
+  {#} Services               - ssh scp irc ftp http
+#####################################################
+Unix Kernel
+	KERN
+	Jails
+	Dtrace
+	PF
+	OTOPSKOPIE
+	Hardware
+File System
+	SICC
+	ZFS
+NET
+	REG
+	REP
+	MARKET
+Jobs
+	HIVE
+	Scrape
+	Scan
+#####################################################
+Each node of the network consists of HOST-kernel, jail-worlds & users-accounts
+HOST   - physical machine node
+  lord - account associated to a ring of power only accesible via WORLD heir account
+ANONI  - jail where all traffic spawns
+  tmp  - account to be wiped upon disconnect & associated with a OTOPSK
+TROVE  - jail which serves anonymous-scp SICC files
+LOG    - jail which serves log files only accesible by seers
+WORLD  - jail user accounts
+  norm - unprivledged user & unable to escalate power
+  seer - norm user with ability to scp logs from LOG
+  heir - norm user with the ability to ssh into HOST 
+#####################################################
+Normal User Connection Example:
+1)  user opens connection by sending One-Time-Only-Pre-Shared-Key [OTOPSK] to a HOST 
+       => external traffic open to spy via ip4 HOST
+2a) HOST redirects connection via Packet Filter to ANONI jail
+       <= => internal service traffic enshrouded by encryption 
+2b) upon disconnection ANONI jail wipes tmp acct
+3a) user can One-Password-In-Everything [OPIE] into WOLRD to access account
+       user => ANONI => internal ssh => WORLD norm
+3b) user can OTOPSK scp into TROVE 
+       user => ANONI => internal scp => TROVE files
+3c) seer can OTOPSK scp LOG
+       seer => ANONI => internal ssh => WORLD seer => scp LOG
+#####################################################
+Lord User Connection Example:
+1)  lord opens connection by sending OTOPSK to HOST
+       => external traffic open to spy ip4 HOST
+2a) HOST redirects connection via Packet Filter to ANONI jail
+       <= => internal service traffic now enshrouded by encryption 
+2b) upon disconnection ANONI jail wipes tmp acct
+3)  lord OPIE into WOLRD to access heir account
+       lord => ANONI => internal ssh => WORLD heir
+4)  lord OPIE using WORLD heir into HOST
+       lord => ANONI => WORLD heir => internal ssh => HOST lord
+#####################################################
+Summary: 
+The ANONI jail method external spy can not distinguish traffic nor user.
+Most imporatant the HOST has only to control ANONI to control access
+|
+|
+|
+|
+|
+|
+|
+Preserve all insight
+Till the last man walk
+
+That he might not walk
+In the darkness of past
+
+Independent of 
+Time wealth or government
+
+Deliver basic rights
+Thru Anarchy against entropy
+|
+|
+|
+|
+|
+|
+|
+####################################################
+# Table of Contents
+####################################################
+
+# 1 ################################################
+SICC
+  Overview
+  Standard
+  Metadata
+  Key
+  shaper
+  BLKR
+# 2 ################################################
+MKRX
+  Overview
+  Tools explained
+  Tool examples
+  CLI examples
+    create GET from BKUP
+    create GET from UNIQ
+    populate a new drive
+    extract a source
+# 3 ################################################
+HIVE
+  Overview
+  Structure
+  Mechanics
+    ORDER
+    SLEEP
+    SUICIDE
+    CLEAN
+    RESUME
+  API
+    SHA
+    GET1
+    UNTAR
+    REGX
+    BLKR
+    SLCR
+  Logs
+# 4 ################################################
+KERN
+  Overview
+  Hardened CONF
+  RINGS (rings of power)
+    root
+    sroot
+    lord
+    heir
+    seer
+    norm
+  JAIL
+  BRICK
+  DNS
+# 5 ################################################
+OTO-PSK-OPIE
+  Overview
+  ASIGN
+  KEY Market
+  RAW Market
+# 6 ################################################
+PF
+  Overview
+  Tables
+  XFR
+  pflog
+# 6 ################################################
+PROTO
+  Overview
+  SSH
+  SCP
+  FTP
+  PF
+  NFS
+  IRC
+  8080
+  HTTPS
+  MORSE
+  SNIFF
+# 7 ################################################
+ZFS & Hardware
+  ZFS
+  0
+  Mirror
+  raidz2
+  raidz3
+# 8 ################################################
+HARDWARE SCHMATICS
+  SIMP
+  TOWR
+  Utilities
+  Hardware
+    BOX
+    BIOS
+    cpu
+    RAM
+    PCI
+    DEV
+    Supply
+    PCI
+    SATA
+    SAS
+    USB
+    JBOD
+  RAID
+  Aggregations
+# 9 ################################################
+DTRACE
+  Overview
+  DISK
+  CPU
+  RAM
+  NET
+  cmpZFS
+  cmpUNIX
+# 10 ###############################################
+SCRAPE
+  Overview
+  Address-of-data
+  Filter html
+  Get data
+# 11 ###############################################
+SCAN
+  tcpdump
+  nmap
+# 12 ###############################################
+APPENDIX
+  backup techniques
+  unix manuals
+    log
+    mount
+    boot
+    ntfs
+  perl manuals
+    log
+    language
+    modules
+  zfs manuals
+    log
+    hotswap
+    import
+    set
+  dtrace manuals
+    language
+# END ##############################################
+|
+|
+|
+|
+|
+|
+|
+####################################################
+# 1 - SICC System In Complete Chaos File System
+####################################################
+
+# Overview #########################################
+Storage shares are the most important factor in this network
+Archive-oriented structures are implemented as a network-wide pursuit of unique files
+
+Write-only dump-dir 0300 /usr/nfs/dump/
+This directory will be scraped by the SICC-system periodically into /usr/nfs/pub/
+
+(this exposes files to an nfs-share mountpoint to the network for file exchange)
+SICC will process all files into a sane manner built to handle massive numbers
+
+Storage has a next important factor is entropy strength
+Entropy is stored to be traded with other hosts
+
+Entropy over-time multiple-source random-selection
+Each Private-Key stored as its sha
+
+To sum up
+Data is kept as a sea such that the listing freeze a system
+
+Obfuscation by explicit filename requests
+Random-parts of random-files in hexadecimal order with no association
+
+To piece together the file
+  [:D] - Metadata file
+  [:D] - KEY file
+  [:D] - shape pool
+  [:D] - KEY$ payment
+# NAME SYSTEM ######################################
+The core of this system is based on sha file computation
+
+Sha is a unique file identifier that is the output of a mathematical algorithm
+This mathematical algorithm will produce the same sha for the same file
+
+Each file is named after its sha
+
+This name system has two benefits:
+  {1} de-duplicates files
+  {2} assigns data into chaotic order
+
+Sha uniqueness keeps all data:
+  [-] simple
+  [-] homogeneous
+  [-] ultra-transient
+
+The duplication of data is accounted in lists
+Each data-pool is maximized in its ability to minimize the data-pool's disk-footprint
+
+The duplication count allows for network backup prioritization to remote devices
+This foundation is stable for automated backup management of massive-distributed-data
+# METADATA #######################################
+Metadata is kept isolated from data
+This isolation allows for the obfuscation of open data
+
+Data-pool lists have lessened-value without Metadata
+Exposure of lists can be nullified by salt
+
+Only someone that has the metadata & access-key can request data
+
+This file-system is built for ultra-transient network management
+All files are located in the directory "/usr/nfs/pub/"
+
+Two factors assist in obfuscation
+  (1) No subdirectories to betray association
+  (2) Alpha-numeric ordering of the hexadecimal names
+
+The path allows for past-association to be deduced for group-reconstruction
+Each file is periodically verified to have a corresponding metadata-file
+
+Each metadata-file consists of 4 lines:
+  (1) name - XS (MKRX) standardized name
+  (2) path - XS standardized path of extraction
+  (3) size - number of bytes
+  (4) encode - type of encoding
+# KEY ##############################################
+A KEY is a recipe to rebuild an obfuscated file
+
+This allows for a powerful layer of unprecedented obfuscation
+What is public gibberish is made private information thru access to a KEY file
+
+Each KEY file is named after the original file sha
+The KEY file contains sequential sha-per-line lists
+
+Obfuscation Methods:
+
+  [X] shaper (secure against file-known)
+        Shreds a file into random-sized parts & creates KEY
+        Random-size prevents sha rainbow-tables of attacker with file-known
+
+  [X] BLKR (insecure if file-known)
+       Shreds file into standard-sized blocks & creates KEY
+       Homogeneous data types will have duplicate-collisions which nullify the duplicate data
+       Only one copy of data can exist in the data-pool
+       Many KEY files can correspond to the same block reducing the data-pool disk-footprint
+       The smaller block-size the greater power of compression & obfuscation of data-pool
+       Each node configures own block-size
+# SUMMARY #########################################
+This file-system spread over a network has the following benefits:
+  [o] All data easily accounted for in simple lists
+  [o] Sane & clean orders of massive-data on an network
+  [o] Network level explicit control of the duplication of data
+  [o] Each node serves what is possible
+  [o] Each node has access to total data
+  [o] Each node can assist in external backups
+  [o] Total network-pool footprint is minimized
+
+On a homogeneous unix kernel the network file-system is transparent
+Only active tunnels will be displayed as available data-pools
+
+Transparent file-system
+  [l] store data remotely
+  [l] get a remote file
+  [l] serve a local file
+  [l] backup network to local drive
+|
+|
+|
+|
+|
+|
+|
+####################################################
+# 1 - MKRX
+####################################################
+
+# Overview #########################################
+
+MKRX is built as node-host-clone to archive massive amounts of data
+Nodes enhance the network & recieve amazing benefits
+Node service & contributions are repaid with the contributions of the whole
+
+MKRX Tools allow the clean & stable foundations for this ecosystem
+The user interface is thru the command-line over a network
+
+# MKRX Tools #######################################
+
+MKRX Tools:
+  [XS]
+    Extract & Standardize
+    Recursive file copy processed by metadata extraction & isolation into ordered ZFS pools
+    This duplicated a pool to pass only unique file data in a minumum-sized disk footprint
+
+  [SCRUB]
+    Verify if sha of file matches the filename
+    This alerts the system to any inconsistencies
+    Alerts help keep the temple pure
+
+  [CHKMETA]
+    Confirm each file has metadata
+    This keeps a tightly-clean organization
+
+  [UNIQ]
+    Output unless (ARG1-files exist in ARG2-files)/
+    This is a nifty program which is used in all facets of administration
+    It compares a linked-list of data to the other and outputs all inconsistency
+    perl hashes transform this project mathematically to reduce a weeks-long process into minutes
+
+  [XFR]
+    Serve data to local drive
+    Serve data to remote locations
+
+  [INDEX]
+    Build Metadata hash-dumps that are clean data structures for user interface
+    This greatly minimized CLI initialization
+
+  [CLI]
+    Load INDEX hash-dumps into memory
+    Terminal Input & Output produce single-entry lists
+
+  [CENSUS]
+    Combine all host_LIST into a community-census
+    OUTPUT:>sha host1 host2 host3 ... hostN
+
+  [LONE]
+    Clone a undupe file from CENSUS
+    INPUT:>sha host4
+    OUTPUT:>sha host4 host11
+
+# XS ###############################################
+
+Extract & Standardize All Files Recursively
+  Send a foreign data tree to pool-dir grabbing all files
+  Build metadata in an isolated place from the data
+
+This process is the gateway for files to enter the archive
+High io usage & multiple process utilization
+
+Features the expert developer kent\n
+This code been worked over 100s millions of files
+
+Automatic logic
+Just point & pull trigger
+
+Name & path values are standardized to keep environment safe
+The path allows for past-association awareness
+Size & encoding keep calculations one-time-only
+
+# UNIQ ############################################
+
+Output if ARG1 does-not-exist in ARG2
+
+Filter data that is unique on the network
+Compare NODE-list against NET-list
+Backup the network with priority files needing duplication
+
+This is a very useful command
+It can handle millions of iterations in both ARGs
+
+Learn the simple code mechanic & this command will prove a general system tool
+In minutes this processes data that would require many days for grep
+
+# CLI ############################################
+
+Interface to network archive requests custom file requests
+This is a daemon server that keeps METAMASTER in memory
+Transactions are hexadecimal arrays
+
+  [1] Build INDEX hash-dumps into memory
+    This may take several minutes due to massive-data
+
+  [2] Build array-list
+    Set to network array-list
+    Load a custom array-list from file
+
+  [3] Filter down array list
+    Use perl regular-expressions to parse patterns
+
+  [4] Report on array-list
+    Print a filtered array to file
+    Count the quantity in array-list
+    Output the corresponding array-list value
+      name, path, size, encode
+
+  [5] Create lists of files bound to a byte-parameter
+    The calculation of sums add up when it is to the millions
+    Array-list is sectioned into specific-sized chunks
+
+  [6] Use XFR to request the files into home directory
+    This process will only require a feed of the output which is the array-list
+    Array-list will always only be the sha of filtered file-metadata
+
+  [7] Use conditional regular-expressions to edit the array-list names into a new-file
+    After XFR complete use new-file to rename array-list files
+
+Command Menu:
+  {regx}  regx data filters
+  {reset} reset array to full network-array
+  {load}  load array from custom file
+  {print} output current array to file
+  {count} count array
+  {value} output values of array 'name, path, size, encoding'
+  {pop}   output size-specific lists that sum to a specific-amount of bytes
+  {name}  edit name using conditional regx into new-file
+
+# EXAMPLES #######################################
+
+[1]
+Create GET for backup
+  {TOTAL_NET}   location of network-wide file list
+  {TOTAL_LOCAL} location of local file list
+  {GET}         single-entry line lists of what TOTAL_LOCAL lacks from TOTAL_NET
++++++++++++++++++++++++++++++++++++++++++++++++++++
+$usr@host> UNIQ TOTAL_NET TOTAL_LOCAL GET
++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+[2]
+Create EXTRACT from UNIQ
+  {TOTAL_SOURCE} sha lists of a source
+  {TOTAL_NET} network-wide file list
+  {EXTRACT} new unique files to network list
++++++++++++++++++++++++++++++++++++++++++++++++++++
+$usr@host> UNIQ TOTAL_SOURCE TOTAL_NET EXTRACT
++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+[3]
+Populate a new drive
+  {~/INDEX/}         location of INDEX metadata database hash dumps
+  {~/POP/1000000000} file to transfer
+  {/mnt/USB/pool/}   location to dump files
++++++++++++++++++++++++++++++++++++++++++++++++++++
+$usr@host> CLI ~/INDEX/
+pop 1000000000
+exit
++++++++++++++++++++++++++++++++++++++++++++++++++++
+$usr@host> cd ~/POP/
++++++++++++++++++++++++++++++++++++++++++++++++++++
+$usr@host> wc -l 1000000000
+8493719 1000000000
++++++++++++++++++++++++++++++++++++++++++++++++++++
+$usr@host> wc -l leftover_1000000000
+39533365846 leftover_1000000000
++++++++++++++++++++++++++++++++++++++++++++++++++++
+$usr@host> XFR ~/POP/1000000000 /mnt/USB/pool/
++++++++++++++++++++++++++++++++++++++++++++++++++++
+$usr@host> CLI ~/INDEX/
+load leftover_1000000000
+pop 1000000000
+exit
++++++++++++++++++++++++++++++++++++++++++++++++++++
+Loop over & over by gigabyte-sized fragments
+
+[4]
+Extract a source
+  {/mnt/bkup10/} location to grab new data
+  {~/} location to dump data into ~/pool/ & ~/g/
++++++++++++++++++++++++++++++++++++++++++++++++++++
+$usr@host> XS /mnt/bkup10/ ~/
++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+# DISK #############################################
+
+Two types of storage
+  [r] - root storage
+    This is a location that resides upon a root-file-system of a kernel
+      /usr/nfs/pub/
+  [r] - flat storage
+    An external disk that contains only an imported pool of files
+      /37w/pool/ or /usr/nfs/37w/pool/
+
+/usr/nfs/pub/  - zfs mount
+/usr/nfs/373/  - nfs mount
+/usr/nfs/y7u/  - nfs mount
+
+External-drives are necessary for clean access to a file-system
+A foreign system can port-itself to mount the simple zfs file-system
+
+The root storage is only slightly more complex
+A trade to only then need a amd64 machine architecture to start up
+
+
+/zroot/boot/ - lord only privilege
+---------------------------- DESCRETE LINE
+/usr/nfs/pub/ - zfs quota protection
+/usr/nfs/el1/ - nfs mount
+/usr/nfs/z87/ - nfs mount
+|
+|
+|
+|
+|
+|
+|
+####################################################
+# 2 - HIVE
+####################################################
+
+# OVERVIEW #########################################
+Network TXN (transactions) are based on KEY$ currency
+Creating & trading private-keys as a means for network access
+
+Usr sends unstable-input to HIVE
+A DEMON stablizes-input & computes
+HIVE deposits payment into usr bank
+Usr buys host-keys & trades them for specified-host-keys
+
+Each heart of each node singular in the aim of Archive
+Data stored for the future & it will offer refuge to any helpful
+
+Encode bounty * group-multiplier = payment
+Payment is exchanged for group-limited private-keys
+
+Private-key will be used to open a tunnel
+Pre-Shared-Key One-Time-In-Everything
+_
+
+Massive projects will be broken down into iterative-tasks
+Usr will work DEMON upon sections of those iterative-tasks
+
+Two quest areas
+  ["] - harvest of novel workloads lists
+  ["] - compute lists
+
+Each project will be distributed to array-computation
+
+project / network-nodes = time
+  time + network latency = total-time
+
+Benefits of network-sync-computation
+  Randomize Entropy Sources
+  Scrape data off from many sources to not cause attention
+  Shred data into random-sized blocks
+  Clean up host into network dump
+  Allow many users to contribute metadata to Archive Collections Interface
+  Distribute loads from disk to network to cpu to disk... to empower robustness
+  Health-Beat of host via dtrace anchors
+
+A network of DEMON (unix daemon) work on a schedule
+  Busy (low all)
+    Scrape http data
+  Mid (low net)
+    Entropy collection
+  Bored (high all)
+    shaper
+    SHA
+
+# NET ##############################################
+
+HIVE
+    {T}    get www.pedrk.com/tome.txt
+  {     }  blkr $i
+{ FACE    }
+    ||
+    ||
+    ||
+    ||
+    ||                    key_4ff38 < [usr]
+    ||                    key_ff9aae   v   > key_d3413
+    ||
+    ||
+    ||
+   {T}       sleep 3600                                {T}      sleep 3600
+ {     }     get www.nasa.com/sun/index.html         {     }    kripkey
+{ FACE  } ========================================{ FACE     }  shaper $i
+
+FACE
+This is an ASCII graphical representation of the NODE
+STATE represents the HOST each report independent to other DEMON
+  [y] NAME
+  [Y] STATE
+  [y] AGE_IN_HOURS
+  [y] SUCCESSFUL_ITERATIONS (YAY, 5-line-success-buffer)
+
+
+Commands (all or node)
+  PING - alive last 15-min
+  SLEEP - pause all (may take forever to infinity)
+  RAW - all output log
+  HICC - fail / error
+  BURP - cat log of successful iterations
+  FACE - echo DEMON portrait
+  REIN - iograph of net & individual data
+  BARK - { [PING * ALLOWANCE] < 10%_expected }
+  SUICIDE - clean-up then kill-itself
+
+A HIVE cumulative workload should never breach 20% of maximum
+The goal behind this work is to allow sanity thru dissociative-scheduled-massive-computation of a network of these HIVE
+
+# NODE #############################################
+
+A unix daemon is an process that severs all-but-explicit interface file descriptors
+This provides an independence which stabilizes the foundation of the code
+This code is a summon-scroll crafted to deal with specific actions
+  The process can be suspended-shutdown-update_que by an admin able to write in a locked-down dir
+  The DEMON-INTERFACE will all specific tasks in an explicit command execution
+
+The Achilles heel of distributive computing are fork-bombs & defunct-muthrfkrs
+Fork bombs are nasty & bloom out of any inconsistency [like invasive network probes]
+Defunct processors are unkillable in certain situations
+You can never automate continuously running programs without a sensitivity to host health
+There is a reason animals have a nervous system & we must forward those lessons onto the machine race
+The sensitivity of the host system will be the stable foundation with catches fork bombs
+  Every host will have an avatar maintained by HIVE
+  This will be a depiction of the health which will have numerical value
+  If any net-process over 50% utilized-cpu then cleanup & exit or sleep
+
+Full-access given to any network node with proper Pre-Shared-Keys Once-In-Everything-Passwords
+This allows a network to be delegated remotely to partitioned unix groups
+  pig_fkn_redneck wants a torrent downloaded at maximum-strength crypto
+  The code will inspect the PSK, shift the key off the array, and have x proxy nodes download the file in pieces
+  When the torrent is complete, verified & archived it is placed in /usr/home/pig_fkn_redneck/torrent/Udders_for.udder.lovers.mp4
+
+# FUNCTIONS #########################################
+
+tombstone() name() time()
+Each DEMON has a unique name that will be memorialized with its lifeswork
+For a member to enrich the whole, first the society must cherish the member
+The tombstone is a snapshot of the last DEMON portrait FACE
+
+que_r() que_up() que_flush() api_verify()
+QUE for work is placed via nfs into the node specific folder /HIVE/node/$host/que/que-file
+que_r() reads the directory, skips . & .. then returns the next value as the que-file
+que_up() reads the que-file into an array then deletes it
+Life must have a stable state due to its unpredictable nature
+que_flush() is the mechanism to ensure that a state is kept by TODO que-file that cycles
+api_verify() checks the que-file is digestible for the HIVE environment
+All que-file that fail the check will become zombies and must be beheaded (head -n 1) & replanted
+|
+|
+|
+|
+|
+|
+####################################################
+# 3 - NET
+####################################################
+
+# OVERVIEW #########################################
+
+# P2p^n ############################################
+
+Network of P2p^n nodes
+  host  : uniq identifier
+  LIST  : sha list
+  REG   : TXN register
+  DNS   : tunnel routes
+
+# DNS
+$host $ip4:$port
+
+Example:   4uu 23.123.231.30 22 ssh
+           y43 37.12.33.42 6660 irc
+           ii3 37.12.33.42 6661 rsh
+
+A user connects to a host via OTO-PSK to an anonymous user of that tier
+Then the user can:
+  OPIE into another user
+  purchase zfs quota
+  nfs tokens
+  ftp
+  http proxy
+  irc proxy
+
+# REP ##############################################
+
+All entities in NET have a REP
+Transfers of REP is in a community-wide register
+
+host_alice : host_bob host_ben host_bill
+[ a register all subscribe to by P2p^n communities ]
+
+TXN registers each transaction
+$date $host_witness $from $to $amount
+
+This creates a simple end-of-day-balance
+$usr $balance
+
+All data are sent to REG
+This will sha log
+
+The currency of the network are file sha
+Data value of the file appraised by community
+
+This is exchanged into value
+The value will change but this is discussed later
+
+# GUILD ############################################
+
+GUILD are groups in the network
+    vatos_hostalice              vatos_hostbob
+           vato_bill >                 vato_proxy: quota bank key
+           vato_ben  >
+           vato_paul >
+
+BANK GUILD host_representative meet to exchange data
+  BANK increases value
+  Exchanges keys value to host_rep
+  host_rep passes that on to usr
+  usr can TXN the value at AH
+
+Each file is on the master_file
+sha usr cur_usr
+dental.pdf ry4l titty
+
+Value of the sha approved for community value
+Originator gets 70% increase Current-Owner gets 30%
+
+# IRC ##############################################
+
+OTO-PSK access to channels
+Channels are secured rooms of communication
+
+# EXAMPLE 1
+
+#BANK "bots only"
+bots wait for all members to join
+Secondary mechanisms of authentication passed
+
+They meet to exchange msg all log
+They agree on the sha of the log
+Then adjourn the meeting
+
+MEMBERS:
+  node_rep    - relations with other nodes
+  ah_bot  - transactions
+  guild   - power
+  archive - value sha
+
+# EXAMPLE 2
+
+#AH "auction house"
+usr /msg menu_bot "list"
+menu_bot: $id $amt ...
+
+usr /msg menu_bot "buy $amt"
+>>ah_bot: key
+
+>>usr sends key to banker
+>>banker sends confirmation
+
+>>usr /msg ah_bot "$key $confirm"
+
+usr /say "$id"
+ah_bot /say "$TXN $buyer $seller $amt $id"
+
+usr /msg ah_bot "refund"
+ah_bot: refunded $amt
+|
+|
+|
+|
+|
+|
+####################################################
+# 4 - KERN
+####################################################
+
+# Overview #########################################
+
+FreeBSD 10.3 kernel is hardened & customized to provide a homogeneous network-environment
+The power of unix is its ability to clone increases the network cohesiveness with the intricateness of the clone
+
+  [z] - program install
+  [z] - configuration
+  [z] - users & groups (section 4)
+
+The system is off-line installation till PSKOPIE
+USB is loaded with pre-worked tarballs of sourcecode
+
+Configuration purify the integrity of the unix-hull
+Users & groups form the columns that keep structure
+
+Triple-Layer-Security
+Password keys must be Pre Shared Keys Onetime Password In Everything
+Each account is associated with a jail account access that is periodic
+The unix kernel is sterilized & monitored over the network
+
+Configurations are default to brick
+BRICK will load decrypted-configuration into dtrace-sensored-memory
+
+Authenticated & anonymous log view
+OTO-PSK key-based log access to node
+(top iostat zfs ps tcpdump)
+
+# PROGRAMS #########################################
+
+Pre-load the USB with programs to be made available by default
+  (1) go to the /usr/ports/ program directory
+  (2) make fetch
+  (3) sanitize configure file
+  (5) insert program into USB install code
+  (4) if test then tar to USB
+
+perl-modules
+  LWP::Protocol::https
+
+unix-packages
+  perl5
+  bash
+
+# CONFIGURATION ####################################
+
+sysctl.conf
+  [p] - Restrict owner-only process view
+  [p] - Restrict member-only group view
+  [p] - Tighten network settings
+
+rc.conf
+  [p] - Dynamic Host Control Protocol (DHCP)
+  [p] - Gateway will determine address & uses that as subnet external-interface
+  [p] - Hostname is a uniq 3 character identifier
+  [p] - Kernel modules loaded
+  [p] - Services are started
+  [p] - System options set
+
+pf.conf
+  All network pipes are structured thru this configuration
+  Tables allow for each node to be synced to the other with approved lists
+  All tcp communications are hardened with reassemble scrubs
+  Traffic is blocked-silent unless there is explicit approval
+  Proxy tunnels are established thru net-lists
+    [q] source_interface
+    [q] destination_addr
+    [q] port
+    [q] usr
+
+start_if.
+  This will mask the MAC for network communications
+  This mask is imperative to network security
+
+ttys && login.conf
+  Remove direct root access
+  Require root-password to single-user-mode
+
+ntpd.conf
+  OpendBSD built ntp server to sync all nodes
+  There is no external-ntp-server
+  All NODE sync to the other
+
+sshd_config
+  PermitRootLogin no
+  PasswordAuthentication no
+  UsePAM no
+  AllowGroups ssh
+  Protocol 2
+  MaxAuthTries 4
+  RSAAuthentication yes
+  PubkeyAuthetication yes
+  AuthorizedKeysFile .ssh/authorized_keys
+  ChallengeResponseAuthentication yes
+
+# ZFS-HEIRARCHY ####################################
+
+/usr/home/
+/usr/nfs/pub/
+/usr/bin/ - norm bin
+/bin - lord bin
+
+# JAIL #############################################
+
+FreeBSD jails are the disposable grounds of the system
+User accounts are tied to a jail that has access to an NFS mount
+
+Jails are periodically turned this requires
+  [d] PSKOPIE associated only with certain dates implementing a 3rd security layer
+  [d] The jail is then destroyed & created again with a sha verified image
+
+This implements a Memory-Disk-like environment changed to persist on reboot
+
+# BIN ##############################################
+
+System-executables
+
+The only user that can read a user home directory is root or su-capable user
+Privacy of user files is a founding principal of this network
+  [#] home
+  [#] mail
+  [#]
+
+# MULTI-File-System ################################
+zfs
+  zpool import -f poolname
+ufs1
+ufs2
+fat
+msdosfs
+  mount -t msdosfs /dev/da3s1 /mnt/usb2
+ext2
+ext3
+ntfs (ro)
+fuse-ext4
+fuse-ntfs (rw)
+# INSTALL ##########################################
+The following will be the steps necessary to install a MKRX node to a network
+# CLEANSE ##########################################
+chmod the fk outta everything
+Always start with a useable base, act then test
+# STRIP ############################################
+Thin down the base
+
+# DNS ##############################################
+Nodes connected thru the cloud
+Directory of ip4-addr:port
+
+Node gets rep by its offers
+
+Servers are planets
+Clients are citizens
+
+Planets serve:
+  nfsv4 file-cities
+  ftp dumps
+  http propaganda
+  irc rooms
+  proxie
+
+Clients can serve:
+  dormant-http-relays
+  scanners
+  scrapers
+  breach-relay
+
+The register on these
+On a P2P basis
+
+Usr gives access to N members
+Members get access to dns
+
+P2p^n
+Peer To peer-branch-n
+
+bob -> alice(1) -> gwen(2) -> hen(3)
+bob -> alice(1) gwen(1) -> hen (2)
+
+bob(alice(gwen(hen)))
+bob(alice(hen), gwen())
+
+The network interaction
+host OTO-PSK host
+|
+|
+|
+|
+|
+|
+|
+####################################################
+# 4 - PSKOPIE Pre-Shared-Key Once-Password-In-Everything
+####################################################
+
+# Overview #########################################
+PAM Group RINGS
+  [#] Socket Credentials
+OSOPSKOPIE
+  [#] One Session Only Pre Shared Key One Password In Everything
+
+ANONi
+  [#] Rotated JAIL (wiped worlds)
+  [#] All session connected to host here
+  [#] One session is lost the user is deleted & wiped
+
+root-usr_jail-anoni_jail-ip4-anoni_jail-usr_jail-root
+
+ANONi interface alone external to a network
+Monitored by every user
+
+Open source & Open log
+System files chron-verified
+
+If there is a breach or inscrutibility
+All connected to the host should know
+
+# Escalation ######################################
+
+GROUPS
+  lord:wheel - su-root
+    mreki:lord - su-lord
+    betty:lord - su-lord
+  heir-lord - su-lord
+    hermi:betty - su-betty
+    genri:merki - su-mreki
+
+  seer-seer - null
+  norm-norm - null
+
+'su' can only be used for ascension
+Seer & norm users have no power to 'su'
+
+NODE-tree are exact net-clones
+norm1@44m (->) norm1@w2w
+norm1@44m (X) norm2@w2w   (FAIL never had norm2-PSK)
+
+USR & GRP are mirrored over hosts
+This allows for the seasoned usr to ascend deeper with ease on any host
+
+Remote root is allowed but thru obfuscated-means & alarms
+The common-action is to use a hidden & extremely limited accounts
+
+ALICE ASCENSION
+ [[3]]
+(alice)#
+    lord:wheel
+------------------                         [[2]]
+||               ||      {{  sir:lord  }} (alice)            [[1]]
+||               ||                           [b_heir:sir]  (alice)[x_heir:sir]
+||               ||                           [w_heir:sir]         [n_heir:sir]
+||               ||      {{ mam:lord   }}
+||               ||                           [f_heir:mam] [n_heir:mam]
+||               ||                           [a_heir:mam] [z_heir:mam]
+------------------
+
+# KEY-UPDATE ######################################
+
+/usr/home/usr/.ssh/id_rsa
+/usr/home/usr/.ssh/id_rsa.pub
+
+Usr accounts have a finite lifespan
+Time added at cost that is reduced upon time-in-relation of the host-system
+
+# KEY$ ############################################
+
+First, to communicate with the network the PSKOPIE KEY$ must be obtained
+Kernels exchange files & services for KEY$ that are a fluid source with a finite-lifespan
+
+Elliptic-curves are used in a random array which each kernel mines periodically
+KEY$ are then exchanged for increased file-sha on their list
+
+Registers account each transaction of a node,  a unique file can only be on one register, each section of the file a sha-confirmed states
+  (1) REGSTR( past + add -  ded )
+  (2) {jan-mar} = $sha
+  (3) "ALARM" unless (cat REGSTR | grep [jan|feb|mar] | SHA == '$sha')
+
+A usr puts in a QUE-bid for a DEMON which relies on host-load to process
+If the output is acceptable output the usr is rewarded with credits it buys connections with
+
+Available kernel KEY$ on a host
+{ host } { host } { host }
+| KEY$ | | KEY$ | |      |
+|_...__| |_...__| |______| . . .
+
+# MARKET ##########################################
+
+KEY$ are exchanged p2p
+  [B] SELL - sell uniq data to kern in exchange for token
+  [B] XFR - transfer KEY$ for KEY$
+
+
+KEY$ are managed like stock
+The more valuable the host access the more valuable the KEY$
+
+(1)
+//zr9\\ ---- $sha_of_unique + zr9_KEY$ ----> //8n8\\
+(2)
+//8n8\\ ---- $sha_of_unique + zr9_KEY$ ----> //55q\\
+
+1
+uniq file archive sha
+
+1000
+ftp
+
+100000
+krip
+
+1000000
+http
+
+1000000000
+log
+
+Access to a host if dervived from the network can only happen from lengthy & positive actions
+
+KEY$ are updated on witness of three others
+Five sha are confirmed the same & published in a broadcast update
+
+All nodes write broadcast to log
+Conflicts will be dealt with noticeably
+
+KEY$ that are inconsistent lock that equal amount in auto-buy
+This allows for the system to be adaptable to mistakes in code
+
+This is a system of key wealthy nodes
+To prosper all one has to do is improve services
+
+NODE make massive-key trades after a value of NODE
+The least inconsistent-locks the more value the KEY$
+
+Incentive to pay for trustworthy-nodes to increase value of TXN
+
+tip witness KEY$
+
+6u8 => 1T KEY$ => 7tw
+  Witnesses
+    mk1 88r q8l
+  XFR worth triples to 3T
+
+This helps centralize efficency the system
+But does not detir decentralized transactions
+
+The host modifier is variant in grade of positive bonus onto the TXN
+The acient houses empower themselves with longstanding service
+
+
+norm has to que
+lord has no que
+
+NODE has 10000 stock
+As the NODE increases in value to the network each stock increases
+
+SPLIT: when a node doubles in value
+
+1000000 is actually 10000 invested ports
+
+Portal out of limbo
+  [u] USR -> PSKOPIE -> port
+  [u] port -> PSKOPIE -> usr
+
+A port account is a sleep'n gate keeper
+It is only woken when asked-for
+
+This allows for several thousand direct-portals open
+Yet at the same time requires null resource
+
+USR holds stock xf71038 a year
+After USR gets access into the port
+port PSKOPIE use
+The USR su 'boobnorm'
+norm PSKOPIE use
+cd ~/
+
+0i3 -> PSKOPIE_SET accounts -> SELL pool
+48o -> BUY 0001norm@0i3 stock -> CLAN bank
+
+0i3 Host nfs 6mo & doubles in timeout-length
+48o CLAN bank -> 0001norm@0i3 -> double length logins
+
+It takes 1 month of positive activity
+To become worth the exchange to a single stock
+
+File worth:
+  [c] prime
+  [c] second
+  [c] third
+  [c] fourth - unverified file
+
+This is the incentive to hold a unique file of value
+To own that prime & hold it or sell it hot
+
+Local storage or net-trade
+bob_3y89d rents space for prime file storage
+  + net salary
+  + usr rent income
+
+Use of remote nodes is useful & encouraged
+Nodes offer transient storage for the BLK_CLD of files
+# CATPURE ##########################################
+If a root opie is lost & physical access to dev
+  [1] boot live-usb
+  [2] mount -u /
+  [3] zpool import -f -o altroot=/ zroot
+
+ << now you are in>>
+|
+|
+|
+|
+|
+|
+|
+####################################################
+# 5 - PF
+####################################################
+
+# Overview #########################################
+
+Packet Filter is a raw-packet pipe system
+Ports & Source-Address pairs are there connected
+
+Raw-packet pipe systems allows for the simplest form of action
+Data that transacts there is read & manipulated pure from 3rd-party-code(government-device-malware)
+
+tcpdump analysis & parsed-output is PSKOPIE posted over the network
+[ pflog is read via tcpdump ]
+
+# XCOM #############################################
+
+eXplicit COMmunications kept the hull of the network tight
+A solid object is formed as expertise grows
+
+No packet is passed unless it is explicitly-allowed to an explicit-host that is SSL verified
+Anti-Middleman techniques used at the network & kernel level
+
+All TCP transactions are scrubbed & reassembled
+The subnet behind the NODE is disguised as the node
+MAC-addresses are all masked on the network
+
+# TABLES ############################################
+
+Tables are files the system uses to lookup hosts to pass
+SSL sockets confirm the identity of the host
+
+(CAPTN_CONFIG discussed later)
+Privileged nologin accounts sha-confirm then load the addresses
+Approved-list -> sha256 -> post to network -> network confirm -> load list
+If the sha does not match the network the table is not loaded
+
+All usrs approved on the network share the same tables
+Every usr knows the identity of all other users securely
+
+The configuration memory is sha-verified to confirm identity
+Each new connection must have a pre-shared-table & PSKOPIE
+
+# USR ##############################################
+
+pf allows for a network to pipe data by usr accounts
+All accounts are preset & pre-shared to keep the network clean, simple & stable
+|
+|
+|
+|
+|
+|
+|
+####################################################
+# 6 - SERVICE
+####################################################
+
+# Overview #########################################
+
+Every day a node is awarded a token that can be exchanged with a host for KEY$
+This incentive will increase a network wide service branch
+
+SSH
+  Keep It Simple & Stoopid
+  One tunnel in everything
+    [h] Shell
+    [h] Copy
+    [h] Log
+
+    [h] Sockets
+        Every connection made thru PSKOPIE
+
+PROXY
+  [0]  1337 link
+  [1]  one-time-only
+  [10] 1337 link
+  [1G] prime-time
+  [1B] basic-cable
+
+DNS
+  Network is predefined only
+  Outer-network is define-able
+
+MAIL
+  Outer-network proxy sockets
+  (SCP) Local only scp message
+
+HTTP
+  Proxy on port 8080
+  Sockets is a market, the more valuable socket => the more valuable node
+
+NTP
+  Sync time is necessary for a network to have cohesion
+  OpenNTP is necessary for stability in its security
+
+FTP
+
+NFS
+  zfs create usr/nfs
+  zfs create usr/nfs/pub
+  zfs set sharenfs=on /usr/nfs/pub
+
+  /etc/exports
+
+  rpcinfo
+  tcpdump
+
+
+HTTP
+SCP-WALKITALKI
+MORSE
+|
+|
+|
+|
+|
+|
+|
+####################################################
+# 7 - ZFS
+####################################################
+
+# Overview #########################################
+
+ark -> 1T -> slicr_server
+slicr_server -> proxy_img -> zfs send proxy/proxy_img -> new_node
+
+new_node -> proxy_dump -> ark
+
+I/O is mostly done on server computers
+Each zfs pool is created from a maximum source pool of the mothership-ark
+
+A proxy shreds the files on its mirror-2T SSD to create the proxy_img
+
+# FUNCTIONS ########################################
+
+zpool create $dev addr
+++++++++++++++++++++++++++++++++++++++++++++++++++++
++ zpool create usb /dev/da1
++ cd /usb/
+++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+zpool create mirror
+  [m] mirrors doubles the speed of a filesystem
+++++++++++++++++++++++++++++++++++++++++++++++++++++
++ zpool create mirror zroot /dev/da0 /dev/da2
+++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+zpool import
+  [m] list available pools
+
+zpool import -f
+++++++++++++++++++++++++++++++++++++++++++++++++++++
++ zpool inport -f usb
++ cd /usb/
+++++++++++++++++++++++++++++++++++++++++++++++++++++
+  [m] DANGER may create unkillable zombie
+  [m] usb or sata attached device
+
+zpool export
+  [m] DANGER may create unkillable zombie
+++++++++++++++++++++++++++++++++++++++++++++++++++++
++ cd ~/
++ zpool export -f usb
+++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+zfs snapshot pool@date
+++++++++++++++++++++++++++++++++++++++++++++++++++++
++ zfs snapshot usb@10mar17
+++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+zfs create -o compression=on $pool
+zfs create -o mountpoint='' $pool
+zfs set -o sharenfs=on $pool
+
+# SECURITY #########################################
+
+read-only
+nfs-share
+nfs-MAC
+  No node knows the other's MAC addr
+  This is shuffled in a predetermined way
+    PSKOPIE pool + Algorithm = valid MAC
+
+# QUOTA ############################################
+
+This allows for secure partition of files to order
+Stability is ensured by zfs file-system caps of data
+
+# zdb ##############################################
+
+zdb raw drive verification
+zfs-point-of-view io-reports
+
+ [-] v ...
+   mo verbosity da mo bettah
+
+ [-] b
+   Block details
+ [-] d ...
+   Dataset details
+   mo d da mo bettah
+ [-] m .. mmm
+   Metaslab details
+   mmm is every spacemap record
+
+ [-] s
+   I/O statistics
+ [-] h
+   History of the pool
+
+ [-] -R $pool vdev:offset:size[:flags]
+   manual file read
+
+ [-] u
+   get uberblock
+ [-] l
+   get vdev labels
+
+ [-] A .. AAA
+   recover tool
+ [-] F
+   recover tool
+
+# log ##############################################
+
+zfs list
+zpool list
+zpool status -x
+zfs snapshot pool@date
+
+# admin ############################################
+
+These ZFS issues will breed zombies:
+  [k] `zpool import`
+  [k] `zpool export`
+  [k] io-errors unkempt-disk
+
+Only in prudence attach a pool to a kernel
+The zombie lasts until death of the kernel
+
+unix is built to run forever
+Respect the ecosystem & it will reward you
+|
+|
+|
+|
+|
+|
+|
+####################################################
+# 8 - Hardware Schematics
+####################################################
+
+# Overview #########################################
+
+# BIOS #############################################
+
+BIOS is like loving a women
+You have to go thru the labor of investigation
+
+  [i] BIOS button [f2] || [f12] || ...
+    This button will drop the system into BIOS as a hotkey
+  [i] Boot
+    Find the drives
+    Select the boot drive
+    Activation of SATA ports is required on some BIOS
+    To learn your machine you must roam the BIOS
+  [i] SATA
+    The motherboard sata-port position may affect the boot of certain motherboards, try each motherboard SATA port if troubleshooting
+
+# CPU ##############################################
+
+High-power-cores for beefy processing
+Multi-quick-cores for mass of calculations
+
+Unix & MKRX keep the system simple
+Low-power massive-pool are favored over next-lvl-computation
+
+Bottom-line is if you know why you like your CPU
+That is all the only standard which you need
+To have that boost-output respective to system-specs
+
+# RAM ##############################################
+
+ECC ram is the best ram because why not have hardware-verification
+RAM is the perfect mate for ZFS even if it is desktop ram
+
+The better the admin the more need for RAM
+MKRX systems is very RAM heavy
+Plus cpu time is heavy loads if left unchecked
+
+SPEED HIERARCHY
+cpu-cache -> ram -> pci-ssd -> sata-ssd -> sata-hdd -> usb -> net
+
+# BOX ##############################################
+
+Hold 1 / 2 drives
+1 SSD
+  Quick root filesystem & network access
+1 HDD
+  Slow but beefy storage
+
+There are several forms of DISK CONNECTION
+Use these options to maximize a NODE build
+
+Each motherboard has its ways
+To the hacker it may give you headaches
+To the scrub it will make you give-up
+
+BIOS specific experience best learned-once
+Lessen the diversity of motherboards in a same-admin-network
+
+
+# DISK CONNECTION  #################################
+
+Kernel requirements to use the hard-disk-drives (HDD)
+  [a] Power pin secure to the HDD
+  [a] SATA cable secure attached to HDD
+  [a] Recognizable File System || overwrite
+
+POWER
+  HDD are powered by a pin that can be daisy chained as a power source
+  HDD do not require much power and this can allow a node to increase in size
+  Drives are not power-hungry but a 1000W Power Supply Unit keeps a box robust
+
+SATA-HDD
+  All amd64 motherboards contain an L-shaped port
+  A male/female cable will connect the drive to the motherboard
+
+PCI-SATA-HDD
+  PCI cards can come from 1-4 SATA ports which add onto drives connectable to the motherboard
+  PCI-SAS + PCI-SATA + mobo = many ports
+
+PCI-SAS-HDD
+  These use break-out cables that split one into four creating 8 SAS connections (SATA)
+
+JBOD
+  ZFS needs the drive to be passed raw free from hardware-raid interventions
+  Each raid-card has their own BIOS to search for the JBOD option
+  Be sure because if you are wrong you are fkd
+
+USB-SATA
+  External-drives in an array with external-power-source
+  Modularization & beef up  on a low transaction host
+  Power-strip + USB ports + shelf
+
+LSI-SAS-9211-8i
+  Preferred Host Bus Adapter
+  Direct-disk-passthru-no-bullshit
+  Never daisy-chain SATA-data cables
+  16 is the expected maximum from the 9211
+  This leaves mobo & pci-e sata ports available
+  If more than one ZFS pool exists on a mobo - mix disk sources
+  8-wide-raidz2 => 4 on hba1 4 on hba2
+  7-wide-raidz2 => 4 on hba1 4 on hba2
+
+Hardware-raid-card
+  Most raid cards have an option JBOD (just-a-bunch-of-disks)
+  Read the manual to see if a direct passthru is possible
+  zdb report out the disk-ids to verify individual disk identities
+  Only if this succeeds (&&)
+  Create a ZFS file system
+
+# TOWER ###############################################
+
+`Dark Tower Steel-Maiden`
+42u Steel hull which bends to the heft of massive drive arrays
+
+The vessel which brought skrp forever to be recalled in the tomes of 1337
+
+Keekay Gennkai
+of the villiage
+Hidden In the 1337
+
+To him as ship thru celestial seas of infinity
+Coastside or on net currents
+
+An ecosystem with moods we weather together
+Melancholy failure or quick-turn success
+
+Magical past contemplation in limitless depths
+Depths of which dark valleys can leave one lost for weeks
+
+`
+   [[98888888888888888888]]         `The Dark Tower of MKRX`
+   [[ ===== firewall ====]]
+   [[ ===================]]oooooo
+   [[ == x3e == 7c7 =====]]     \\
+   [[ ___________________]]      ===
+   [[ ========= UPS =====]]    -----\\-----   --------------
+   [[ ======= switch ====]]   |      \\0000000000000
+   [[ == powerstrip =====]]   |       /_____________\  A---,)Xxx'
+   [[ ====== CHEST ======]]   | unix  ' ' '|' ' ' ' '  :  ."
+   [[ ===================]]   |____________|  |_____ orrJrr'rr
+   [[ ====== hdd cage ===]]        [  ]          [ QQQ      PDD
+   [[ ====== mirror =====]]  ________=======,====QQQQJ        PDD8
+   [[ ===================]]                       '^^\\     //^^'
+   [[ ===== raidz2 ======]]                          GG     GG
+   [[ ===== raidz2 ======]]                    ,,---/  x  x   --}
+   [[ ==== raid3 ========]]                   {   _____ kk ___  }}
+   [[ ===================]]                     h h     kk     l l
+   [[ ===== scraper =====]]                      ===    kk    SS
+   [[88888888888888888888]]                        //   ,.   3B8
+   @ @                  @ @                      B83    v
+
+# Utilities ##########################################
+
+  HDD External Case
+    house HDD apartments 1
+  UPS
+    give the router immunity to death for x-min
+  CHEST
+    lock your private possessions
+    Know that rig may explode or melt
+    Due to PS & UPS damage
+  switch
+    unmanaged pass thru 24 ports
+  hdd cage
+    hotswap 4-wide holder
+    powered by extended-molex-cables
+  scraper
+    dual-processor scrape-only machine
+  keyboard
+    Keyboards are nice with no mice <38:~~
+  USB ports
+    USB-extenders for the lower bandwith-requirements
+    A source for external-drive aggregation
+  cords
+    (.) SATA-power daisy-chains
+    (.) SAS breakout cables
+    (.) Multi-size SATA cables
+    (.) Ethernet cable (multi-size / flat / outdoor)
+    (.) USB=>SATA-data USB=>SATA-power
+    (.) HDMI is the best cable for video
+    Do not daisy-chain SATA-data cables
+
+# RAID ###############################################
+
+Raid can be a beautiful thing
+They are always true muthrfkrs
+
+Hot-swap is the act of precariously recalculating pool-parity after drive-failure
+First the physical-location must be known a trial of hardship for white-box-hackers
+
+Despite finished efforts of mapping still: drive-failure + physical-location = complete nightmare
+
+If one drive fails the recalculation of parity will overwork the pool
+If another drive fails the pool is mostly toast
+This a cliff I have myself stared down
+
+The beauty of simplicity should always be carried out before a raid-array attempted
+Very easy to setup but when SHTF they are the worst to deal with
+
+raidz3 at 15 drives wide nears the efficiency of a raidz2
+I have run one 3 years without a need for hot-swap or error
+NFS serving 75%+ data pool
+
+# Aggregations #######################################
+
+PCI
+  8 ports
+  raidz3
+  raidz2
+
+PCI-E
+  4 ports
+  raidz1
+  mirror
+
+MOBO
+  6 ports
+  mirror
+  raidz1
+
+USB
+  extendable
+  Sys-usb-sync-one-only-ever
+
+
+Aggregations are nice
+To update backup timely
+
+Decentralization
+Is the lesson of the seed
+
+SEED
+  unix KERN bootable ZFS MKRX archive
+  One SEED can load the other after boot
+
+  /usr/nfs/$nfs_pool  - variable  /usr/nfs/7t7/pub/ - remote data
+  /usr/nfs/pub/ - host data      /usr/nfs/pub_LIST - low-io directory
+|
+|
+|
+|
+|
+|
+|
+####################################################
+# 9 - STAT
+####################################################
+
+# Overview #########################################
+
+# UNIX-LOG #########################################
+
+   [M] - NET
+   [M] - DISK
+   [M] - CPU
+
+# ZFS-REPORTS ##########################################
+
+  [M] - NET
+  [M] - DISK
+  [M] - CPU
+
+# DTRACE-REPORTS ###########################################
+
+  [M] - NET
+  [M] - DISK
+      [m] write-latency
+      [m] read-latency
+      [m] create-latency
+  [M] - CPU
+      [m] count all syscalls by PID
+      [m]
+
+DTrace is a powerful bond between the kernel & hacker
+Nobullshit-raw-data-sensor-anchors
+
+Track the host by raw syscalls
+Parse the anchor output into intelligent reports
+
+Dtrace reports of HIVE health
+Syscall timing aggregations
+Compare results to normal-health
+
+The result of aggregations will favor or disfavor
+'aggregations allow for a scalable way'
+'prefer to use aggregations...when possible'
+
+Work in the HIVE is standard
+blkr, get, copy, send
+
+The system calls that involve these API
+Are all known & notified if err
+
+
+count
+syscall::write:entry
+{
+  self->writecalls = count() ;
+}
+
+thruput_ttl
+avg
+max
+
+Cacheable predicates for low cost
+
+syscall::write:entry
+{
+  self->rate = avg();
+}
+(unix health audit to determine host health)
+
+Boot tracing via directives in /boot/dtrace.dof
+`dtrace -A`
+`reboot`
+|
+|
+|
+|
+|
+|
+|
+Code tips
+1) fix syntax
+2) review structure for mem-leaks
+3) step-into-uncomment-code to correct by block of code
+####################################################
+# 10 - SCRAPE
+####################################################
+
+Internet hosts fields of information as free forages
+The extraction of data is unique to individual fields
+
+Massive-Iterations worked-over-time
+Various host sources is ideal
+
+Steps
+  [1] - grab html pages that holds addresses of data
+  [2] - filter only the addresses that are useful into a queue file
+  [3] - work over the queues in a light-weight-sleepy-http_get request
+
+[1]
+Find the lists of data-items
+This takes several probes of investigation
+
+The ideal location is an incremental-address
+  https://artgallery.yale.edu/nodes/0
+  https://artgallery.yale.edu/nodes/1
+  https://artgallery.yale.edu/nodes/2
+
+Deposit these html-files in a designated directory
+
+[2]
+This is normally where the locals get clever to hide the data
+Only by tracing normal-access, can the scraper figure-out the formula for filters
+
+FORMULA
+  [f] - unique-regx-pattern as the start of the address-of-data
+  [f] - unique-regx-pattern as the end of the address-of-data
+  [f] - unique-regx-pattern as the front cut-off-trim to the address-of-data
+  [f] - unique-regx-pattern as the end cut-off-trim to the address-of-data
+  [f] - concatenate the addresses-of-data to a queue file as a full-address-of-data
+
+Move html-file to a processed-only-directory only-if there was an extraction of a address-of-data
+A review of the formula & the failed-extraction-html-file will improve the formula
+
+A formula must be created for each project
+A formula has to be found once per project
+
+[3]
+Split the queue of the workload into appropriate-segments
+Read each segment then remove it from that directory
+
+Work over each segments only after sleeping the process for a short time
+Sleep is necessary for client-machines, server-machines, & all-in-between
+
+Perl http-get-request
+  LWP::Protocol::https
+  LWP::UserAgent
+
+  my $ua = LWP::UserAgent->new(agent, "donkeytrain/54.0.1", from, "punxnotdead", timeout, 45);
+  $ua->get($address, ':content_file'=>$file);
+|
+|
+|
+|
+|
+|
+|
+####################################################
+# 11 - SCAN
+####################################################
+
+Handmade code aides in obscurity
+Admins can familiarize popular code
+
+Reverse engineer it to find firewall rules to break a scrape
+
+nmap the greatest hacker tool invented
+Refined by the world's tech power Google
+
+Run handmade code
+On-fail run nmap
